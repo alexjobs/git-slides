@@ -1,5 +1,5 @@
 <section>
-    <h3>Help and Config</h3>
+    <h2>Help and Config</h2>
     <h3>Help</h3>
 <pre>
 <code style="margin-top: 20px;">
@@ -21,6 +21,7 @@
 <pre><code style="margin-top: 20px;">
   $ git config user.name "Alen Jobs"
   $ git config user.email "4008@dothejob.org"
+  
 </code></pre>
     <p>When reading, the values are read from the system, global and repository local configuration files by default, and options --system, --global, --local and --file &lt;filename&gt; can be used to tell the command to read from only that location.</p>
     <p>When writing, the new value is written to the repository local configuration file by default, and options --system, --global, --file &lt;filename&gt; can be used to tell the command to write to that location (you can say --local but that is the default).</p>
@@ -30,15 +31,16 @@
     <h3>OPTIONS</h3>
     <ul>
         <li>
-            <em>--global</em> :<br />
-            writing : write to global ~/.gitconfig file rather than the repository .git/config, write to $XDG_CONFIG_HOME/git/config file if this file exists and the ~/.gitconfig file doesn't.<br />
-            reading : read only from global ~/.gitconfig and from $XDG_CONFIG_HOME/git/config.
-        </li>
-        <li>
             <em>--system</em> :<br />
             writing : write to system-wide $(prefix)/etc/gitconfig.<br />
             reading : read only from system-wide $(prefix)/etc/gitconfig.
         </li>
+        <li>
+            <em>--global</em> :<br />
+            writing : write to global ~/.gitconfig file rather than the repository .git/config, write to $XDG_CONFIG_HOME/git/config file if this file exists and the ~/.gitconfig file doesn't.<br />
+            reading : read only from global ~/.gitconfig and from $XDG_CONFIG_HOME/git/config.
+        </li>
+        
         <li>
             <em>--local</em> :<br />
             writing : write to the repository .git/config file. This is	the default behavior.<br />
