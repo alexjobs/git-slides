@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ndpsoftware.com/show_char_limit.php by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:50 GMT -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>
+      NDP Software ::
+Show Character Limit jQuery Plugin Demos    </title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"/>
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <meta name="msvalidate.01" content="B24F365C5258BA8C65E423307692C32E" />
+        <link rel="stylesheet" href="fonts/Impact-Label-fontfacekit/stylesheet.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/ndp-print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="css/ndp.css" media="screen" />
+            <script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/csster.js"></script>
+    <script type="text/javascript" src="js/color_factory.js"></script>
+    <script type="text/javascript" src="js/jquery.boxes.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1458227-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </head>
+  <body class="show_char_limit" onload="">
+    <div id="margin">
+      <div id="page">
+        <div id="new_header">
+           <h1><span>&nbsp;NDP Software&nbsp;</span></h1>
+           <h2>Compelling Software &bull; Design & Construction</h3>
+        </div>
+      
+        <div id="header" class="screenOnly">
+          <h1>
+            Andrew J. Peterson
+          </h1>
+        <h1>
+          Compelling Software, Design and Development
+        </h1>
+      <h1>
+        NDP Software
+      </h1>
+    <h1>
+      Andrew Peterson, Consultant
+    </h1>
+</div>
+<div id="menu" class="screenOnly">
+  <div class="menu">
+    <ul>
+      <!--li>
+        NDP Software 
+      </li-->
+      <li>
+        <a href="index-2.html" title="Overview of the software consulting business">
+          About NDP Software
+        </a>
+      </li>
+      <li>
+        <a href="visualization.html" title="Interactions and Visualizations">
+          Visualization
+        </a>
+      </li>
+      <li>
+        <a href="prototype.html" title="Prototypes">
+          Prototype
+        </a>
+      </li>
+      <li>
+        <a href="consulting.html" title="Consulting projects and areas of expertise">
+          Software Consultant
+        </a>
+      </li>
+<!--      <li>
+        <a href="web.php" title="Web-related software projects">
+          Web Development
+        </a>
+      </li>
+      <li>
+        <a href="software.php" title="Custom-built software">
+          Software Development
+        </a>
+      </li> -->
+      <li>
+        <a href="clients.html" title="Clients of NDP Software">
+          Clients
+        </a>
+      </li>
+      <li>
+        <a href="http://blog.ndpsoftware.com/" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="http://github.com/ndp" target="_blank">Github Repo</a>
+      </li>
+      <li>
+        <a href="http://amp-what.com/" target="_blank">Amp What</a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/111325326458556506982/posts?rel=author">Google+</a>
+      </li>
+      <li class="email">
+         <a href="mailto:andy@ndpsoftware.com">Email</a>
+      </li>
+      <li class="linked_in">
+        <script src="../platform.linkedin.com/in.js" type="text/javascript"></script>
+        <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/ndpsoftware" data-format="hover" data-related="false"></script>
+      </li>
+      <!--li class="social">
+        <g:plusone size="small" annotation="inline" width="160"></g:plusone>
+      </li-->
+    </ul>
+  </div>
+</div>
+<div id="content">
+  <h2>
+Show Character Limit jQuery Plugin Demos  </h2>
+<p>jQuery plugin to display interactive character limit feedback about a text field or textarea.
+  The <a href="http://github.com/ndp/show_char_limit">Show Char Limit Project</a> is <a href="http://github.com/ndp/show_char_limit">hosted on GitHub</a>.</p>
+
+<script type="text/javascript">
+  jQuery(function () {
+    jQuery('#input_example1 input').show_char_limit();
+
+    jQuery('#input_example2 input').show_char_limit({
+      status_element: '#input_example2 .status',
+      status_style: 'chars_left',
+      maxlength: 20
+    });
+
+    jQuery('#input_example3 input').show_char_limit(4, {
+      status_element: '#input_example3 .status',
+      error_element: '#input_example3',
+      status_style: 'chars_typed'
+    });
+
+    jQuery('#text_area_example textarea').show_char_limit(160, {
+      status_element: '#text_area_example .status',
+      error_element: '#text_area_example'
+    });
+  });
+</script>
+<script type="text/javascript" src="js/jquery.show_char_limit-1.1.1.js"></script>
+
+<style>
+  fieldset {
+    margin: 10px 0;
+    padding: 10px;
+    font-family: helvetica, arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+  }
+
+  fieldset>* {
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+
+  fieldset input, fieldset textarea {
+    font-size: medium;
+  }
+
+  fieldset textarea {
+    width: 250px;
+    height: 150px;
+  }
+
+  fieldset label, fieldset span {
+    color: #333;
+    padding-top: 5px;
+  }
+
+  fieldset span.explanation {
+    visibility: hidden;
+  }
+
+  fieldset.error span.explanation {
+    visibility: visible;
+  }
+
+  fieldset span.status {
+    padding: 5px;
+    font-size: large;
+    background-color: #eee;
+    color: #bbb;
+    border: 1px solid transparent;
+  }
+
+  fieldset.error span.status {
+    background-color: red;
+    color: white;
+  }
+
+  ol {
+    margin-top: 40px;
+  }
+  ol li {
+    margin-top: 20px;
+    list-style-position: inside;
+  }
+  ol li em {
+    font-weight: bold;
+  }
+  ol li code {
+    font-family: courier, monospaced;
+    font-style:normal;
+  }
+  ol li code.html {
+    display: block;
+    color: #999;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  ol li code.js {
+    background-color: black;
+    color: #999;
+    display: block;
+    font-style: italic;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+</style>
+<ol>
+  <li>
+    <em>Simple Usage</em> Text field with <code>maxlength</code> attribute.
+      Creates the status HTML element automatically.
+    <fieldset id='input_example1'>
+      <input maxlength="20" type='text' value="defaults"/>
+    </fieldset>
+      <code class="html">&lt;input maxlength="20" type='text' value="defaults" /&gt;</code>
+      <code class="js">$('#input_example1 input').show_char_limit(); ...</code>
+  </li>
+  <li>
+    <em>Explicit control</em> over status element, style and length.
+    <fieldset id='input_example2'>
+      <input type='text' value="custom feedback" />
+      <span class='status'></span>
+    </fieldset>
+<code class="html">&lt;input type='text' value="custom feedback" />
+&lt;span class='status'>&lt;/span></code>
+<code class="js">$('#input_example2 input').show_char_limit({
+  status_element: '#input_example2 .status',
+  status_style: 'chars_left',
+  maxlength: 20
+} );
+</code>
+  </li>
+  <li>
+    <em>Using a custom "error" element</em>, which shows when in the error state. This also
+    hides the "explanation" div, which is giving the feedback, so that this only shows
+    validation errors.
+    <fieldset id='input_example3'>
+      <label>4-letter Word</label>
+      <input type='text'/>
+      <span class='status'></span>
+      <span class='explanation'>Four characters ONLY!</span>
+    </fieldset>
+<code class='js'>$('#input_example3 input').show_char_limit(4, {
+  status_element: '#input_example3 .status',
+  error_element: '#input_example3',
+  status_style: 'chars_typed'
+} );</code>
+<code class="html">&lt;style&gt;
+  fieldset span.explanation {
+    visibility: hidden;
+  }
+  fieldset.error span.explanation {
+    visibility: visible;
+  }
+  fieldset.error span.status {
+    background-color: red;
+    color: white;
+  }
+&lt;/style&gt;
+&lt;input type='text'/&gt;
+&lt;span class='status'&gt;&lt;/span&gt;
+&lt;span class='explanation'&gt;Four characters ONLY!&lt;/span&gt;</code>
+  </li>
+  <li><em>Text-area Example</em>
+    <fieldset id='text_area_example'>
+      <textarea></textarea>
+      <span class='status'></span>
+    </fieldset>
+<code class="js">$('#text_area_example textarea').show_char_limit(160, {
+  status_element: '#text_area_example .status',
+  error_element: '#text_area_example'
+} );</code>
+<code class="html">&lt;textarea&gt;&lt;/textarea&gt;&lt;span class='status'&gt;&lt;/span&gt;</code>
+  </li>
+</ol>
+
+
+<a name='docs'></a>
+<h3>Documentation &amp; Download</h3>
+   <p>Please see <a href="http://github.com/ndp/show_char_limit">GitHub page</a></p>
+
+
+
+<h3>Alternative Downloads</h3>
+<a href="js/jquery.show_char_limit-1.2.0.js">jquery.show_char_limit-1.2.0.js</a>
+
+<h3>Source Code</h3>
+<a href="http://github.com/ndp/show_char_limit">At Github, including ScrewUnit tests</a>
+
+<h4>Previous Version</h4>
+<a href="js/jquery.show_char_limit-1.1.2.js">jquery.show_char_limit-1.1.2.js</a>
+<a href="js/jquery.show_char_limit-1.1.1.js">jquery.show_char_limit-1.1.1.js</a>
+<a href="js/jquery.show_char_limit-1.1.js">jquery.show_char_limit-1.1.js</a>
+<a href="js/jquery.show_char_limit-1.0.js">jquery.show_char_limit-1.0.js</a>
+
+<h3>Features</h3>
+<ul>
+<li>
+The caller provides the "status" element to display the feedback.
+</li>
+<li>
+A status element will be created if not provided.
+</li>
+<li>
+Supports instrumenting multiple fields at once.
+Can calculate the status field from the target field's ID, such field id <code>tweet</code>
+can map to id <code>tweet_status</code>, by specifying a suffix <code>_status</code>.
+</li>
+<li>
+The current status can be formatted as count down, count up, or some other
+format.
+</li>
+<li>
+Optionally it can add a class to any DOM elements when the field is over the limit.
+This is convenient as it allows turning an element red, or displaying a
+hidden div with more detailed error message.
+</li>
+</ul>
+
+</div>
+<!--id content -->
+<div id="footer" >
+  <table class="sitemap screenOnly">
+    <tr>
+      <td>
+        <div class="menu cheatsheets">
+          <ul>
+            <li title="Short summaries of detailed technical topics">
+              Cheat Sheets 
+            </li>
+            <li>
+              <a class="new" href="git-cheatsheet.html">
+                Visual Git Cheatsheet
+              </a>
+            </li>
+            <li>
+              <a href="HibernateMappingCheatSheet.html" title="Short hibernate mapping examples, without the detailed explanations.">
+                Hibernate Mapping
+              </a>
+            </li>
+            <li>
+              <a class="updated" href="JSPXMLCheatSheet.html" title="JSPs with XML? A simple summary of the most useful and used constructs">
+                JSP 2.0 XML Documents
+              </a>
+            </li>
+            <li>
+              <a href="http://amp-what.com/" title="A quick, interactive reference of 11,500 HTML character entities">&amp;what (amp-what.com)</a>
+            </li>
+            <li>
+              XSLT 
+            </li>
+            <li>
+              <a href="downloads-xsl-struts.html">
+                Struts Xslt
+              </a>
+            </li>
+            <li>
+              <a href="downloads-xsl-resume.html">
+                Xslt for My Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu technical">
+          <ul>
+            <li>
+              CSS 
+            </li>
+            <li>
+              <a class="updated" href="CssBestPractices.html">
+                CSS Best Practices
+              </a>
+            </li>
+            <li>
+              <a href="cssExperiments.html">
+                CSS Experiments
+              </a>
+            </li>
+            <li>
+              <a href="css.html">
+                CSS Links
+              </a>
+            </li>
+            <li>
+              Javascript 
+            </li>
+            <li>
+              <a href="http://github.com/ndp/csster" class="new" >
+                Csster
+              </a>
+            </li>
+            <li>
+              <a href="ScriptaculousEffectsDemo.html" class="new" >
+                Scriptaculous Effects Demo
+              </a>
+            </li>
+            <li>
+                <a href="http://github.com/ndp/jsutils" class="new" >
+                    Javascript Playground
+                </a>
+            </li>
+            <li>
+              jQuery Plugins
+            </li>
+            <li>
+              <a href="show_char_limit.html" class="new" >
+                Show Char Limit
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/align-column" class="new" >
+                Align Column
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/fixie" class="new" >
+                Fixie
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/wizardize" class="new" >
+                Wizardize
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/color_spy" class="new" >
+                Color Spy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu technical">
+          <ul>
+            <li>
+              Other Technical 
+            </li>
+            <!--li>
+              <a href="books.php" title="Books we like">
+                Books
+              </a>
+            </li-->
+            <li>
+              <a href="isbn.html">
+                ISBN Excel Converter
+              </a>
+            </li>
+            <li>
+              <a class="new" href="agile_methods/agile_methods.html">
+                Agile Methods Visualization
+              </a>
+            </li>
+            <li>
+              <a class="new" href="softwareDevMaturityModel.html">
+                Software Development Maturity Model
+              </a>
+            </li>
+            <li>
+              <a class="new" href="OpenUpBasic/index.html" target="_blank">
+                OpenUP/Basic
+              </a>
+            </li>
+            <li>
+              <a class="new" href="other.html">
+                Other Projects
+              </a>
+            </li>
+            <li>
+              <a href="http://blog.ndpsoftware.com/" target="_blank">My Blog</a>
+            </li>
+            <li>
+              <a href="about.html"> 
+                About This Site
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu nontechnical">
+          <ul>
+            <li>
+              Non-technical 
+            </li>
+            <li>
+              <a href="http://delicious.com/ndp" target="_blank">
+                  delicious/ndp
+              </a>
+            </li>
+            <li>
+              <a href="http://ical.mac.com/WebObjects/iCal.woa/wa/default?u=ndp&amp;n=ndp.ics" target="_blank">
+                Calendar
+              </a>
+            </li>
+            <li>
+              <a href="construction.html">
+                Construction
+              </a>
+            </li>
+            <!--<li>-->
+              <!--<a href="http://priita.com" target="_blank">-->
+                <!--Priita.com-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="http://homepage.mac.com/ndp" target="_blank">-->
+                <!--Photos-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="http://tanyandy.com" target="_blank">-->
+                <!--Tanyandy.com-->
+              <!--</a>-->
+            <!--</li>-->
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="footnotes screenOnly">
+    <div class="menu technical">
+      <ul>
+        <li>
+          <span class='st_email'></span>
+            <span class='st_stumbleupon'></span>
+             <span class='st_twitter'></span>
+            <span class='st_googleplus'></span>
+            <span class='st_facebook'></span>
+            <span class='st_wordpress'></span>
+            <span class='st_hatena'></span>
+            <span class='st_delicious'></span>
+            <span class='st_blogger'></span>
+            <span class='st_tumblr'></span>
+            <span class='st_reddit'></span>
+            <span class='st_linkedin'></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    Copyright (c) 1999-2013 Andrew J. Peterson.
+    <a href="mailto:andy@ndpsoftware.com">
+      andy@ndpsoftware.com</a>. 
+  </div>
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = '../apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>      
+<script type="text/javascript">var switchTo5x=false;</script><script type="text/javascript" src="../w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'34a76a8b-d635-4885-8b9c-78fbf9a6d08d'});</script>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/show_char_limit.php by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:54 GMT -->
+</html>
+

@@ -1,0 +1,130 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/continuous_integration,_i8bUEL6cEdqti4GwqTkbsQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:25:31 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Continuous Integration</title>
+<meta content="Guideline" name="uma.type">
+<meta content="continuous_integration" name="uma.name">
+<meta content="Continuous Integration" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Continuous Integration</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline describes how to apply continuous integration to improve the integration of units into the code base.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../disciplines/config_and_change_management%2c_0TwXgMlgEdmt3adZL5Dmdw.html" guid="_0TwXgMlgEdmt3adZL5Dmdw">Configuration &amp; Change Management</a>
+</li>
+<li>
+<a href="../../workproducts/build%2c_0YuXEMlgEdmt3adZL5Dmdw.html" guid="_0YuXEMlgEdmt3adZL5Dmdw">Build</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    [ Don't forget to talk about running developer tests. ]
+</p>
+<p>
+    [Content below taken from step “Accept Integrated Elements and Promote Build" in the Task “Integrate and Create
+    Build"... this Main Description needs to be cleaned up ]
+</p>
+<p>
+    Depending on the complexity and number of&nbsp;components to be integrated, it is often more efficient to produce the
+    target build in a number of steps, adding more&nbsp;components with each step, and producing a series of intermediate
+    'mini' builds - thus, each build planned for an iteration may, in turn, have its own sequence of transient intermediate
+    builds. These are subjected to a minimal integration test&nbsp;to ensure that what is added is compatible with what
+    already exists in the system integration workspace. It should be easier to isolate and diagnose problems using this
+    approach.&nbsp;
+</p>
+<p>
+    Delivered&nbsp;components are accepted&nbsp;incrementally into the system integration workspace,&nbsp;having any merge
+    conflicts being resolved.&nbsp;It is recommended that this&nbsp;is done in a bottom-up approach with respect to the
+    layered structure, making sure that the versions of the&nbsp;components are consistent, taking imports into
+    consideration. The increment of&nbsp;components is compiled and linked into an intermediate build, which is then
+    provided to the tester to execute a minimal system integration test.
+</p>
+<p>
+    <font size="1"><img height="172" alt="" src="resources/ac_intsy.gif" width="501" /></font>
+</p>
+<p>
+    This diagram shows a build produced in three increments. Some&nbsp;components are only needed as stubs, to make it
+    possible to compile and link the other components, and provide the essential minimal run-time behavior.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../concepts/continuous_integration%2c_B3xkEPD0EdqYgerqi84oCA.html" guid="_B3xkEPD0EdqYgerqi84oCA">Continuous Integration</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/continuous_integration,_i8bUEL6cEdqti4GwqTkbsQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:25:32 GMT -->
+</html>

@@ -1,0 +1,283 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/tasks/impl_developer_tests,_0iL1EMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:24:59 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Task: Implement Developer Tests</title>
+<meta content="Task" name="uma.type">
+<meta content="impl_developer_tests" name="uma.name">
+<meta content="Implement Developer Tests" name="uma.presentationName">
+<meta content="Discipline:implementation:Implementation" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Developer">
+<link type="text/css" href="../../css/default.css" rel="StyleSheet">
+<script src="../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script src="../../scripts/steps.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../index-2.html';
+					imgPath = '../../images/index.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../images/index.html'); createStepLinks('div', 'stepHeading');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Task: Implement Developer Tests</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../index.html"></a><script src="../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Implement one or more tests that enable the validation of the individual software components through execution.</td>
+</tr>
+<tr>
+<td>Disciplines: <a href="../disciplines/implementation%2c_0TeDoMlgEdmt3adZL5Dmdw.html" guid="_0TeDoMlgEdmt3adZL5Dmdw">Implementation</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Purpose</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell">Prepare to validate a software component (e.g. an operation, a class, a stored procedure) through unit testing.&nbsp; The
+result is one or more new developer tests.</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell">Primary Performer:
+								<ul>
+<li>
+<a href="../roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" guid="_0YDosMlgEdmt3adZL5Dmdw">Developer</a>
+</li>
+</ul>
+</td><td class="sectionTableCell">Additional Performers:
+								<ul>
+<li>
+<a href="../roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" guid="_0ZM4MclgEdmt3adZL5Dmdw">Tester</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Inputs</th><td width="42%" class="sectionTableCell">Mandatory:
+								<ul>
+<li>
+<a href="../workproducts/implementation%2c_0YoQcMlgEdmt3adZL5Dmdw.html" guid="_0YoQcMlgEdmt3adZL5Dmdw">Implementation</a>
+</li>
+</ul>
+</td><td class="sectionTableCell">Optional:
+								<ul>
+<li>
+<a href="../workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" guid="_0WuL8slgEdmt3adZL5Dmdw">Design</a>
+</li>
+<li>
+<a href="../workproducts/test_script%2c_0ZfMEMlgEdmt3adZL5Dmdw.html" guid="_0ZfMEMlgEdmt3adZL5Dmdw">Test Script</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Outputs</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="../workproducts/developer_test%2c_0YuXEclgEdmt3adZL5Dmdw.html" guid="_0YuXEclgEdmt3adZL5Dmdw">Developer Test</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    Developer testing is different from other forms of testing in that it is based on the expected behavior of code units
+    rather than being directly based on the system requirements.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Steps</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Refine scope and identify the test(s)</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Select the increment of work to be tested and identify developer test(s) to verify that the&nbsp;<a class="elementLink" href="../workproducts/implementation%2c_0YoQcMlgEdmt3adZL5Dmdw.html" guid="_0YoQcMlgEdmt3adZL5Dmdw">Implementation</a>&nbsp;being developed behaves correctly.&nbsp; It is best to do this
+    at a small scale, much smaller than the complete code base to be authored by a developer over the course of an
+    iteration.&nbsp; This can be done for one operation, one field added to a user interface, one stored procedure, etc.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Write the test setup</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Implement the setup logic&nbsp;that must be performed as part of the&nbsp;<a class="elementLink" href="../workproducts/developer_test%2c_0YuXEclgEdmt3adZL5Dmdw.html" guid="_0YuXEclgEdmt3adZL5Dmdw">Developer Test</a>.&nbsp; To successfully run a test the system must be in a known state
+    so that the correct behavior can be defined.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Write the test logic</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>Write the&nbsp;steps that performs the actual test(s).&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Define the expected results</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Define the expected results of&nbsp;each&nbsp;test&nbsp;so that it can be verified.
+</p>
+<p>
+    After&nbsp;a test runs, you need to be able to compare the results of running the test against what&nbsp;was expected
+    to happen.&nbsp; The test is successful when the actual results match the expected results.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Define the test response</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>Define the information the test(s) must produce to successfully indicate success or failure.&nbsp; Consider if a response
+of True or False is sufficient, or&nbsp;if a detailed message should be logged as well.</td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Write clean-up code</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>Identify, and then implement, the steps to be followed in order to restore the environment to the original state for each
+test.&nbsp; The goal is to ensure that there are no side effects from running&nbsp;the tests.</td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Test the test</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Verify&nbsp;that&nbsp;each developer test works correctly. To do this:
+</p>
+<ul>
+    <li>
+        Run the test(s), observe&nbsp;their behavior, and fix any defects in the tests.
+    </li>
+    <li>
+        Ensure that the expected results are defined properly and that they're being checked correctly.&nbsp;
+    </li>
+    <li>
+        Check the clean-up logic for each test.
+    </li>
+    <li>
+        Ensure that each developer test&nbsp;works within your test suite framework.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Key Considerations</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><ol>
+    <li>
+        Automate tests via a unit regression testing tool (for example, xUnit) so that tests may be run by developers
+        whenever they make changes to the code.
+    </li>
+    <li>
+        Test to the risk of the component. For example, the more critical a component is, the more important it is&nbsp;to
+        test it&nbsp;thoroughly.
+    </li>
+    <li>
+        Pair with the Tester in all steps of this task to gain insight on testing and quality considerations.
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Alternatives</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell">Rely on acceptance tests to validate your software. This will likely be time consuming, late, and not as effective as
+developer testing in identifying bugs and finding their location in the code.</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../guidances/concepts/test_first_design%2c_0Y6kUMlgEdmt3adZL5Dmdw.html" guid="_0Y6kUMlgEdmt3adZL5Dmdw">Test-first Design</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../guidances/guidelines/developer_testing%2c_0ZGxkMlgEdmt3adZL5Dmdw.html" guid="_0ZGxkMlgEdmt3adZL5Dmdw">Developer Testing</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../guidances/supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/tasks/impl_developer_tests,_0iL1EMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:25:00 GMT -->
+</html>

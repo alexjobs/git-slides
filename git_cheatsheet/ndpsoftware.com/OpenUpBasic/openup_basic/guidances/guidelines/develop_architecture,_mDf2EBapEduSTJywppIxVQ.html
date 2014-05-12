@@ -1,0 +1,309 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/develop_architecture,_mDf2EBapEduSTJywppIxVQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Develop the Architecture</title>
+<meta content="Guideline" name="uma.type">
+<meta content="develop_architecture" name="uma.name">
+<meta content="Develop the Architecture" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Develop the Architecture</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline provides additional information to support the ongoing refinement and development of the architecture.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../tasks/develop_arch%2c_0gRJgMlgEdmt3adZL5Dmdw.html" guid="_0gRJgMlgEdmt3adZL5Dmdw">Develop the Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><h4>
+    Identify architectural drivers and scenarios
+</h4>
+<p>
+    <strong>Architectural drivers</strong> are the combination of functional requirements and&nbsp;quality attributes that
+    shape the architecture. Typically, the drivers are a subset of the&nbsp;<a class="elementLink" href="../../workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" guid="_BVh9cL-CEdqb7N6KIeDL8Q">Supporting Requirements</a> that address attributes such as modifiability, performance,
+    safety, reliability, and security. The drivers&nbsp;can also&nbsp;address functional aspects of the requirements that
+    provide essential system services.
+</p>
+<p>
+    The requirements of architectural drivers are often satisfied by the development of software that implements&nbsp;<a class="elementLink" href="../concepts/arch_mech%2c_mzxI0A4LEduibvKwrGxWxA.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a>. The features required by these mechanisms can be implicit
+    in the use cases that describe the functionality of the system. These are used to guide the design of
+    each&nbsp;architectural mechanism. It may sometimes be useful to devise additional use cases and scenarios to
+    specifically describe the architectural mechanism. For example&nbsp;<strong>Log on to Application</strong> is a use
+    case commonly associated with mechanisms related to security, but&nbsp;frequently overlooked when users alone specify
+    software requirements.
+</p>
+<p>
+    It is important to specify qualities precisely. For example, if you want a system to be secure, specify the types of
+    threats. Quality scenarios are one way to express desired qualities in collaboration with the system stakeholders [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html" guid="_9ToeIB83Edqsvps02rpOOg">KAZ04</a>]. Walk through things that could happen to the system and How it would
+    respond. <strong>Use-case scenarios</strong> &nbsp;focus on run-time behavior where the stakeholder is the user.
+    <strong>Quality scenarios</strong> encompass other interactions with the system as well, such as system maintenance
+    staff modifying the system.
+</p>
+<p>
+    For each quality attribute (such as usability, reliability, performance, or&nbsp;security), several scenarios may be
+    documented (for instance, security scenarios for denial of service and unauthorized access). A good scenario makes
+    clear what the stimulus is, what causes it, and what responses are appropriate.
+</p>
+<p>
+    Example:
+</p>
+<blockquote>
+    <p>
+        During peak operation, an unauthorized intruder tries to download prohibited data through the system
+        administrator’s interface. The system detects the attempt, blocks access, and notifies the supervisor within 15
+        seconds.
+    </p>
+</blockquote>
+<p>
+    After you have collected the use cases and scenarios, you need to establish priorities for them. Use scenarios to
+    realize requirements, so that their mapping onto the architecture, their impact, and their interactions can be
+    understood.
+</p>
+<h4>
+    Identify design mechanisms
+</h4>
+<p>
+    Consider each high-priority quality scenario, and map each of these onto the architecture. This step raises the set of
+    infrastructure services that determine issues to the architectural level. Examples: :
+</p>
+<ul>
+    <li>
+        How system activities are scheduled and coordinated
+    </li>
+    <li>
+        How data moves through the system
+    </li>
+    <li>
+        How faults are propagated and handled
+    </li>
+    <li>
+        How security is achieved
+    </li>
+    <li>
+        How performance goals are measured and met
+    </li>
+    <li>
+        How new components are integrated
+    </li>
+    <li>
+        How well the system scales
+    </li>
+</ul>
+<p>
+    It is this set of infrastructure services, far more than the functional goals of the system, that determine the form of
+    the architecture.
+</p>
+<p>
+    Propose mechanisms or tactics for responding to quality scenarios. These are represented by the <a class="elementLink" href="../concepts/design_mechanism%2c_w2ACwA4LEduibvKwrGxWxA.html" guid="_w2ACwA4LEduibvKwrGxWxA">Design Mechanism</a>. There are, for example, sets of engineering design principles and
+    patterns for dealing with performance constraints, modifiability, or fault tolerance. The Software Engineering
+    Institute (SEI) at Carnegie Mellon University has proposed tactics for six quality attributes [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html" guid="_9ToeIB83Edqsvps02rpOOg">KAZ00</a>]:
+</p>
+<ol>
+    <li>
+        Availability
+    </li>
+    <li>
+        Modifiability
+    </li>
+    <li>
+        Security
+    </li>
+    <li>
+        Performance
+    </li>
+    <li>
+        Usability
+    </li>
+    <li>
+        Testability
+    </li>
+</ol>
+<h4>
+    Identify reuse opportunities
+</h4>
+<p>
+    After looking for similar behavior and returned values, then look for similarity of parameters. If their
+    interfaces&nbsp;are not an exact match for the component interfaces being proposed, you can modify the
+    proposed&nbsp;signatures to increase the degree of reuse. Some design mechanisms, such as performance or security
+    requirements, may disqualify a component from reuse even when there is&nbsp;a perfect match between operation
+    signatures.
+</p>
+<p align="left">
+    A common set of components may exist that provides many of the <a class="elementLink" href="../concepts/arch_mech%2c_mzxI0A4LEduibvKwrGxWxA.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a> that you need&nbsp;for the new system. These components may
+    be available either because they were developed or purchased previously for&nbsp;similar systems. Given their
+    suitability and compatibility within the software architecture, there may be a need to reverse-engineer these
+    components to represent them in a design model and reuse them in a project.
+</p>
+<p align="left">
+    Similar thinking applies to&nbsp;existing databases. Part of the information to be used by the application under
+    development may already reside in a database. You may be able to get the classes that represent the database structures
+    that hold this information by reverse-engineering the database.
+</p>
+<h4 align="left">
+    Identify architecturally significant design elements
+</h4>
+<p align="left">
+    Consider&nbsp;each high-priority use case in turn while mapping use case scenarios&nbsp;onto the architecture. Walk
+    through the actions that the use case initiates and highlight the areas of the architecture that participate in
+    realizing, or implementing, the use case.
+</p>
+<p>
+    Identifying components will help hide the complexity of the system and help you work at a higher level. Components need
+    to be internally cohesive and to provide external services through a limited interface. Component identification can
+    be&nbsp;based on architectural layers, deployment choices, or key abstractions. Ask yourself these questions:
+</p>
+<ul>
+    <li>
+        What is logically or functionally related (same use case or service, for example)?
+    </li>
+    <li>
+        What entities provide services to multiple others?
+    </li>
+    <li>
+        What entities depend on each other? Strongly or weakly?
+    </li>
+    <li>
+        What entities should you be able to exchange independently from others?
+    </li>
+    <li>
+        What will run on the same processor or network node?
+    </li>
+    <li>
+        What parts are constrained by similar performance requirements?
+    </li>
+</ul>
+<p>
+    Each component includes entities from the problem domain, control classes that coordinate complex tasks within
+    components, and interfaces that handle communication with the environment. The interface for each instantiated element
+    is identified. At this point, interfaces do not need to be as detailed as a signature, but they do need to document
+    what the elements need, what they can use, and what they can depend on.
+</p>
+<p>
+    Identified patterns define the types of elements, but not a specific number. Apply the chosen patterns to define a new
+    set of elements that conform to the patterns. Functionality will be allocated to the instantiated elements.
+</p>
+<h4>
+    Define development and test architectures
+</h4>
+<p>
+    The development and test architectures may be different from the target production implementation.
+</p>
+<ul>
+    <li>
+        Additional software may need to be developed to support testing.
+    </li>
+    <li>
+        Alternative deployment configurations may need to be defined in response to constraints on development hardware.
+    </li>
+    <li>
+        Multiple environments may be required to support different categories of tests.
+    </li>
+</ul>
+<p>
+    In each case, you need to specify the architecture. Also, be sure to consider the impact on the quality of the overall
+    architecture.
+</p>
+<h4>
+    Document and communicate decisions
+</h4>
+<p>
+    You can document and communicate your decisions as many ways as you wish:
+</p>
+<ul>
+    <li>
+        Publication of&nbsp;reference source code
+    </li>
+    <li>
+        Publication of&nbsp;reference models
+    </li>
+    <li>
+        Publication of&nbsp;software architecture documentation
+    </li>
+    <li>
+        Formal&nbsp;presentations of the material
+    </li>
+    <li>
+        Informal walkthroughs of the architecture
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../concepts/business_pattern%2c_Z53x0BapEduSTJywppIxVQ.html" guid="_Z53x0BapEduSTJywppIxVQ">Business Pattern</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/develop_architecture,_mDf2EBapEduSTJywppIxVQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+</html>

@@ -1,0 +1,272 @@
+<section>
+    <h2>Basic Snapshotting</h2>
+    <h3>The lifecycle of the status of your files</h3>
+    <img src="images/four_stages.png">
+</section>
+
+<section>
+
+    <h3>Checking the Status of Your Files</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git status
+  # On branch master
+  nothing to commit (working directory clean)
+	</code></pre>
+
+    <pre><code style="margin-top: 20px;">
+  $ nano README
+  $ git status
+  # On branch master
+  # Untracked files:
+  # (use "git add &lt;file&gt;..." to include in what will be committed)
+  #
+  # README
+  nothing added to commit but untracked files present (use "git add" to track)
+	</code></pre>
+</section>
+
+<section>
+    <h3>Tracking New Files</h3>
+    <pre><code style="margin-top: 20px;">
+  $ touch README
+  $ git add README
+	</code></pre>
+
+    <pre><code style="margin-top: 20px;">
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # new file: README  
+	</code></pre>
+</section>
+
+<section>
+    <h3>Staging Modified Files</h3>
+    <pre><code style="margin-top: 20px;">
+  $ nano test.txt   # file edit
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # new file: README
+  #
+  # Changed but not updated:
+  # (use "git add &lt;file&gt;..." to update what will be committed)
+  #
+  # modified: test.txt  
+	</code></pre>
+
+    <pre><code style="margin-top: 20px;">
+  $ git add test.txt
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # new file: README
+  # modified: test.txt  
+	</code></pre>
+</section>
+
+
+<section>
+    <h3>gotcha :)</h3>
+    <pre><code style="margin-top: 20px;">
+  $ nano test.txt   # file edit
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # new file: README
+  # modified: test.txt
+  #
+  # Changed but not updated:
+  # (use "git add &lt;file&gt;..." to update what will be committed)
+  #
+  # modified: test.txt
+  	</code></pre>
+    <pre><code style="margin-top: 20px;"> 
+  $ git add test.txt
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt..." to unstage)
+  #
+  # new file readme
+  # modified test.txt  
+	</code></pre>
+</section>
+
+
+<section>
+    <h3>Viewing Your Staged and Unstaged Changes</h3>
+    <pre><code style="margin-top: 20px;">
+  $ nano test.txt   # file edit
+  $ git status
+  # On branch master
+  #
+  # Changed but not updated:
+  # (use "git add &lt;file&gt;..." to update what will be committed)
+  #
+  # modified: test.txt  
+	</code></pre>
+
+    <pre><code style="margin-top: 20px;">
+  $ git diff 
+	</code></pre>
+    <p>This command compares what is in your working directory with what is in your staging area. The result tells you the changes you've made that you haven't yet staged.</p>
+
+</section>
+
+<section>
+    <h3>More diff.....</h3>
+<pre><code style="margin-top: 20px;">
+  $ git diff -staged
+  $ git diff -cached
+	</code></pre>
+    <p>This command compares your staged changes to your last commit</p>
+
+    <pre><code style="margin-top: 20px;">
+  $ git diff --check 
+	</code></pre>
+    <p>This command identifies possible whitespace errors.</p>
+</section>
+
+
+<section>
+    <h3>Committing Your Changes</h3>
+<pre><code style="margin-top: 20px;">
+  $ git commit
+  $ git commit -m "#3182: Fixed Layout Issues"
+  $ git commit -a -m "#3182: Fixed Layout Issues" #it does not include untracked files 
+	</code></pre>
+    <h3>Viewing the Commit History</h3>
+<pre><code style="margin-top: 20px;">
+  $ git log
+  $ git log -p
+  $ git log -p 2
+  $ git log --stat
+  $ git log --pretty=oneline
+  $ git log --pretty=format:"%h - %an, %ar : %s"
+  $ git log --since=2.weeks  # --since, --after, --until, --before, --author, --committer
+	</code></pre>
+
+</section>
+
+<section>
+    <h3>Changing Your Last Commit</h3>
+<pre><code style="margin-top: 20px;">
+  $ git commit -m 'initial commit'
+  $ git add forgotten_file
+  $ git commit --amend
+	</code></pre>
+    <h3>Revert some existing commits</h3>
+<pre><code style="margin-top: 20px;">
+  $ git revert [--[no-]edit] [-n] [-m parent-number] [-s] "commit"...
+  $ git revert --continue
+  $ git revert --quit
+  $ git revert --abort
+	</code></pre>
+  <pre><code style="margin-top: 20px;">  
+  $ git revert HEAD~3
+  # Revert the changes specified by the fourth last commit in HEAD and create a new commit with the reverted changes.
+
+  $ git revert -n master~5..master~2
+  # Revert the changes done by commits from the fifth last commit in master (included) to the third last commit in master (included), but do not create any commit with the reverted changes. The revert only modifies the working tree and the index.
+</code></pre>
+</section>
+
+
+<section>
+    <h3>Unstaging a Staged File</h3>
+<pre><code style="margin-top: 20px;">
+  $ git add .
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # modified: README.txt
+  # modified: test.txt
+	</code></pre>
+<pre><code style="margin-top: 20px;">    
+  $ git reset HEAD test.txt
+  test.txt: locally modified
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # modified: README.txt
+  #
+  # Changed but not updated:
+  # modified: test.txt
+	</code></pre>
+</section>
+
+<section>
+    <h3>Unmodifying a Modified File</h3>
+<pre><code style="margin-top: 20px;">
+  $ git checkout -- test.txt
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # modified: README.txt
+  	</code></pre>
+</section>
+
+<section>
+    <h3>Removing Files</h3>
+    <pre><code style="margin-top: 20px;">
+  $ rm grit.gemspec
+  $ git status
+  # On branch master
+  #
+  # Changed but not updated:
+  # (use "git add/rm &lt;file&gt;..." to update what will be committed)
+  #
+  # deleted: grit.gemspec 
+	</code></pre>
+    <pre><code style="margin-top: 20px;">
+  $ git rm grit.gemspec
+  # rm 'grit.gemspec'
+  $ git status
+  # On branch master
+  #
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # deleted: grit.gemspec
+	</code></pre>
+    <pre><code style="margin-top: 20px;">
+  $ git rm --cached readme.txt
+	</code></pre>
+</section>
+
+<section>
+    <h3>Moving Files</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git mv file_from file_to 
+	</code></pre>
+    <pre><code style="margin-top: 20px;">
+  $ git mv README.txt README
+  $ git status
+  # On branch master
+  # Your branch is ahead of 'origin/master' by 1 commit.
+  #
+  # Changes to be committed:
+  # (use "git reset HEAD &lt;file&gt;..." to unstage)
+  #
+  # renamed: README.txt -> README
+  #
+	</code></pre>
+    <pre><code style="margin-top: 20px;">
+  $ mv README.txt README
+  $ git rm README.txt
+  $ git add README
+	</code></pre>
+</section>

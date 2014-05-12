@@ -1,0 +1,1717 @@
+<html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/noapplet/OpenUP_Basic.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:19:12 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Contents</title>
+<style type="text/css">
+/*******************************************************************************
+ * Copyright (c) 2000, 2004, 2005 IBM Corporation. All Rights Reserved. 
+ *
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *******************************************************************************/
+
+* {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 9pt;
+	margin: 0;
+	padding: 0;
+}
+
+BODY {
+	background-color: Window;
+	font: icon;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+UL {
+	border-width:0;
+	margin-left:15px;
+}
+
+#root {
+	margin-top:5px;
+	margin-left:5px;
+}
+
+UL.expanded {
+	display:block;
+}
+
+UL.collapsed {
+	display: none;
+}
+
+LI {
+	margin-top:3px;
+	list-style-image:none;
+	list-style-type:none;
+		white-space: nowrap;
+}
+
+IMG {
+	vertical-align: top;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	margin-right:4px;
+}
+
+
+A {
+	text-decoration:none;
+	color:#258
+	padding-right:2px;
+	/* this works in ie5.5, but not in ie5.0  */
+	white-space: nowrap;
+}
+
+A:hover{
+	text-decoration:underline;
+}
+
+A.active{
+	background:Highlight;
+	color:HighlightText;
+	width:100%;
+}
+
+A.active:hover{
+	text-decoration:underline;
+	background:Highlight;
+	color:HighlightText;
+	width:100%;
+}
+
+
+
+.h {
+	visibility:hidden;
+}
+
+</style>
+<base target="ory_doc">
+<script language="JavaScript">
+
+// Preload images
+minus = new Image();
+minus.src = "images"+"/minus.gif";
+plus = new Image();
+plus.src = "images"+"/plus.gif";
+toc_open_img = new Image();
+toc_open_img.src = "images"+"/toc_open.gif";
+toc_closed_img = new Image();
+toc_closed_img.src = "images"+"/toc_closed.gif";
+folder_img = new Image();
+folder_img.src = "images"+"/container_obj.gif";
+topic_img = new Image();
+topic_img.src = "images"+"/topic.gif";
+altTopicClosed = "Topic\u0020closed";
+altTopicOpen = "Topic\u0020open";
+</script><script src="toc.js" language="JavaScript"></script><script src="tree.js" language="JavaScript"></script>
+</head>
+<body onload="setLoaded();" dir="ltr">
+<ul id="root" class="expanded" dir="ltr">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/supportingmaterials/intro_to_openup_basic%2c_i-BDsNogEdqfmNgIq7q3Xw.html" id="_i-BDsNogEdqfmNgIq7q3Xw"><img title="" alt="" src="images/mic.gif">Introduction to OpenUP/Basic</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/getting_started%2c_cp6ycBOGEduCNqgZdt_OaA.html" id="_cp6ycBOGEduCNqgZdt_OaA"><img title="" alt="" src="images/mic.gif">Getting Started</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/roadmaps/openup_basic_roadmap%2c_vEruwN-rEdqiM_wFaqLjNg.html" id="_vEruwN-rEdqiM_wFaqLjNg"><img title="" alt="" src="images/Roadmap.gif">OpenUP/Basic Roadmap</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/about%2c_ClDF4BOHEduCNqgZdt_OaA.html" id="_ClDF4BOHEduCNqgZdt_OaA"><img title="" alt="" src="images/about.gif">About</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/supportingmaterials/about_openup_basic%2c_8tSNMPGYEdqiDINUyockoA.html" id="_8tSNMPGYEdqiDINUyockoA"><img title="" alt="" src="images/about.gif">About OpenUP/Basic</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../base_concepts/guidances/supportingmaterials/about_base_concepts%2c_uvje4D_fEdqDFvujd6NHiA.html" id="_uvje4D_fEdqDFvujd6NHiA"><img title="" alt="" src="images/about.gif">About Base Concepts</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" id="_UaGfECcTEduSX6N2jUafGA"><img title="" alt="" src="images/CRsym_obj.gif">OpenUP Copyright</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/core_principles_cat%2c_HEu9QBOHEduCNqgZdt_OaA.html" id="_HEu9QBOHEduCNqgZdt_OaA"><img title="" alt="" src="images/concept_obj.gif">Core Principles</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_balance%2c_ssG6MMvpEdqukPpotm3DYg.html" id="_ssG6MMvpEdqukPpotm3DYg"><img title="" alt="" src="images/Concept.gif">Balance competing priorities to maximize stakeholder value</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_collaborate%2c_KkTIsMp7EdqC_NfSivunjA.html" id="_KkTIsMp7EdqC_NfSivunjA"><img title="" alt="" src="images/Concept.gif">Collaborate to align interests and share understanding</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_focus%2c_9gocwMvoEdqukPpotm3DYg.html" id="_9gocwMvoEdqukPpotm3DYg"><img title="" alt="" src="images/Concept.gif">Focus on articulating the architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_evolve%2c_GXiogMvoEdqukPpotm3DYg.html" id="_GXiogMvoEdqukPpotm3DYg"><img title="" alt="" src="images/Concept.gif">Evolve to continuously obtain feedback and improve</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/sub_processes%2c_V2BQkEmbEdu0xduwSKie-w.html" id="_V2BQkEmbEdu0xduwSKie-w"><img title="" alt="" src="images/concept_obj.gif">Sub-processes</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/collab_commun_subprocess%2c_r8cVIEmbEdu0xduwSKie-w.html" id="_r8cVIEmbEdu0xduwSKie-w"><img title="" alt="" src="images/concept_obj.gif">Collaboration and Communication</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_collaborate%2c_KkTIsMp7EdqC_NfSivunjA.html" id="_KkTIsMp7EdqC_NfSivunjA"><img title="" alt="" src="images/Concept.gif">Collaborate to align interests and share understanding</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/rolesets/openup_basic_roles%2c_TZIJ0O8NEdmKSqa_gSYthg.html" id="_TZIJ0O8NEdmKSqa_gSYthg"><img title="" alt="" src="images/RoleSet.gif">Roles</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/define_vision%2c_0fOAoMlgEdmt3adZL5Dmdw.html" id="_0fOAoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Define Vision</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/detail_requirements%2c_0e1mIMlgEdmt3adZL5Dmdw.html" id="_0e1mIMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Detail Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/find_and_outline_requirements%2c_P9cMUPV_EdmdHa9MmVPgqQ.html" id="_P9cMUPV_EdmdHa9MmVPgqQ"><img title="" alt="" src="images/Task.gif">Find and Outline Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/actor%2c_0VMh8MlgEdmt3adZL5Dmdw.html" id="_0VMh8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Actor</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/glossary%2c_Wn7HcNcEEdqz_d2XWoVt6Q.html" id="_Wn7HcNcEEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Artifact.gif">Glossary</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" id="_BVh9cL-CEdqb7N6KIeDL8Q"><img title="" alt="" src="images/Artifact.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/use_case%2c_0VGbUMlgEdmt3adZL5Dmdw.html" id="_0VGbUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/uc_model%2c_W2SgEDR5EdutE_HNDTJk5Q.html" id="_W2SgEDR5EdutE_HNDTJk5Q"><img title="" alt="" src="images/Artifact.gif">Use Case Model</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/vision%2c_0WVxcMlgEdmt3adZL5Dmdw.html" id="_0WVxcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Vision</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/any_role%2c_0dsWoMlgEdmt3adZL5Dmdw.html" id="_0dsWoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Any Role</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/request_change%2c_0mwzEclgEdmt3adZL5Dmdw.html" id="_0mwzEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Request Change</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" id="_0X9iEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Architect</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/analyze_arch_reqs%2c_0f-1oMlgEdmt3adZL5Dmdw.html" id="_0f-1oMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Analyze Architectural Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/demonstrate_architecture%2c_0hmmQclgEdmt3adZL5Dmdw.html" id="_0hmmQclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Demonstrate the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/develop_arch%2c_0gRJgMlgEdmt3adZL5Dmdw.html" id="_0gRJgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Develop the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/arch_poc%2c_PoDR0NbYEdmlO4WLYHrJaQ.html" id="_PoDR0NbYEdmlO4WLYHrJaQ"><img title="" alt="" src="images/Artifact.gif">Architectural Proof-of-Concept</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" id="_0XAf0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Architecture</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" id="_0fshwMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Design the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/impl_developer_tests%2c_0iL1EMlgEdmt3adZL5Dmdw.html" id="_0iL1EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Developer Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_solution%2c_0hyzgMlgEdmt3adZL5Dmdw.html" id="_0hyzgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_developer_tests%2c_0iYCUMlgEdmt3adZL5Dmdw.html" id="_0iYCUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Developer Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/build%2c_0YuXEMlgEdmt3adZL5Dmdw.html" id="_0YuXEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Build</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" id="_0WuL8slgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/developer_test%2c_0YuXEclgEdmt3adZL5Dmdw.html" id="_0YuXEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Developer Test</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/implementation%2c_0YoQcMlgEdmt3adZL5Dmdw.html" id="_0YoQcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Implementation</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/assess_results%2c_0l53cMlgEdmt3adZL5Dmdw.html" id="_0l53cMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Assess Results</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/manage_iteration%2c_8S2aICbYEdqh1LYUOGRh2A.html" id="_8S2aICbYEdqh1LYUOGRh2A"><img title="" alt="" src="images/Task.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_iteration%2c_0keUEMlgEdmt3adZL5Dmdw.html" id="_0keUEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_the_project%2c_0lC70MlgEdmt3adZL5Dmdw.html" id="_0lC70MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Project</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/iteration_plan%2c_0aQBEslgEdmt3adZL5Dmdw.html" id="_0aQBEslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Iteration Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/project_plan%2c_0a6vcMlgEdmt3adZL5Dmdw.html" id="_0a6vcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Project Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/risk_list%2c_Ckay8Cc_EduIsqH1Q6ZuqA.html" id="_Ckay8Cc_EduIsqH1Q6ZuqA"><img title="" alt="" src="images/Artifact.gif">Risk List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/status_assessment%2c_0bA2EMlgEdmt3adZL5Dmdw.html" id="_0bA2EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Status Assessment</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/work_items_list%2c_rGNWsCbSEdqh1LYUOGRh2A.html" id="_rGNWsCbSEdqh1LYUOGRh2A"><img title="" alt="" src="images/Artifact.gif">Work Items List</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/stakeholder%2c_dTa6gMAYEdqX-s4mWhkyqQ.html" id="_dTa6gMAYEdqX-s4mWhkyqQ"><img title="" alt="" src="images/Role.gif">Stakeholder</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/create_test_case%2c_0iwc0clgEdmt3adZL5Dmdw.html" id="_0iwc0clgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Create Test Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_tests%2c_0jO98MlgEdmt3adZL5Dmdw.html" id="_0jO98MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_tests%2c_0jVEkMlgEdmt3adZL5Dmdw.html" id="_0jVEkMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/test_case%2c_0ZS-0MlgEdmt3adZL5Dmdw.html" id="_0ZS-0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/test_log%2c_0ZlSsMlgEdmt3adZL5Dmdw.html" id="_0ZlSsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Log</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/test_script%2c_0ZfMEMlgEdmt3adZL5Dmdw.html" id="_0ZfMEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Script</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/intent_subprocess%2c_57_ZMEmbEdu0xduwSKie-w.html" id="_57_ZMEmbEdu0xduwSKie-w"><img title="" alt="" src="images/concept_obj.gif">Intent</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_balance%2c_ssG6MMvpEdqukPpotm3DYg.html" id="_ssG6MMvpEdqukPpotm3DYg"><img title="" alt="" src="images/Concept.gif">Balance competing priorities to maximize stakeholder value</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/requirements%2c_0TR2ZMlgEdmt3adZL5Dmdw.html" id="_0TR2ZMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Requirements</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/initiate_project%2c_0pWNA8lgEdmt3adZL5Dmdw.html" id="_0pWNA8lgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Initiate Project</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_requirements%2c_0o9ygclgEdmt3adZL5Dmdw.html" id="_0o9ygclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Manage Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_0pJ_xslgEdmt3adZL5Dmdw.html" id="_0pJ_xslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Ongoing Tasks</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/define_vision%2c_0fOAoMlgEdmt3adZL5Dmdw.html" id="_0fOAoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Define Vision</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/detail_requirements%2c_0e1mIMlgEdmt3adZL5Dmdw.html" id="_0e1mIMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Detail Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/find_and_outline_requirements%2c_P9cMUPV_EdmdHa9MmVPgqQ.html" id="_P9cMUPV_EdmdHa9MmVPgqQ"><img title="" alt="" src="images/Task.gif">Find and Outline Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/detail_ucs_and_scenarios%2c_4BJ_YCxSEdqjsdw1QLH_6Q.html" id="_4BJ_YCxSEdqjsdw1QLH_6Q"><img title="" alt="" src="images/Guideline.gif">Detail Use Cases and Scenarios</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/effective_req_reviews%2c_E-dPIL-GEdqb7N6KIeDL8Q.html" id="_E-dPIL-GEdqb7N6KIeDL8Q"><img title="" alt="" src="images/Guideline.gif">Effective Requirement Reviews</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/find_and_outline_actors_and_ucs%2c_eyL0wCu-EdqSxKAVa9kmvA.html" id="_eyL0wCu-EdqSxKAVa9kmvA"><img title="" alt="" src="images/Guideline.gif">Find and Outline Actors and Use Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/requirement_attributes%2c_VQ268O0KEdqHTdbLTmC5IQ.html" id="_VQ268O0KEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Requirement Attributes</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/requirement_pitfalls%2c_1AOsMO0JEdqHTdbLTmC5IQ.html" id="_1AOsMO0JEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Guideline.gif">Requirement Pitfalls</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/requirements%2c_0Wh-sMlgEdmt3adZL5Dmdw.html" id="_0Wh-sMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/req_gathering_techniques%2c_OnoNQNSAEdmLhZ9H5Plxyw.html" id="_OnoNQNSAEdmLhZ9H5Plxyw"><img title="" alt="" src="images/Guideline.gif">Requirements Gathering Techniques</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/supporting_requirements%2c_VXZ5wO0IEdqHTdbLTmC5IQ.html" id="_VXZ5wO0IEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/supporting_requirements%2c_wr24gNcGEdqz_d2XWoVt6Q.html" id="_wr24gNcGEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Guideline.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/traceability%2c_eYtQQO0KEdqHTdbLTmC5IQ.html" id="_eYtQQO0KEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Traceability</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/use_case%2c_KudM0NcJEdqz_d2XWoVt6Q.html" id="_KudM0NcJEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Concept.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/use_case_formats%2c_qq0GMAXkEduj_7BEUj1JfQ.html" id="_qq0GMAXkEduj_7BEUj1JfQ"><img title="" alt="" src="images/Guideline.gif">Use Case Formats</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/writing_good_requirements%2c_6jXzYNcKEdqz_d2XWoVt6Q.html" id="_6jXzYNcKEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Guideline.gif">Writing Good Requirements</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/config_and_change_management%2c_0TwXgMlgEdmt3adZL5Dmdw.html" id="_0TwXgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Configuration &amp; Change Management</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_0pJ_xslgEdmt3adZL5Dmdw.html" id="_0pJ_xslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Ongoing Tasks</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/request_change%2c_0mwzEclgEdmt3adZL5Dmdw.html" id="_0mwzEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Request Change</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/assign_changes_to_iteration%2c__yQQ4L6REdqti4GwqTkbsQ.html" id="__yQQ4L6REdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Assign Changes to an Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/change_requests%2c_6jdvECb3Edqh1LYUOGRh2A.html" id="_6jdvECb3Edqh1LYUOGRh2A"><img title="" alt="" src="images/Concept.gif">Change Requests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/change_requests%2c_fnZj0NVXEdqy9sbRhejO5Q.html" id="_fnZj0NVXEdqy9sbRhejO5Q"><img title="" alt="" src="images/Guideline.gif">Change Requests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/continuous_integration%2c_B3xkEPD0EdqYgerqi84oCA.html" id="_B3xkEPD0EdqYgerqi84oCA"><img title="" alt="" src="images/Concept.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/continuous_integration%2c_i8bUEL6cEdqti4GwqTkbsQ.html" id="_i8bUEL6cEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/promoting_builds%2c_SM4YIL6dEdqti4GwqTkbsQ.html" id="_SM4YIL6dEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Promoting Builds</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/work_items_list%2c_7vEXEMA4EdqSgKaj2SZBmg.html" id="_7vEXEMA4EdqSgKaj2SZBmg"><img title="" alt="" src="images/Guideline.gif">Work Items List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/workspace%2c_0cEmAMlgEdmt3adZL5Dmdw.html" id="_0cEmAMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Workspace</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/requirements%2c_allMQMWfEdqiT9CqkRksWQ.html" id="_allMQMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Requirements</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/actor%2c_0VMh8MlgEdmt3adZL5Dmdw.html" id="_0VMh8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Actor</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/actor%2c_0VrDEMlgEdmt3adZL5Dmdw.html" id="_0VrDEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Actor</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/find_and_outline_actors_and_ucs%2c_eyL0wCu-EdqSxKAVa9kmvA.html" id="_eyL0wCu-EdqSxKAVa9kmvA"><img title="" alt="" src="images/Guideline.gif">Find and Outline Actors and Use Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/use_case_formats%2c_qq0GMAXkEduj_7BEUj1JfQ.html" id="_qq0GMAXkEduj_7BEUj1JfQ"><img title="" alt="" src="images/Guideline.gif">Use Case Formats</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/glossary%2c_Wn7HcNcEEdqz_d2XWoVt6Q.html" id="_Wn7HcNcEEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Artifact.gif">Glossary</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" id="_BVh9cL-CEdqb7N6KIeDL8Q"><img title="" alt="" src="images/Artifact.gif">Supporting Requirements</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/good_requirements%2c_jxn9EO0HEdqHTdbLTmC5IQ.html" id="_jxn9EO0HEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Checklist.gif">Qualities of Good Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/supporting_requirements%2c_Vael8CGMEdu3VKXZx45D3A.html" id="_Vael8CGMEdu3VKXZx45D3A"><img title="" alt="" src="images/Checklist.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/supporting_requirements%2c_VXZ5wO0IEdqHTdbLTmC5IQ.html" id="_VXZ5wO0IEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/supporting_requirements%2c_wr24gNcGEdqz_d2XWoVt6Q.html" id="_wr24gNcGEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Guideline.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/supporting_requirements_spec%2c_ItYXcNa9Edqrw4BYKyYKiA.html" id="_ItYXcNa9Edqrw4BYKyYKiA"><img title="" alt="" src="images/Template.gif">Supporting Requirements Specification</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/use_case%2c_0VGbUMlgEdmt3adZL5Dmdw.html" id="_0VGbUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Use Case</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/use_case%2c_0kNwINk1Edq2Q8qZoWbvGA.html" id="_0kNwINk1Edq2Q8qZoWbvGA"><img title="" alt="" src="images/Checklist.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/use_case%2c_KudM0NcJEdqz_d2XWoVt6Q.html" id="_KudM0NcJEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Concept.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/uc_specification%2c_0cpNwMlgEdmt3adZL5Dmdw.html" id="_0cpNwMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Use-Case Specification</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/uc_model%2c_W2SgEDR5EdutE_HNDTJk5Q.html" id="_W2SgEDR5EdutE_HNDTJk5Q"><img title="" alt="" src="images/Artifact.gif">Use Case Model</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/actor%2c_0VMh8MlgEdmt3adZL5Dmdw.html" id="_0VMh8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Actor</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/use_case%2c_0VGbUMlgEdmt3adZL5Dmdw.html" id="_0VGbUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/uc_model%2c_0U6OEMlgEdmt3adZL5Dmdw.html" id="_0U6OEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Use-Case Model</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/use_case_model%2c_2jyfUAhVEduRe8TeoBmuGg.html" id="_2jyfUAhVEduRe8TeoBmuGg"><img title="" alt="" src="images/Concept.gif">Use-Case Model</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/uc_model%2c_0VAUsMlgEdmt3adZL5Dmdw.html" id="_0VAUsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Use-Case Model</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/vision%2c_0WVxcMlgEdmt3adZL5Dmdw.html" id="_0WVxcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Vision</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/good_requirements%2c_jxn9EO0HEdqHTdbLTmC5IQ.html" id="_jxn9EO0HEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Checklist.gif">Qualities of Good Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/vision%2c_0WoFUMlgEdmt3adZL5Dmdw.html" id="_0WoFUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Vision</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/vision%2c_0cW54MlgEdmt3adZL5Dmdw.html" id="_0cW54MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Vision</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_requirements%2c_0o9ygclgEdmt3adZL5Dmdw.html" id="_0o9ygclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Manage Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_0pJ_xslgEdmt3adZL5Dmdw.html" id="_0pJ_xslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Ongoing Tasks</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/management_subprocess%2c_Aoz2gEmcEdu0xduwSKie-w.html" id="_Aoz2gEmcEdu0xduwSKie-w"><img title="" alt="" src="images/concept_obj.gif">Management</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_evolve%2c_GXiogMvoEdqukPpotm3DYg.html" id="_GXiogMvoEdqukPpotm3DYg"><img title="" alt="" src="images/Concept.gif">Evolve to continuously obtain feedback and improve</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/project_management%2c_0TqQ4MlgEdmt3adZL5Dmdw.html" id="_0TqQ4MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Project Management</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/assess_results%2c_0l53cMlgEdmt3adZL5Dmdw.html" id="_0l53cMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Assess Results</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/manage_iteration%2c_8S2aICbYEdqh1LYUOGRh2A.html" id="_8S2aICbYEdqh1LYUOGRh2A"><img title="" alt="" src="images/Task.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_iteration%2c_0keUEMlgEdmt3adZL5Dmdw.html" id="_0keUEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_the_project%2c_0lC70MlgEdmt3adZL5Dmdw.html" id="_0lC70MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Project</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/project_management%2c_QxjGYMWfEdqiT9CqkRksWQ.html" id="_QxjGYMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Project Management</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/iteration_plan%2c_0aQBEslgEdmt3adZL5Dmdw.html" id="_0aQBEslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Iteration Plan</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/iteration%2c_lam4ADkBEduxovfWMDsntw.html" id="_lam4ADkBEduxovfWMDsntw"><img title="" alt="" src="images/Concept.gif">Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/iteration_burndown%2c_uAzgkDg3Edu4E8ZdmlYjtA.html" id="_uAzgkDg3Edu4E8ZdmlYjtA"><img title="" alt="" src="images/Report.gif">Iteration Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/examples/iteration_plan%2c_TuNhIEE4EdulKujnGUuxbg.html" id="_TuNhIEE4EdulKujnGUuxbg"><img title="" alt="" src="images/Example.gif">Iteration Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/iteration_plan%2c_0dBoQMlgEdmt3adZL5Dmdw.html" id="_0dBoQMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Iteration Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/iteration_planning%2c_0auiMMlgEdmt3adZL5Dmdw.html" id="_0auiMMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Iteration Planning</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/project_plan%2c_0a6vcMlgEdmt3adZL5Dmdw.html" id="_0a6vcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Project Plan</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/project_burndown%2c_ePrt8Dj3EduxovfWMDsntw.html" id="_ePrt8Dj3EduxovfWMDsntw"><img title="" alt="" src="images/Report.gif">Project Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/examples/project_plan%2c_Nzv5kDoAEdusGsHODb-STA.html" id="_Nzv5kDoAEdusGsHODb-STA"><img title="" alt="" src="images/Example.gif">Project Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/project_plan%2c_0c7hoMlgEdmt3adZL5Dmdw.html" id="_0c7hoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Project Plan</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/risk_list%2c_Ckay8Cc_EduIsqH1Q6ZuqA.html" id="_Ckay8Cc_EduIsqH1Q6ZuqA"><img title="" alt="" src="images/Artifact.gif">Risk List</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/risk%2c_0bsLgMlgEdmt3adZL5Dmdw.html" id="_0bsLgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Risk</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/risk_list%2c_7BZa0DIdEduDTv4Y1akVTA.html" id="_7BZa0DIdEduDTv4Y1akVTA"><img title="" alt="" src="images/Checklist.gif">Risk List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/risk_list%2c_MIUO0C8FEduzydamRseoUw.html" id="_MIUO0C8FEduzydamRseoUw"><img title="" alt="" src="images/Template.gif">Risk List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/risk_management%2c_VNxL4ACsEdu8m4dIntu6jA.html" id="_VNxL4ACsEdu8m4dIntu6jA"><img title="" alt="" src="images/Concept.gif">Risk Management</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/status_assessment%2c_0bA2EMlgEdmt3adZL5Dmdw.html" id="_0bA2EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Status Assessment</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/status_assessment%2c_1awLIEp2Edup0IY9DKDPkg.html" id="_1awLIEp2Edup0IY9DKDPkg"><img title="" alt="" src="images/Template.gif">Status Assessment</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/work_items_list%2c_rGNWsCbSEdqh1LYUOGRh2A.html" id="_rGNWsCbSEdqh1LYUOGRh2A"><img title="" alt="" src="images/Artifact.gif">Work Items List</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/agile_estimation%2c_CGHskBEdEdqY7JB6N6CW2w.html" id="_CGHskBEdEdqY7JB6N6CW2w"><img title="" alt="" src="images/Guideline.gif">Agile Estimation</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/iteration_burndown%2c_uAzgkDg3Edu4E8ZdmlYjtA.html" id="_uAzgkDg3Edu4E8ZdmlYjtA"><img title="" alt="" src="images/Report.gif">Iteration Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/project_burndown%2c_ePrt8Dj3EduxovfWMDsntw.html" id="_ePrt8Dj3EduxovfWMDsntw"><img title="" alt="" src="images/Report.gif">Project Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/examples/work_items_list%2c_nHomIDgzEdu4E8ZdmlYjtA.html" id="_nHomIDgzEdu4E8ZdmlYjtA"><img title="" alt="" src="images/Example.gif">Work Items List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/work_items_list%2c_7vEXEMA4EdqSgKaj2SZBmg.html" id="_7vEXEMA4EdqSgKaj2SZBmg"><img title="" alt="" src="images/Guideline.gif">Work Items List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/work_items_list%2c_QwUJYDg0Edu4E8ZdmlYjtA.html" id="_QwUJYDg0Edu4E8ZdmlYjtA"><img title="" alt="" src="images/Template.gif">Work Items List</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/initiate_project%2c_0pWNA8lgEdmt3adZL5Dmdw.html" id="_0pWNA8lgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Initiate Project</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_iteration%2c_0nJNkslgEdmt3adZL5Dmdw.html" id="_0nJNkslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Plan and Manage Iteration</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/customcategories/solution_subprocess%2c_HEVvgEmcEdu0xduwSKie-w.html" id="_HEVvgEmcEdu0xduwSKie-w"><img title="" alt="" src="images/concept_obj.gif">Solution</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/core_principle_focus%2c_9gocwMvoEdqukPpotm3DYg.html" id="_9gocwMvoEdqukPpotm3DYg"><img title="" alt="" src="images/Concept.gif">Focus on articulating the architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/analysis_and_design%2c_0TX9AMlgEdmt3adZL5Dmdw.html" id="_0TX9AMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Analysis &amp; Design</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/analyze_arch_reqs%2c_0f-1oMlgEdmt3adZL5Dmdw.html" id="_0f-1oMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Analyze Architectural Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/demonstrate_architecture%2c_0hmmQclgEdmt3adZL5Dmdw.html" id="_0hmmQclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Demonstrate the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" id="_0fshwMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Design the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/develop_arch%2c_0gRJgMlgEdmt3adZL5Dmdw.html" id="_0gRJgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Develop the Architecture</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/implementation%2c_0TeDoMlgEdmt3adZL5Dmdw.html" id="_0TeDoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Implementation</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/impl_developer_tests%2c_0iL1EMlgEdmt3adZL5Dmdw.html" id="_0iL1EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Developer Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_solution%2c_0hyzgMlgEdmt3adZL5Dmdw.html" id="_0hyzgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_developer_tests%2c_0iYCUMlgEdmt3adZL5Dmdw.html" id="_0iYCUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Developer Tests</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/test%2c_0TkKQMlgEdmt3adZL5Dmdw.html" id="_0TkKQMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Test</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/create_test_case%2c_0iwc0clgEdmt3adZL5Dmdw.html" id="_0iwc0clgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Create Test Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_tests%2c_0jO98MlgEdmt3adZL5Dmdw.html" id="_0jO98MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_tests%2c_0jVEkMlgEdmt3adZL5Dmdw.html" id="_0jVEkMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Tests</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/architecture%2c_xITr8MWXEdqWePvIjHInwg.html" id="_xITr8MWXEdqWePvIjHInwg"><img title="" alt="" src="images/Domain.gif">Architecture</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/arch_poc%2c_PoDR0NbYEdmlO4WLYHrJaQ.html" id="_PoDR0NbYEdmlO4WLYHrJaQ"><img title="" alt="" src="images/Artifact.gif">Architectural Proof-of-Concept</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" id="_0X9iEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Architect</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/arch_poc%2c_THh0cMm_EdqGlYjw6LZtjg.html" id="_THh0cMm_EdqGlYjw6LZtjg"><img title="" alt="" src="images/Guideline.gif">Architectural Proof of Concept</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" id="_0XAf0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Architecture</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" id="_0X9iEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Architect</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/abstract_away_complexity%2c_we3F4ACpEdu8m4dIntu6jA.html" id="_we3F4ACpEdu8m4dIntu6jA"><img title="" alt="" src="images/Concept.gif">Abstract Away Complexity</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/architectural_view%2c_T9nygClEEduLGM8dfVsrKg.html" id="_T9nygClEEduLGM8dfVsrKg"><img title="" alt="" src="images/Guideline.gif">Architectural View</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/architecture%2c_17PYUNd6EdmIm-bsRSNCgw.html" id="_17PYUNd6EdmIm-bsRSNCgw"><img title="" alt="" src="images/Checklist.gif">Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/architecture%2c__JXkoCk8EduLGM8dfVsrKg.html" id="__JXkoCk8EduLGM8dfVsrKg"><img title="" alt="" src="images/Template.gif">Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/component%2c_0YP18MlgEdmt3adZL5Dmdw.html" id="_0YP18MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Component</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/layering%2c_0gpkAMlgEdmt3adZL5Dmdw.html" id="_0gpkAMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Layering</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/patterns%2c_0YJvUMlgEdmt3adZL5Dmdw.html" id="_0YJvUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Patterns</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/repres_interfaces_to_ext_systems%2c_0gjdYMlgEdmt3adZL5Dmdw.html" id="_0gjdYMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Representing Interfaces to External Systems</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/using_visualizations%2c_Jlz_YACuEdu8m4dIntu6jA.html" id="_Jlz_YACuEdu8m4dIntu6jA"><img title="" alt="" src="images/Concept.gif">Using Visualizations</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/visual_modeling%2c_0XY6UMlgEdmt3adZL5Dmdw.html" id="_0XY6UMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Visual Modeling</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/development%2c_A9k3UMWfEdqiT9CqkRksWQ.html" id="_A9k3UMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Development</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/build%2c_0YuXEMlgEdmt3adZL5Dmdw.html" id="_0YuXEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Build</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/continuous_integration%2c_B3xkEPD0EdqYgerqi84oCA.html" id="_B3xkEPD0EdqYgerqi84oCA"><img title="" alt="" src="images/Concept.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/continuous_integration%2c_i8bUEL6cEdqti4GwqTkbsQ.html" id="_i8bUEL6cEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/promoting_builds%2c_SM4YIL6dEdqti4GwqTkbsQ.html" id="_SM4YIL6dEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Promoting Builds</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" id="_0WuL8slgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Design</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/design%2c_0XSzsMlgEdmt3adZL5Dmdw.html" id="_0XSzsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/design%2c_0X3bcMlgEdmt3adZL5Dmdw.html" id="_0X3bcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/visual_modeling%2c_0XY6UMlgEdmt3adZL5Dmdw.html" id="_0XY6UMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Visual Modeling</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/developer_test%2c_0YuXEclgEdmt3adZL5Dmdw.html" id="_0YuXEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Developer Test</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/test_first_design%2c_0Y6kUMlgEdmt3adZL5Dmdw.html" id="_0Y6kUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Test-first Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/types_of_developer_tests%2c_eRutgC5QEduVhuZHT5jKZQ.html" id="_eRutgC5QEduVhuZHT5jKZQ"><img title="" alt="" src="images/Guideline.gif">Types of Developer Tests</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/implementation%2c_0YoQcMlgEdmt3adZL5Dmdw.html" id="_0YoQcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Implementation</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/implementation%2c_0Y0dsMlgEdmt3adZL5Dmdw.html" id="_0Y0dsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Implementation</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/test%2c_ou4CMMWfEdqiT9CqkRksWQ.html" id="_ou4CMMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Test</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/test_case%2c_0ZS-0MlgEdmt3adZL5Dmdw.html" id="_0ZS-0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Case</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/test_case%2c_0Zxf8MlgEdmt3adZL5Dmdw.html" id="_0Zxf8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Test Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/test_case%2c_0dT8IMlgEdmt3adZL5Dmdw.html" id="_0dT8IMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Test Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/types_of_test%2c_0aJ6cMlgEdmt3adZL5Dmdw.html" id="_0aJ6cMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Types of Test</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/test_log%2c_0ZlSsMlgEdmt3adZL5Dmdw.html" id="_0ZlSsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Log</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/test_script%2c_0ZfMEMlgEdmt3adZL5Dmdw.html" id="_0ZfMEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Script</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/programming_automated_tests%2c_0j5sUMlgEdmt3adZL5Dmdw.html" id="_0j5sUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Programming Automated Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/test_data%2c_KZQJMBhBEduxCP6DVVLxsA.html" id="_KZQJMBhBEduxCP6DVVLxsA"><img title="" alt="" src="images/Checklist.gif">Test Data</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/test_script%2c_0Z9tMMlgEdmt3adZL5Dmdw.html" id="_0Z9tMMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Test Script</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/test_suite%2c_0aDz0MlgEdmt3adZL5Dmdw.html" id="_0aDz0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Test Suite</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/define_architecture%2c_0sx7islgEdmt3adZL5Dmdw.html" id="_0sx7islgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Define the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/determine_architectural_feasibility%2c_0sluQslgEdmt3adZL5Dmdw.html" id="_0sluQslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Determine Architectural Feasibility</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/develop_solution%2c_h2-iAfimEdmugcVr9AdHjQ.html" id="_h2-iAfimEdmugcVr9AdHjQ"><img title="" alt="" src="images/CapabilityPattern.gif">Develop Solution (for requirement) (within context)</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/test%2c_0nz79clgEdmt3adZL5Dmdw.html" id="_0nz79clgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Test</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/rolesets/openup_basic_roles%2c_TZIJ0O8NEdmKSqa_gSYthg.html" id="_TZIJ0O8NEdmKSqa_gSYthg"><img title="" alt="" src="images/RoleSet.gif">Roles</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/define_vision%2c_0fOAoMlgEdmt3adZL5Dmdw.html" id="_0fOAoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Define Vision</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/detail_requirements%2c_0e1mIMlgEdmt3adZL5Dmdw.html" id="_0e1mIMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Detail Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/find_and_outline_requirements%2c_P9cMUPV_EdmdHa9MmVPgqQ.html" id="_P9cMUPV_EdmdHa9MmVPgqQ"><img title="" alt="" src="images/Task.gif">Find and Outline Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/actor%2c_0VMh8MlgEdmt3adZL5Dmdw.html" id="_0VMh8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Actor</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/glossary%2c_Wn7HcNcEEdqz_d2XWoVt6Q.html" id="_Wn7HcNcEEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Artifact.gif">Glossary</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" id="_BVh9cL-CEdqb7N6KIeDL8Q"><img title="" alt="" src="images/Artifact.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/use_case%2c_0VGbUMlgEdmt3adZL5Dmdw.html" id="_0VGbUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/uc_model%2c_W2SgEDR5EdutE_HNDTJk5Q.html" id="_W2SgEDR5EdutE_HNDTJk5Q"><img title="" alt="" src="images/Artifact.gif">Use Case Model</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/vision%2c_0WVxcMlgEdmt3adZL5Dmdw.html" id="_0WVxcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Vision</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/any_role%2c_0dsWoMlgEdmt3adZL5Dmdw.html" id="_0dsWoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Any Role</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/request_change%2c_0mwzEclgEdmt3adZL5Dmdw.html" id="_0mwzEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Request Change</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" id="_0X9iEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Architect</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/analyze_arch_reqs%2c_0f-1oMlgEdmt3adZL5Dmdw.html" id="_0f-1oMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Analyze Architectural Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/demonstrate_architecture%2c_0hmmQclgEdmt3adZL5Dmdw.html" id="_0hmmQclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Demonstrate the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/develop_arch%2c_0gRJgMlgEdmt3adZL5Dmdw.html" id="_0gRJgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Develop the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/arch_poc%2c_PoDR0NbYEdmlO4WLYHrJaQ.html" id="_PoDR0NbYEdmlO4WLYHrJaQ"><img title="" alt="" src="images/Artifact.gif">Architectural Proof-of-Concept</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" id="_0XAf0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Architecture</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" id="_0fshwMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Design the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/impl_developer_tests%2c_0iL1EMlgEdmt3adZL5Dmdw.html" id="_0iL1EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Developer Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_solution%2c_0hyzgMlgEdmt3adZL5Dmdw.html" id="_0hyzgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_developer_tests%2c_0iYCUMlgEdmt3adZL5Dmdw.html" id="_0iYCUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Developer Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/build%2c_0YuXEMlgEdmt3adZL5Dmdw.html" id="_0YuXEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Build</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" id="_0WuL8slgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/developer_test%2c_0YuXEclgEdmt3adZL5Dmdw.html" id="_0YuXEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Developer Test</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/implementation%2c_0YoQcMlgEdmt3adZL5Dmdw.html" id="_0YoQcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Implementation</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/assess_results%2c_0l53cMlgEdmt3adZL5Dmdw.html" id="_0l53cMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Assess Results</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/manage_iteration%2c_8S2aICbYEdqh1LYUOGRh2A.html" id="_8S2aICbYEdqh1LYUOGRh2A"><img title="" alt="" src="images/Task.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_iteration%2c_0keUEMlgEdmt3adZL5Dmdw.html" id="_0keUEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_the_project%2c_0lC70MlgEdmt3adZL5Dmdw.html" id="_0lC70MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Project</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/iteration_plan%2c_0aQBEslgEdmt3adZL5Dmdw.html" id="_0aQBEslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Iteration Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/project_plan%2c_0a6vcMlgEdmt3adZL5Dmdw.html" id="_0a6vcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Project Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/risk_list%2c_Ckay8Cc_EduIsqH1Q6ZuqA.html" id="_Ckay8Cc_EduIsqH1Q6ZuqA"><img title="" alt="" src="images/Artifact.gif">Risk List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/status_assessment%2c_0bA2EMlgEdmt3adZL5Dmdw.html" id="_0bA2EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Status Assessment</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/work_items_list%2c_rGNWsCbSEdqh1LYUOGRh2A.html" id="_rGNWsCbSEdqh1LYUOGRh2A"><img title="" alt="" src="images/Artifact.gif">Work Items List</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/stakeholder%2c_dTa6gMAYEdqX-s4mWhkyqQ.html" id="_dTa6gMAYEdqX-s4mWhkyqQ"><img title="" alt="" src="images/Role.gif">Stakeholder</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/create_test_case%2c_0iwc0clgEdmt3adZL5Dmdw.html" id="_0iwc0clgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Create Test Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_tests%2c_0jO98MlgEdmt3adZL5Dmdw.html" id="_0jO98MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_tests%2c_0jVEkMlgEdmt3adZL5Dmdw.html" id="_0jVEkMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/test_case%2c_0ZS-0MlgEdmt3adZL5Dmdw.html" id="_0ZS-0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/test_log%2c_0ZlSsMlgEdmt3adZL5Dmdw.html" id="_0ZlSsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Log</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/test_script%2c_0ZfMEMlgEdmt3adZL5Dmdw.html" id="_0ZfMEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Script</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/openup_basic_wp%2c_s4Z9AMWXEdqWePvIjHInwg.html" id="_s4Z9AMWXEdqWePvIjHInwg"><img title="" alt="" src="images/Domain.gif">Work Products</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/architecture%2c_xITr8MWXEdqWePvIjHInwg.html" id="_xITr8MWXEdqWePvIjHInwg"><img title="" alt="" src="images/Domain.gif">Architecture</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/arch_poc%2c_PoDR0NbYEdmlO4WLYHrJaQ.html" id="_PoDR0NbYEdmlO4WLYHrJaQ"><img title="" alt="" src="images/Artifact.gif">Architectural Proof-of-Concept</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" id="_0X9iEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Architect</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/arch_poc%2c_THh0cMm_EdqGlYjw6LZtjg.html" id="_THh0cMm_EdqGlYjw6LZtjg"><img title="" alt="" src="images/Guideline.gif">Architectural Proof of Concept</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" id="_0XAf0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Architecture</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" id="_0X9iEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Architect</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/abstract_away_complexity%2c_we3F4ACpEdu8m4dIntu6jA.html" id="_we3F4ACpEdu8m4dIntu6jA"><img title="" alt="" src="images/Concept.gif">Abstract Away Complexity</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/architectural_view%2c_T9nygClEEduLGM8dfVsrKg.html" id="_T9nygClEEduLGM8dfVsrKg"><img title="" alt="" src="images/Guideline.gif">Architectural View</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/architecture%2c_17PYUNd6EdmIm-bsRSNCgw.html" id="_17PYUNd6EdmIm-bsRSNCgw"><img title="" alt="" src="images/Checklist.gif">Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/architecture%2c__JXkoCk8EduLGM8dfVsrKg.html" id="__JXkoCk8EduLGM8dfVsrKg"><img title="" alt="" src="images/Template.gif">Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/component%2c_0YP18MlgEdmt3adZL5Dmdw.html" id="_0YP18MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Component</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/layering%2c_0gpkAMlgEdmt3adZL5Dmdw.html" id="_0gpkAMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Layering</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/patterns%2c_0YJvUMlgEdmt3adZL5Dmdw.html" id="_0YJvUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Patterns</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/repres_interfaces_to_ext_systems%2c_0gjdYMlgEdmt3adZL5Dmdw.html" id="_0gjdYMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Representing Interfaces to External Systems</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/using_visualizations%2c_Jlz_YACuEdu8m4dIntu6jA.html" id="_Jlz_YACuEdu8m4dIntu6jA"><img title="" alt="" src="images/Concept.gif">Using Visualizations</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/visual_modeling%2c_0XY6UMlgEdmt3adZL5Dmdw.html" id="_0XY6UMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Visual Modeling</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/development%2c_A9k3UMWfEdqiT9CqkRksWQ.html" id="_A9k3UMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Development</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/build%2c_0YuXEMlgEdmt3adZL5Dmdw.html" id="_0YuXEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Build</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/continuous_integration%2c_B3xkEPD0EdqYgerqi84oCA.html" id="_B3xkEPD0EdqYgerqi84oCA"><img title="" alt="" src="images/Concept.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/continuous_integration%2c_i8bUEL6cEdqti4GwqTkbsQ.html" id="_i8bUEL6cEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/promoting_builds%2c_SM4YIL6dEdqti4GwqTkbsQ.html" id="_SM4YIL6dEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Promoting Builds</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" id="_0WuL8slgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Design</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/design%2c_0XSzsMlgEdmt3adZL5Dmdw.html" id="_0XSzsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/design%2c_0X3bcMlgEdmt3adZL5Dmdw.html" id="_0X3bcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/visual_modeling%2c_0XY6UMlgEdmt3adZL5Dmdw.html" id="_0XY6UMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Visual Modeling</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/developer_test%2c_0YuXEclgEdmt3adZL5Dmdw.html" id="_0YuXEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Developer Test</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/test_first_design%2c_0Y6kUMlgEdmt3adZL5Dmdw.html" id="_0Y6kUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Test-first Design</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/types_of_developer_tests%2c_eRutgC5QEduVhuZHT5jKZQ.html" id="_eRutgC5QEduVhuZHT5jKZQ"><img title="" alt="" src="images/Guideline.gif">Types of Developer Tests</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/implementation%2c_0YoQcMlgEdmt3adZL5Dmdw.html" id="_0YoQcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Implementation</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" id="_0YDosMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Developer</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/implementation%2c_0Y0dsMlgEdmt3adZL5Dmdw.html" id="_0Y0dsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Implementation</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/project_management%2c_QxjGYMWfEdqiT9CqkRksWQ.html" id="_QxjGYMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Project Management</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/iteration_plan%2c_0aQBEslgEdmt3adZL5Dmdw.html" id="_0aQBEslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Iteration Plan</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/iteration%2c_lam4ADkBEduxovfWMDsntw.html" id="_lam4ADkBEduxovfWMDsntw"><img title="" alt="" src="images/Concept.gif">Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/iteration_burndown%2c_uAzgkDg3Edu4E8ZdmlYjtA.html" id="_uAzgkDg3Edu4E8ZdmlYjtA"><img title="" alt="" src="images/Report.gif">Iteration Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/examples/iteration_plan%2c_TuNhIEE4EdulKujnGUuxbg.html" id="_TuNhIEE4EdulKujnGUuxbg"><img title="" alt="" src="images/Example.gif">Iteration Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/iteration_plan%2c_0dBoQMlgEdmt3adZL5Dmdw.html" id="_0dBoQMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Iteration Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/iteration_planning%2c_0auiMMlgEdmt3adZL5Dmdw.html" id="_0auiMMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Iteration Planning</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/project_plan%2c_0a6vcMlgEdmt3adZL5Dmdw.html" id="_0a6vcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Project Plan</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/project_burndown%2c_ePrt8Dj3EduxovfWMDsntw.html" id="_ePrt8Dj3EduxovfWMDsntw"><img title="" alt="" src="images/Report.gif">Project Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/examples/project_plan%2c_Nzv5kDoAEdusGsHODb-STA.html" id="_Nzv5kDoAEdusGsHODb-STA"><img title="" alt="" src="images/Example.gif">Project Plan</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/project_plan%2c_0c7hoMlgEdmt3adZL5Dmdw.html" id="_0c7hoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Project Plan</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/risk_list%2c_Ckay8Cc_EduIsqH1Q6ZuqA.html" id="_Ckay8Cc_EduIsqH1Q6ZuqA"><img title="" alt="" src="images/Artifact.gif">Risk List</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/risk%2c_0bsLgMlgEdmt3adZL5Dmdw.html" id="_0bsLgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Risk</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/risk_list%2c_7BZa0DIdEduDTv4Y1akVTA.html" id="_7BZa0DIdEduDTv4Y1akVTA"><img title="" alt="" src="images/Checklist.gif">Risk List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/risk_list%2c_MIUO0C8FEduzydamRseoUw.html" id="_MIUO0C8FEduzydamRseoUw"><img title="" alt="" src="images/Template.gif">Risk List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/risk_management%2c_VNxL4ACsEdu8m4dIntu6jA.html" id="_VNxL4ACsEdu8m4dIntu6jA"><img title="" alt="" src="images/Concept.gif">Risk Management</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/status_assessment%2c_0bA2EMlgEdmt3adZL5Dmdw.html" id="_0bA2EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Status Assessment</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/status_assessment%2c_1awLIEp2Edup0IY9DKDPkg.html" id="_1awLIEp2Edup0IY9DKDPkg"><img title="" alt="" src="images/Template.gif">Status Assessment</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/work_items_list%2c_rGNWsCbSEdqh1LYUOGRh2A.html" id="_rGNWsCbSEdqh1LYUOGRh2A"><img title="" alt="" src="images/Artifact.gif">Work Items List</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" id="_0a0o0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Project Manager</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/agile_estimation%2c_CGHskBEdEdqY7JB6N6CW2w.html" id="_CGHskBEdEdqY7JB6N6CW2w"><img title="" alt="" src="images/Guideline.gif">Agile Estimation</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/iteration_burndown%2c_uAzgkDg3Edu4E8ZdmlYjtA.html" id="_uAzgkDg3Edu4E8ZdmlYjtA"><img title="" alt="" src="images/Report.gif">Iteration Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/reports/project_burndown%2c_ePrt8Dj3EduxovfWMDsntw.html" id="_ePrt8Dj3EduxovfWMDsntw"><img title="" alt="" src="images/Report.gif">Project Burndown</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/examples/work_items_list%2c_nHomIDgzEdu4E8ZdmlYjtA.html" id="_nHomIDgzEdu4E8ZdmlYjtA"><img title="" alt="" src="images/Example.gif">Work Items List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/work_items_list%2c_7vEXEMA4EdqSgKaj2SZBmg.html" id="_7vEXEMA4EdqSgKaj2SZBmg"><img title="" alt="" src="images/Guideline.gif">Work Items List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/work_items_list%2c_QwUJYDg0Edu4E8ZdmlYjtA.html" id="_QwUJYDg0Edu4E8ZdmlYjtA"><img title="" alt="" src="images/Template.gif">Work Items List</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/requirements%2c_allMQMWfEdqiT9CqkRksWQ.html" id="_allMQMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Requirements</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/actor%2c_0VMh8MlgEdmt3adZL5Dmdw.html" id="_0VMh8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Actor</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/actor%2c_0VrDEMlgEdmt3adZL5Dmdw.html" id="_0VrDEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Actor</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/find_and_outline_actors_and_ucs%2c_eyL0wCu-EdqSxKAVa9kmvA.html" id="_eyL0wCu-EdqSxKAVa9kmvA"><img title="" alt="" src="images/Guideline.gif">Find and Outline Actors and Use Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/use_case_formats%2c_qq0GMAXkEduj_7BEUj1JfQ.html" id="_qq0GMAXkEduj_7BEUj1JfQ"><img title="" alt="" src="images/Guideline.gif">Use Case Formats</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/glossary%2c_Wn7HcNcEEdqz_d2XWoVt6Q.html" id="_Wn7HcNcEEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Artifact.gif">Glossary</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" id="_BVh9cL-CEdqb7N6KIeDL8Q"><img title="" alt="" src="images/Artifact.gif">Supporting Requirements</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/good_requirements%2c_jxn9EO0HEdqHTdbLTmC5IQ.html" id="_jxn9EO0HEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Checklist.gif">Qualities of Good Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/supporting_requirements%2c_Vael8CGMEdu3VKXZx45D3A.html" id="_Vael8CGMEdu3VKXZx45D3A"><img title="" alt="" src="images/Checklist.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/supporting_requirements%2c_VXZ5wO0IEdqHTdbLTmC5IQ.html" id="_VXZ5wO0IEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/supporting_requirements%2c_wr24gNcGEdqz_d2XWoVt6Q.html" id="_wr24gNcGEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Guideline.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/supporting_requirements_spec%2c_ItYXcNa9Edqrw4BYKyYKiA.html" id="_ItYXcNa9Edqrw4BYKyYKiA"><img title="" alt="" src="images/Template.gif">Supporting Requirements Specification</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/use_case%2c_0VGbUMlgEdmt3adZL5Dmdw.html" id="_0VGbUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Use Case</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/use_case%2c_0kNwINk1Edq2Q8qZoWbvGA.html" id="_0kNwINk1Edq2Q8qZoWbvGA"><img title="" alt="" src="images/Checklist.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/use_case%2c_KudM0NcJEdqz_d2XWoVt6Q.html" id="_KudM0NcJEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Concept.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/uc_specification%2c_0cpNwMlgEdmt3adZL5Dmdw.html" id="_0cpNwMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Use-Case Specification</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/uc_model%2c_W2SgEDR5EdutE_HNDTJk5Q.html" id="_W2SgEDR5EdutE_HNDTJk5Q"><img title="" alt="" src="images/Artifact.gif">Use Case Model</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/actor%2c_0VMh8MlgEdmt3adZL5Dmdw.html" id="_0VMh8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Actor</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/workproducts/use_case%2c_0VGbUMlgEdmt3adZL5Dmdw.html" id="_0VGbUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/uc_model%2c_0U6OEMlgEdmt3adZL5Dmdw.html" id="_0U6OEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Use-Case Model</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/use_case_model%2c_2jyfUAhVEduRe8TeoBmuGg.html" id="_2jyfUAhVEduRe8TeoBmuGg"><img title="" alt="" src="images/Concept.gif">Use-Case Model</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/uc_model%2c_0VAUsMlgEdmt3adZL5Dmdw.html" id="_0VAUsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Use-Case Model</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/vision%2c_0WVxcMlgEdmt3adZL5Dmdw.html" id="_0WVxcMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Vision</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" id="_0VxJsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Analyst</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/good_requirements%2c_jxn9EO0HEdqHTdbLTmC5IQ.html" id="_jxn9EO0HEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Checklist.gif">Qualities of Good Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/vision%2c_0WoFUMlgEdmt3adZL5Dmdw.html" id="_0WoFUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Vision</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/vision%2c_0cW54MlgEdmt3adZL5Dmdw.html" id="_0cW54MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Vision</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/domains/test%2c_ou4CMMWfEdqiT9CqkRksWQ.html" id="_ou4CMMWfEdqiT9CqkRksWQ"><img title="" alt="" src="images/Domain.gif">Test</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/test_case%2c_0ZS-0MlgEdmt3adZL5Dmdw.html" id="_0ZS-0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Case</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/test_case%2c_0Zxf8MlgEdmt3adZL5Dmdw.html" id="_0Zxf8MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Test Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/templates/test_case%2c_0dT8IMlgEdmt3adZL5Dmdw.html" id="_0dT8IMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Template.gif">Test Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/types_of_test%2c_0aJ6cMlgEdmt3adZL5Dmdw.html" id="_0aJ6cMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Types of Test</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/test_log%2c_0ZlSsMlgEdmt3adZL5Dmdw.html" id="_0ZlSsMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Log</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/workproducts/test_script%2c_0ZfMEMlgEdmt3adZL5Dmdw.html" id="_0ZfMEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Artifact.gif">Test Script</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" id="_0ZM4MclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Role.gif">Tester</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/programming_automated_tests%2c_0j5sUMlgEdmt3adZL5Dmdw.html" id="_0j5sUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Programming Automated Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/test_data%2c_KZQJMBhBEduxCP6DVVLxsA.html" id="_KZQJMBhBEduxCP6DVVLxsA"><img title="" alt="" src="images/Checklist.gif">Test Data</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/checklists/test_script%2c_0Z9tMMlgEdmt3adZL5Dmdw.html" id="_0Z9tMMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Checklist.gif">Test Script</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/test_suite%2c_0aDz0MlgEdmt3adZL5Dmdw.html" id="_0aDz0MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Guideline.gif">Test Suite</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplinegroupings/openup_basic_disciplines%2c__BZycP1UEdmek8CQTQgrOQ.html" id="__BZycP1UEdmek8CQTQgrOQ"><img title="" alt="" src="images/DisciplineGrouping.gif">Disciplines</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/analysis_and_design%2c_0TX9AMlgEdmt3adZL5Dmdw.html" id="_0TX9AMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Analysis &amp; Design</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/analyze_arch_reqs%2c_0f-1oMlgEdmt3adZL5Dmdw.html" id="_0f-1oMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Analyze Architectural Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/demonstrate_architecture%2c_0hmmQclgEdmt3adZL5Dmdw.html" id="_0hmmQclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Demonstrate the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" id="_0fshwMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Design the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/develop_arch%2c_0gRJgMlgEdmt3adZL5Dmdw.html" id="_0gRJgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Develop the Architecture</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/config_and_change_management%2c_0TwXgMlgEdmt3adZL5Dmdw.html" id="_0TwXgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Configuration &amp; Change Management</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_0pJ_xslgEdmt3adZL5Dmdw.html" id="_0pJ_xslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Ongoing Tasks</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/request_change%2c_0mwzEclgEdmt3adZL5Dmdw.html" id="_0mwzEclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Request Change</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/assign_changes_to_iteration%2c__yQQ4L6REdqti4GwqTkbsQ.html" id="__yQQ4L6REdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Assign Changes to an Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/change_requests%2c_6jdvECb3Edqh1LYUOGRh2A.html" id="_6jdvECb3Edqh1LYUOGRh2A"><img title="" alt="" src="images/Concept.gif">Change Requests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/change_requests%2c_fnZj0NVXEdqy9sbRhejO5Q.html" id="_fnZj0NVXEdqy9sbRhejO5Q"><img title="" alt="" src="images/Guideline.gif">Change Requests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/continuous_integration%2c_B3xkEPD0EdqYgerqi84oCA.html" id="_B3xkEPD0EdqYgerqi84oCA"><img title="" alt="" src="images/Concept.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/continuous_integration%2c_i8bUEL6cEdqti4GwqTkbsQ.html" id="_i8bUEL6cEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Continuous Integration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/promoting_builds%2c_SM4YIL6dEdqti4GwqTkbsQ.html" id="_SM4YIL6dEdqti4GwqTkbsQ"><img title="" alt="" src="images/Guideline.gif">Promoting Builds</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/work_items_list%2c_7vEXEMA4EdqSgKaj2SZBmg.html" id="_7vEXEMA4EdqSgKaj2SZBmg"><img title="" alt="" src="images/Guideline.gif">Work Items List</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/workspace%2c_0cEmAMlgEdmt3adZL5Dmdw.html" id="_0cEmAMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Workspace</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/implementation%2c_0TeDoMlgEdmt3adZL5Dmdw.html" id="_0TeDoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Implementation</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/impl_developer_tests%2c_0iL1EMlgEdmt3adZL5Dmdw.html" id="_0iL1EMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Developer Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_solution%2c_0hyzgMlgEdmt3adZL5Dmdw.html" id="_0hyzgMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement the Solution</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_developer_tests%2c_0iYCUMlgEdmt3adZL5Dmdw.html" id="_0iYCUMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Developer Tests</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/project_management%2c_0TqQ4MlgEdmt3adZL5Dmdw.html" id="_0TqQ4MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Project Management</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/assess_results%2c_0l53cMlgEdmt3adZL5Dmdw.html" id="_0l53cMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Assess Results</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/manage_iteration%2c_8S2aICbYEdqh1LYUOGRh2A.html" id="_8S2aICbYEdqh1LYUOGRh2A"><img title="" alt="" src="images/Task.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_iteration%2c_0keUEMlgEdmt3adZL5Dmdw.html" id="_0keUEMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/plan_the_project%2c_0lC70MlgEdmt3adZL5Dmdw.html" id="_0lC70MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Plan Project</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/requirements%2c_0TR2ZMlgEdmt3adZL5Dmdw.html" id="_0TR2ZMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Requirements</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/initiate_project%2c_0pWNA8lgEdmt3adZL5Dmdw.html" id="_0pWNA8lgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Initiate Project</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_requirements%2c_0o9ygclgEdmt3adZL5Dmdw.html" id="_0o9ygclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Manage Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_0pJ_xslgEdmt3adZL5Dmdw.html" id="_0pJ_xslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/CapabilityPattern.gif">Ongoing Tasks</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/define_vision%2c_0fOAoMlgEdmt3adZL5Dmdw.html" id="_0fOAoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Define Vision</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/detail_requirements%2c_0e1mIMlgEdmt3adZL5Dmdw.html" id="_0e1mIMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Detail Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/find_and_outline_requirements%2c_P9cMUPV_EdmdHa9MmVPgqQ.html" id="_P9cMUPV_EdmdHa9MmVPgqQ"><img title="" alt="" src="images/Task.gif">Find and Outline Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/detail_ucs_and_scenarios%2c_4BJ_YCxSEdqjsdw1QLH_6Q.html" id="_4BJ_YCxSEdqjsdw1QLH_6Q"><img title="" alt="" src="images/Guideline.gif">Detail Use Cases and Scenarios</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/effective_req_reviews%2c_E-dPIL-GEdqb7N6KIeDL8Q.html" id="_E-dPIL-GEdqb7N6KIeDL8Q"><img title="" alt="" src="images/Guideline.gif">Effective Requirement Reviews</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/find_and_outline_actors_and_ucs%2c_eyL0wCu-EdqSxKAVa9kmvA.html" id="_eyL0wCu-EdqSxKAVa9kmvA"><img title="" alt="" src="images/Guideline.gif">Find and Outline Actors and Use Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/requirement_attributes%2c_VQ268O0KEdqHTdbLTmC5IQ.html" id="_VQ268O0KEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Requirement Attributes</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/requirement_pitfalls%2c_1AOsMO0JEdqHTdbLTmC5IQ.html" id="_1AOsMO0JEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Guideline.gif">Requirement Pitfalls</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/requirements%2c_0Wh-sMlgEdmt3adZL5Dmdw.html" id="_0Wh-sMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Concept.gif">Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/req_gathering_techniques%2c_OnoNQNSAEdmLhZ9H5Plxyw.html" id="_OnoNQNSAEdmLhZ9H5Plxyw"><img title="" alt="" src="images/Guideline.gif">Requirements Gathering Techniques</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/supporting_requirements%2c_VXZ5wO0IEdqHTdbLTmC5IQ.html" id="_VXZ5wO0IEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/supporting_requirements%2c_wr24gNcGEdqz_d2XWoVt6Q.html" id="_wr24gNcGEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Guideline.gif">Supporting Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/traceability%2c_eYtQQO0KEdqHTdbLTmC5IQ.html" id="_eYtQQO0KEdqHTdbLTmC5IQ"><img title="" alt="" src="images/Concept.gif">Traceability</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/use_case%2c_KudM0NcJEdqz_d2XWoVt6Q.html" id="_KudM0NcJEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Concept.gif">Use Case</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/use_case_formats%2c_qq0GMAXkEduj_7BEUj1JfQ.html" id="_qq0GMAXkEduj_7BEUj1JfQ"><img title="" alt="" src="images/Guideline.gif">Use Case Formats</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/guidelines/writing_good_requirements%2c_6jXzYNcKEdqz_d2XWoVt6Q.html" id="_6jXzYNcKEdqz_d2XWoVt6Q"><img title="" alt="" src="images/Guideline.gif">Writing Good Requirements</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/disciplines/test%2c_0TkKQMlgEdmt3adZL5Dmdw.html" id="_0TkKQMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Discipline.gif">Test</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/create_test_case%2c_0iwc0clgEdmt3adZL5Dmdw.html" id="_0iwc0clgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Create Test Cases</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/implement_tests%2c_0jO98MlgEdmt3adZL5Dmdw.html" id="_0jO98MlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Implement Tests</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/tasks/run_tests%2c_0jVEkMlgEdmt3adZL5Dmdw.html" id="_0jVEkMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Task.gif">Run Tests</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/deliveryprocesses/openup_basic_process%2c_0uyGoMlgEdmt3adZL5Dmdw.html" id="_0uyGoMlgEdmt3adZL5Dmdw"><img title="" alt="" src="images/DeliveryProcess.gif">OpenUP/Basic Lifecycle</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/deliveryprocesses/inception_phase_iteration%2c_xupMvxOKEduCNqgZdt_OaAe494.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_xupMvxOKEduCNqgZdt_OaA" id="_xupMvxOKEduCNqgZdt_OaA"><img title="" alt="" src="images/Activity.gif">Inception Iteration [1..n]</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/initiate_project%2c_0oSdE8lgEdmt3adZL5Dmdw2101.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_xupMvxOKEduCNqgZdt_OaA,_0oSdE8lgEdmt3adZL5Dmdw" id="_0oSdE8lgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Initiate Project</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_iteration%2c_jLaKwP77Edm1zMZYtD3GjA5a50.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_xupMvxOKEduCNqgZdt_OaA,_jLaKwP77Edm1zMZYtD3GjA" id="_jLaKwP77Edm1zMZYtD3GjA"><img title="" alt="" src="images/Activity.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_requirements%2c_0okw8clgEdmt3adZL5Dmdw04ae.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_xupMvxOKEduCNqgZdt_OaA,_0okw8clgEdmt3adZL5Dmdw" id="_0okw8clgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Manage Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/determine_architectural_feasibility%2c_0oreoclgEdmt3adZL5Dmdwb17b.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_xupMvxOKEduCNqgZdt_OaA,_0oreoclgEdmt3adZL5Dmdw" id="_0oreoclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Determine Architectural Feasibility</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/deliveryprocesses/elaboration_phase_iteration%2c_0Spa4BOKEduCNqgZdt_OaA9f0a.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA" id="_0Spa4BOKEduCNqgZdt_OaA"><img title="" alt="" src="images/Activity.gif">Elaboration Iteration [1..n]</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_iteration%2c_0rWYIslgEdmt3adZL5Dmdwdb3b.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA,_0rWYIslgEdmt3adZL5Dmdw" id="_0rWYIslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_requirements%2c_0ruyoclgEdmt3adZL5Dmdwd996.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA,_0ruyoclgEdmt3adZL5Dmdw" id="_0ruyoclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Manage Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/define_architecture%2c_0rcewclgEdmt3adZL5Dmdw0ee8.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA,_0rcewclgEdmt3adZL5Dmdw" id="_0rcewclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Define the Architecture</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/develop_requirement_within_context%2c_WrXvwPinEdmugcVr9AdHjQ1c2c.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA,_WrXvwPinEdmugcVr9AdHjQ" id="_WrXvwPinEdmugcVr9AdHjQ"><img title="" alt="" src="images/Activity.gif">Develop Solution (for requirement) (within context)</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/validate_build%2c_0rilYclgEdmt3adZL5Dmdw185b.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA,_0rilYclgEdmt3adZL5Dmdw" id="_0rilYclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Validate Build</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_TAVx0CliEdqjQsaFX0CJTw8ed9.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA,_TAVx0CliEdqjQsaFX0CJTw" id="_TAVx0CliEdqjQsaFX0CJTw"><img title="" alt="" src="images/Activity.gif">Ongoing Tasks</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/deliveryprocesses/construction_phase_iteration%2c_3CqrAROKEduCNqgZdt_OaA6775.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_3CqrAROKEduCNqgZdt_OaA" id="_3CqrAROKEduCNqgZdt_OaA"><img title="" alt="" src="images/Activity.gif">Construction Iteration [1..n]</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_iteration%2c_y-k0bOtQEdqc1LGhiSPqRg8216.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_3CqrAROKEduCNqgZdt_OaA,_y-k0bOtQEdqc1LGhiSPqRg" id="_y-k0bOtQEdqc1LGhiSPqRg"><img title="" alt="" src="images/Activity.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_requirements%2c_eE5nEUbpEduLBN1xMBngqw6b6c.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_3CqrAROKEduCNqgZdt_OaA,_eE5nEUbpEduLBN1xMBngqw" id="_eE5nEUbpEduLBN1xMBngqw"><img title="" alt="" src="images/Activity.gif">Manage Requirements</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/develop_solution%2c_MWFjoU9HEdudU75l2xOQTw0f9a.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_3CqrAROKEduCNqgZdt_OaA,_MWFjoU9HEdudU75l2xOQTw" id="_MWFjoU9HEdudU75l2xOQTw"><img title="" alt="" src="images/Activity.gif">Develop Solution (for requirement) (within context)</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/validate_build%2c_y-3IretQEdqc1LGhiSPqRg9e4f.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_3CqrAROKEduCNqgZdt_OaA,_y-3IretQEdqc1LGhiSPqRg" id="_y-3IretQEdqc1LGhiSPqRg"><img title="" alt="" src="images/Activity.gif">Validate Build</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_y_PjTOtQEdqc1LGhiSPqRg07f7.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_3CqrAROKEduCNqgZdt_OaA,_y_PjTOtQEdqc1LGhiSPqRg" id="_y_PjTOtQEdqc1LGhiSPqRg"><img title="" alt="" src="images/Activity.gif">Ongoing Tasks</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/deliveryprocesses/transition_phase_iteration%2c_467NIhOKEduCNqgZdt_OaA05ec.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_467NIhOKEduCNqgZdt_OaA" id="_467NIhOKEduCNqgZdt_OaA"><img title="" alt="" src="images/Activity.gif">Transition Iteration [1..n]</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/manage_iteration%2c_0q33AclgEdmt3adZL5Dmdw01af.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_467NIhOKEduCNqgZdt_OaA,_0q33AclgEdmt3adZL5Dmdw" id="_0q33AclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Manage Iteration</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/develop_requirement_within_context%2c_0DMlYPinEdmugcVr9AdHjQd4bf.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_467NIhOKEduCNqgZdt_OaA,_0DMlYPinEdmugcVr9AdHjQ" id="_0DMlYPinEdmugcVr9AdHjQ"><img title="" alt="" src="images/Activity.gif">Develop Solution (for requirement) (within context)</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/validate_build%2c_0qrpwslgEdmt3adZL5Dmdw53c4.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_467NIhOKEduCNqgZdt_OaA,_0qrpwslgEdmt3adZL5Dmdw" id="_0qrpwslgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Validate Build</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/capabilitypatterns/ongoing_tasks%2c_0qxwYclgEdmt3adZL5Dmdwf62e.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&amp;path=_0uyGoMlgEdmt3adZL5Dmdw,_467NIhOKEduCNqgZdt_OaA,_0qxwYclgEdmt3adZL5Dmdw" id="_0qxwYclgEdmt3adZL5Dmdw"><img title="" alt="" src="images/Activity.gif">Ongoing Tasks</a>
+</li>
+</ul>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/plus.gif"><a href="../openup_basic/deliveryprocesses/Guidance_openup_basic_process%2c_0uyGoMlgEdmt3adZL5Dmdw.html" id="Guidance"><img title="" alt="" src="images/folder.gif">Guidance</a>
+<ul class="collapsed">
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/construction_phase%2c_48EKsBOMEduCNqgZdt_OaA.html" id="_48EKsBOMEduCNqgZdt_OaA"><img title="" alt="" src="images/Concept.gif">Construction Phase</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/elaboration_phase%2c_2plxwBOMEduCNqgZdt_OaA.html" id="_2plxwBOMEduCNqgZdt_OaA"><img title="" alt="" src="images/Concept.gif">Elaboration Phase</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/inception_phase%2c_0hmKgBOMEduCNqgZdt_OaA.html" id="_0hmKgBOMEduCNqgZdt_OaA"><img title="" alt="" src="images/Concept.gif">Inception Phase</a>
+</li>
+<li>
+<img title="" alt="" class="collapsed" src="images/noplus.gif"><a href="../openup_basic/guidances/concepts/transition_phase%2c__ca5UBOMEduCNqgZdt_OaA.html" id="__ca5UBOMEduCNqgZdt_OaA"><img title="" alt="" src="images/Concept.gif">Transition Phase</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/noapplet/OpenUP_Basic.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:24:03 GMT -->
+</html>

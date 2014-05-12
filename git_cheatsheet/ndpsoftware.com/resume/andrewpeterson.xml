@@ -1,0 +1,989 @@
+<resume lang="EN">
+	<!-- 
+	Copyright (c) 2004-2007 Andrew J. Peterson
+	All Rights Reserved.
+	This software may be used for education purposes only. Any commercial use requires
+	written permission of the author.
+	-->
+<name>Andrew J. Peterson</name><address><street>4104 - 24th Street, #202</street><city>San Francisco, CA 94114</city></address><phone>415.648.5434</phone><cell>415.377.3998</cell><email>andy@ndpsoftware.com</email>
+	<goal goal="engineer">Challenging technical projects, where I can use my broad software experience to build great, user-focused software.</goal>
+	<goal goal="manager">Lead a successful team that produces great software products, using my techical leadership, user-focus and management.</goal>
+
+	<skillLabel type="language">Languages &amp; Scripts</skillLabel>
+	<skillLabel type="technology">Platforms, Technologies &amp; Protocols</skillLabel>
+	<skillLabel type="software">Software</skillLabel>
+	<skillLabel type="designer">Software Designer</skillLabel>
+	<skillLabel type="ui">User Interface</skillLabel>
+
+
+	<skill type="designer">Analysis</skill>
+	<skill type="designer">Object-oriented Design (OOD)</skill>
+	<skill type="designer">Software Architecture</skill>
+	<skill type="designer">Human Interface Design</skill>
+	<skill type="designer">Database</skill>
+	<skill type="designer">Writing</skill>
+	<skill type="designer">Agile development</skill>
+ 	<skill type="designer">Prototyping</skill>
+ 	<skill type="designer">Human Interface Design</skill>
+ 	<skill type="designer">User Testing</skill>
+ 	<skill type="designer">Data Presentation</skill>
+
+	<skill type="language">HTML</skill>
+	<skill type="language">XHTML</skill>
+	<skill type="language">CSS</skill>
+	<skill type="technology">CGI</skill>
+	<skill type="language">XML</skill>
+	<skill type="language">XSLT</skill>
+	<skill type="technology">Java EE</skill>
+	<skill type="technology">Struts</skill>
+	<skill type="language">PERL</skill>
+	<skill type="language">PHP</skill>
+	<skill type="language">AppleScript</skill>
+	<skill type="language">Javascript</skill>
+	<skill type="language">Java</skill>
+
+
+	<skill type="technology">Linux</skill>
+	<skill type="technology">Unix</skill>
+	<skill type="technology">DOS</skill>
+	<skill type="technology">Windows NT</skill>
+	<skill type="technology">Windows 2000</skill>
+	<skill type="technology">Windows 98</skill>
+	<skill type="technology">MacOS X</skill>
+	<skill type="technology">MacOS</skill>
+ 
+ 	<skill type="language">PERL</skill>
+ 	<skill type="language">PHP</skill>
+ 	<skill type="language">AppleScript</skill>
+ 	<skill type="language">MPW</skill>
+ 	<skill type="language">HyperTalk (Hypercard)</skill>
+ 	<skill type="language">Javascript</skill>
+ 	<skill type="language">VBScript</skill>
+ 	<skill type="language">TCL/Tk</skill>
+ 	<skill type="language">csh</skill>
+ 	<skill type="language">zsh</skill>
+ 	<skill type="language">bash</skill>
+ 	<skill type="language">regex (regular expressions)</skill>
+
+
+ 	<skill type="software">Symantec compilers</skill>
+ 	<skill type="software">Make</skill>
+	<skill type="technology">Internationalization (i18n)</skill>
+
+ 
+ 	<job><company href="http://www.tbd.com/"><name>TeeBeeDee</name>
+ 	<description>Social and information networking platform for Baby Boomers.</description></company>
+ 	<title>Principal Software Architect</title>
+ 	<date year="2006.10">October 2006 - present</date>
+			<manager>Claude Devarenne, Director of Engineering</manager>
+ 			<role>
+				<title>Architect</title>
+ 				<description>
+				Set technical strategy and advocated internal development projects. Provided technical 
+				leadership and mentoring.
+				Established standard development patterns to improve maintainability and development velocity.
+				Created tools to reduce code complexity.
+			</description>
+ 			</role>
+ 			<role>
+				<title>Software Developer</title>
+ 				<description>
+				Designed and built the "kudos", a peer rating system; member profile pages; "Invite a Friend"; Q&amp;A; "Real-life Scripts", and various parts of other functionality. Worked at all tiers: DB schemas, persistence mappings, services, web controllers, and views. 
+			</description>
+ 			</role>
+ 			<role>
+				<title>Scrum Master</title>
+ 				<description>
+			Ran daily stand-up meetings, iteration check-in meetings, engineering estimations, and iteration retrospectives. 
+			Advocated agile development and worked with product development to implement an agile process.
+			</description>
+ 			</role>
+
+<skill type="language">CSS</skill>
+<skill type="language">Java 5</skill>
+<skill type="language">Javascript</skill>
+<skill type="language">sh</skill>
+<skill type="language">SQL</skill>
+<skill type="technology">Linux</skill>
+<skill type="technology">MacOS X</skill>
+<skill type="technology">Windows XP</skill>
+<skill type="designer">Agile development</skill>
+<skill type="software">Ant</skill>
+<skill type="software">Atlassian Bamboo</skill>
+<skill type="software">Atlassian JIRA</skill>
+<skill type="software">Atlassian Confluence</skill>
+<skill type="software">DWR</skill>
+<skill type="designer">Extreme Programming</skill>
+<skill type="software">IntelliJ IDEA</skill>
+<skill type="software">JUnit</skill>
+<skill type="software">EasyMock</skill>
+<skill type="software">Prototype</skill>
+<skill type="software">Scriptaculous</skill>
+<skill type="software">MochiKit</skill>
+<skill type="software">JSAN</skill>
+<skill type="technology">JSON</skill>
+<skill type="software">YUI-2.3.0</skill>
+<skill type="software">DWR</skill>
+<skill type="software">Lucene</skill>
+<skill type="technology">Search Engines</skill>
+<skill type="software">Solr</skill>
+<skill type="software">MySQL</skill>
+<skill type="designer">Pair programming</skill>
+<skill type="designer">Refactoring</skill>
+<skill type="designer">Test-driven development</skill>
+<skill type="designer">User stories</skill>
+<skill type="technology">Ajax</skill>
+<skill type="software">Apache Commons</skill>
+<skill type="technology">Apache Jakarta Tomcat</skill>
+<skill type="technology">Apache web server</skill>
+<skill type="technology">SVN</skill>
+<skill type="software">Hibernate 3</skill>
+<skill type="technology">JSP Documents</skill>
+<skill type="software">JUnit</skill>
+<skill type="software">Compass</skill>
+<skill type="software">Spring Framework</skill>
+<skill type="software">Spring MVC</skill>
+<skill type="language">XHTML</skill>
+<skill type="language">XML</skill>
+<skill type="software">Photoshop</skill>
+ 	</job>
+
+
+ 
+ 
+ 
+ 
+ 
+ 	<job>
+		<company href="http://www.greatschools.net">
+			<name>
+				GreatSchools.net
+			</name>
+			<description>
+				The premier guide to K-12 school information, the non-profit GreatSchools  provides 
+				resources for parents to improve the U.S. education system. 
+			</description>
+		</company>
+			<title>Software Manager, Senior Software Architect</title>
+		<date year="2005">
+			March 2005 - October 2006
+		</date>
+			<manager>Todd Huss, VP of Engineering</manager>
+	
+ 			<role>
+				<title>Architect</title>
+ 				<description>
+Defined the technology stack and designed architecture to transition a data-intensive, high-traffic web site (max 2-3k page view per minute) from Perl to Java. Developed transition strategy and completed initial implementation.
+			</description>
+ 			</role>
+ 			<role>
+				<title>Software Manager</title>
+ 				<description>
+ 					Implementing an XP/agile-based methodology including test-driven development, pair programming, code reviews, user stories and "planning poker." Hired and managed staff, and coordinated contractors as needed. Coordinated releases and development schedule.
+ 				</description>
+ 			</role>
+ 			<role>
+				<title>Senior Software Developer</title>
+ 				<description>Implemented numerous web pages, from the CSS and Javascript down to the database schema. Prototyped new product ideas, especially mapping and Ajax-based UIs.
+ Added secure Verisign credit card processing. Delivered user-friendly Swing-based data loading tool to internal team. 
+</description>
+ 			</role>
+
+<skill type="language">CSS</skill>
+<skill type="language">Java</skill>
+<skill type="language">Javascript</skill>
+<skill type="language">PERL</skill>
+<skill type="language">sh</skill>
+<skill type="language">XSLT</skill>
+<skill type="technology">FreeBSD</skill>
+<skill type="technology">MacOS X</skill>
+<skill type="technology">Windows 2000</skill>
+<skill type="technology">Windows XP</skill>
+<skill type="designer">Agile development</skill>
+<skill type="software">Ant</skill>
+<skill type="software">Clover code coverage</skill>
+<skill type="software">Cruise Control</skill>
+<skill type="designer">Extreme Programming</skill>
+<skill type="software">Google Maps API</skill>
+<skill type="software">IntelliJ IDEA</skill>
+<skill type="software">JUnit</skill>
+<skill type="software">Maven</skill>
+<skill type="software">MySQL</skill>
+<skill type="designer">Pair programming</skill>
+<skill type="designer">Refactoring</skill>
+<skill type="designer">Test-driven development</skill>
+<skill type="designer">User stories</skill>
+<skill type="technology">Ajax</skill>
+<skill type="software">Apache Commons</skill>
+<skill type="technology">Apache Jakarta Tomcat</skill>
+<skill type="technology">Apache web server</skill>
+<skill type="technology">CGI</skill>
+<skill type="software">Cruise Control</skill>
+<skill type="technology">CVS</skill>
+<skill type="technology">Geocoding</skill>
+<skill type="software">Hibernate 3</skill>
+<skill type="software">Hibernate</skill>
+<skill type="technology">Java WebStart</skill>
+<skill type="technology">JSP Documents</skill>
+<skill type="software">JUnit</skill>
+<skill type="software">Lucene</skill>
+<skill type="software">Sitemesh</skill>
+<skill type="software">Spring Framework</skill>
+<skill type="software">Spring MVC</skill>
+<skill type="technology">Swing</skill>
+<skill type="technology">Verisign Credit Card Processing</skill>
+<skill type="technology">WebServices</skill>
+<skill type="language">XHTML</skill>
+<skill type="language">XPath</skill>
+<skill type="language">XML</skill>
+<skill type="software">Photoshop</skill>
+ 	</job>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<job>
+		<company href="http://ndpsoftware.com">
+			<name>
+				NDP Software
+			</name>
+		</company>
+		<date year="2004.02">
+			March 1999 - present
+		</date>
+		<title>Principal</title>
+		<description>
+			NDP Software creates high-quality software products and provides consulting services for enterprise, commercial and non-profit clients. Services range from web development
+			to software development along with consulting.
+		</description>
+				<skill type="software">MooTools</skill>
+
+
+			<project>
+				<company href="http://navis.com">
+					<name>
+						Navis LLC
+					</name>
+				</company>
+				<title>Java Architect, Presentation Tier</title>
+				<date year="2004.12">
+					July 2002 - March 2005
+				</date>
+				<summary>
+					Created the web and presentation tier for a next generation of enterprise software in the Java EE environment.
+				</summary>
+				<description>
+					Led web tier development of company's Java EE platform. Defined, tested, documented, taught and sold the overall approach to the team and other teams. Built all framework components, including site map, navigation system, data dictionary, taglibs, ui "widgets" and business tier API. Used some aspects of extreme programming, notably unit testing and continuous integration.
+				</description>
+				<skill type="language">Java</skill>
+				<skill type="language">JSP</skill>
+				<skill type="language">SQL</skill>
+				<skill type="language">XML</skill>
+				<skill type="language">XSLT</skill>
+				<skill type="language">XPath</skill>
+				<skill type="language">HTML</skill>
+				<skill type="language">XHTML</skill>
+				<skill type="language">Javascript</skill>
+				<skill type="technology">Java EE</skill>
+				<skill type="technology">J2SE</skill>
+				<skill type="technology">JDBC</skill>
+				<skill type="technology">JSP Taglibs</skill>
+				<skill type="technology">Servlets</skill>
+				<skill type="technology">TCP/IP</skill>
+				<skill type="technology">SDKs</skill>
+				<skill type="technology">ULC (Canoo)</skill>
+				<skill type="software">Jakarta Commons Java utilities</skill>
+				<skill type="software">Spring Framework</skill>
+				<skill type="software">JWebUnit</skill>
+				<skill type="software">JUnit</skill>
+				<skill type="software">HttpUnit</skill>
+				<skill type="technology">Unit Testing</skill>
+				<skill type="software">JDOM</skill>
+				<skill type="software">Hibernate</skill>
+				<skill type="software">Struts</skill>
+				<skill type="technology">UML</skill>
+				<skill type="software">Macker</skill>
+				<skill type="software">Eclipse</skill>
+				<skill type="technology">MacOS X</skill>
+				<skill type="technology">Unix</skill>
+				<skill type="software">IntelliJ IDEA</skill>
+				<skill type="software">BBEdit</skill>
+				<skill type="software">CVS</skill>
+				<skill type="software">MySQL</skill>
+				<skill type="software">Ant</skill>
+				<skill type="software">Cruise Control</skill>
+				<skill type="software">JBoss</skill>
+				<skill type="software">Apache Jakarta Tomcat</skill>
+				<skill type="designer">Object-oriented Design (OOD)</skill>
+				<skill type="designer">Object-oriented Programming (OOP)</skill>
+				<skill type="designer">Extreme Programming</skill>
+				<skill type="designer">UML</skill>
+				<skill type="designer">Design Patterns</skill>
+				<skill type="software">source code control</skill>
+				<manager>Jon Shields, PhD., Navis LLC</manager>
+			</project>
+			<project>
+				<company href="http://www.spinguys.com">
+					<name>
+						SpinGuys
+					</name>
+				</company>
+				<description>
+					Provides quick to set up and easy-to-manage political campaign web sites to local and state-wide candidates.
+				</description>
+				<date year="2004">
+					2002-present
+				</date>
+				<title>Partner/Developer</title>
+				<description>
+					Implemented web-site database backend system and template-based front-end system on a very tight budget.
+				</description>
+				<skill type="language">SQL</skill>
+				<skill type="software">Eclipse</skill>
+				<skill type="language">PHP</skill>
+				<skill type="language">XHTML</skill>
+				<skill type="language">HTML</skill>
+				<skill type="language">Javascript</skill>
+				<skill type="software">Apache</skill>
+				<skill type="software">Unix</skill>
+				<skill type="software">BBEdit</skill>
+				<skill type="software">MacroMedia Fireworks</skill>
+				<skill type="software">FTP</skill>
+				<skill type="software">MySQL</skill>
+				<link href="http://friendsofmikegordon.com">
+				Friends of Mike Gordon
+				</link>
+				
+<link href="http://www.hardwork.net">Dean Florez for CA State Senate</link>
+
+<link href="http://www.votejackson.com">Hannah-Beth Jackson for CA Assembly</link>
+
+<link href="http://www.rosenberg2000.com">Rosenberg for U.S. Congress</link>
+
+<link href="http://www.spinguys.com/front/screenshots/hutchinson.jpg">Ann Hutchinson for U.S. Congress</link>
+
+<link href="http://www.superkathysoundbites.com">Super Kathy Soundbites</link>
+
+<link href="http://www.reskeforindiana.com">Reske for Indiana Assembly</link>
+
+
+
+				<manager>Dan Rosenberg</manager>
+
+			</project>
+			<project>
+				<company href="http://www.aida-americas.org">
+					<name>
+						AIDA
+					</name>
+					<description>
+						Inter-American Association for Environmental Defence
+					</description>
+				</company>
+				<date year="2004">
+					2000-present
+				</date>
+				<title>Web Site Developer</title>
+				<description>
+					Sole developer of a web site for the non-profit. Initially included hundreds of pages of content, but now is migrated to a custom, bi-lingual content management system. Site has instigated social change throughout the Americas.
+				</description>
+				<manager>Anna Cederstav</manager>
+				<skill type="language">SQL</skill>
+				<skill type="software">Eclipse</skill>
+				<skill type="software">FTP</skill>
+				<skill type="language">PHP</skill>
+				<skill type="language">HTML</skill>
+				<skill type="language">XHTML</skill>
+				<skill type="language">Javascript</skill>
+				<skill type="software">Apache</skill>
+				<skill type="technology">Unix</skill>
+				<skill type="software">BBEdit</skill>
+				<skill type="software">MacroMedia Fireworks</skill>
+				<skill type="software">MySQL</skill>
+			</project>
+
+			<project>
+				<company href="http://navis.com">
+					<name>
+						Navis LLC
+					</name>
+				</company>
+				<date year="2002.10">
+					October - November 2002
+				</date>
+				<project>
+					M and R
+				</project>
+				<title>User Interface Consultant, M&amp;R</title>
+				<description>
+					Built prototype of new product to improve product design and work out ambiguities in the specifications. Worked with product managers, designers and graphic artist to create frameworks for current and future applications.
+				</description>
+				<skill type="language">PHP</skill>
+				<skill type="language">HTML</skill>
+				<skill type="language">XHTML</skill>
+				<skill type="language">Javascript</skill>
+				<skill type="technology">MacOS X</skill>
+				<skill type="technology">Unix</skill>
+				<skill type="software">BBEdit</skill>
+				<skill type="software">MacroMedia Fireworks</skill>
+				<skill type="software">CVS</skill>
+			</project>
+			<project>
+				<company href="http://www.idex.org">
+					<name>
+						IDEX
+					</name>
+					<description>
+						International Development Exchange is a non-profit partnering with small, local, non-profits around the world to facilitate grass-roots development.
+					</description>
+				</company>
+				<date year="2001">
+					2001-present
+				</date>
+				<title>Web Project Management Consultant</title>
+				<description>
+					Provided project management consulting throughout the web site production, and then became the "web guy." Created a user-friendly web content management system. Site now helps bring in thousands of dollars in donations.
+				</description>
+				<skill type="language">SQL</skill>
+				<skill type="software">Eclipse</skill>
+				<skill type="language">PHP</skill>
+				<skill type="language">HTML</skill>
+				<skill type="language">XHTML</skill>
+				<skill type="language">Javascript</skill>
+				<skill type="software">Apache</skill>
+				<skill type="technology">Unix</skill>
+				<skill type="software">BBEdit</skill>
+				<skill type="software">MacroMedia Fireworks</skill>
+				<skill type="software">MySQL</skill>
+				<skill type="software">FTP</skill>
+				<manager>Heather Mansfield, IDEX</manager>
+			</project>
+			<project>
+				<company href="http://www.liquidaudio.com">
+					<name>
+						Liquid Audio
+					</name>
+				</company>
+				<project>
+					Liquid Player
+				</project>
+				<title>Programming Consultant</title>
+				<date year="2001">
+					2001-2002
+				</date>
+				<description>
+					Developed from the ground up a flexible, usable "Music Organizer" component for a secure digital music player.
+				</description>
+				<skill type="language">C++</skill>
+				<skill type="technology">SDKs</skill>
+				<skill type="technology">MacOS</skill>
+				<skill type="software">Metrowerks CodeWarrior</skill>
+				<skill type="software">PowerPlant</skill>
+				<skill type="software">Perforce</skill>
+				<skill type="designer">Object-oriented Design (OOD)</skill>
+				<skill type="designer">Object-oriented Programming (OOP)</skill>
+				<skill type="software">source code control</skill>
+			</project>
+			<project>
+				<company>
+					<name>
+						Rosenberg for Congress
+					</name>
+				</company>
+				<title>Database Consultant</title>
+				<date year="2000">
+					2000
+				</date>
+				<description>
+					Database design and implementation for a campaign donation tracking system, used throughout a campaign for U.S. Congress.
+				</description>
+				<skill type="software">FileMaker Pro</skill>
+				<skill type="software">source code control</skill>
+				<manager>Dan Rosenberg</manager>
+			</project>
+			<project>
+				<company href="http://www.siteofcare.com">
+					<name>
+						Site of Care Systems
+					</name>
+				</company>
+				<title>Database Consultant</title>
+				<date year="1999">
+					1999
+				</date>
+				<description>
+					Database design and implementation of a bug-tracking system for a medical software developer.
+				</description>
+				<skill type="software">FileMaker Pro</skill>
+			</project>
+			<project>
+				<company href="http://www.maccvs.org">
+					<name>MacCVS Pro</name>
+				</company>
+				<date year="2000">
+					2000-2002
+				</date>
+				<title>Open Source Developer</title>
+				<project>
+					MacCVS Pro
+				</project>
+				<description>
+					Added AppleScript scripting capabilities to MacCVS Pro. Designed and implemented an enhanced "history" view, which provides an easy way to explore the history of a file, its tags and branches.
+				</description>
+				<skill type="language">C++</skill>
+				<skill type="language">AppleScript</skill>
+				<skill type="technology">MacOS X</skill>
+				<skill type="software">Metrowerks CodeWarrior</skill>
+				<skill type="software">CVS</skill>
+				<skill type="software">source code control</skill>
+			</project>
+			<project>
+				<company href="http://lw.com">
+					<name>
+						Latham-Watkins LLC, Menlo Park
+					</name>
+				</company>
+				<company href="http://sony.com">
+					<name>
+						Sony Electronics
+					</name>
+				</company>
+				<company href="http://tivo.com">
+					<name>
+						TiVo
+					</name>
+				</company>
+				<date year="2004">
+					2003 - 2005
+				</date>
+				<title>Expert Witness Consultant</title>
+				<description>
+					Provide expert witness research, reports and testimony.
+				</description>
+				<manager>Matthew Rawlinson, Latham-Watkins LLC</manager>
+			</project>
+			<project>
+				<company href="http://navis.com">
+					<name>
+						Navis LLC
+					</name>
+				</company>
+				<date year="2002.02">
+					February 2002 - October 2002
+				</date>
+				<title>Version Control Consultant</title>
+				<project>
+					Express
+				</project>
+				<description>
+					Facilitated migration of an Oracle-forms based product from an un-versioned development process to a scheduled, versioned release process. Performed data gathering through extensive interviews. Recommended technical direction and best practices.  Created all necessary technical tools and materials. Trained all stakeholders. Integrated in-house change management system with CVS, providing accurate mapping of code changes to bugs and enhancements. Designed a CVS front-end system. Integrated CVS with an in-house bug tracking system.
+				</description>
+				<skill type="language">Java</skill>
+				<skill type="software">CVS</skill>
+				<skill type="software">Doxygen</skill>
+				<skill type="software">source code control</skill>
+				<skill type="technology">JDBC</skill>
+				<skill type="language">XML</skill>
+				<manager>Rodrigo Silviera, Navis LLC</manager>
+			</project>
+			<project>
+				<company href="http://navis.com">
+					<name>
+						Navis LLC
+					</name>
+				</company>
+				<project>
+					Sparcs
+				</project>
+				<date year="2001.01">
+					January - October 2001
+				</date>
+				<title>Development Tools Consultant</title>
+				<description>
+					CVS Conversion. Convert large codebase (1000 files) with dozens of active versions from MPW Projector to CVS source code control.
+					<br />
+					Created reliable and easy-to-use build system for a complex, cross-platform product. Facilitate conversion of large codebase from Object Pascal to C++. Provided coding style guidelines to faciliate C++ migration.
+				</description>
+				<skill type="language">C++</skill>
+				<skill type="language">Object Pascal</skill>
+				<skill type="language">PERL</skill>
+				<skill type="language">TCL/Tk</skill>
+				<skill type="language">AppleScript</skill>
+				<skill type="technology">Microsoft Windows</skill>
+				<skill type="technology">MacOS X</skill>
+				<skill type="technology">DOS</skill>
+				<skill type="software">Metrowerks CodeWarrior</skill>
+				<skill type="software">CVS</skill>
+				<skill type="software">Doxygen</skill>
+				<skill type="software">source code control</skill>
+				<manager>Jon Ranstrom, Navis LLC</manager>
+			</project>
+	</job>
+	<job>
+		<company href="http://www.ccsf.org">
+			<name>
+				City College of San Francisco
+			</name>
+		</company>
+		<date year="2001">
+			2001 - 2002
+		</date>
+		<title>Instructor of web technologies</title>
+		<description>
+			Taught CIS 135 series, which includes in-depth HTML, XHTML, and CSS; covered briefly Javascript, Java applets, CGI, PERL, XML, PHP, ASP, security and legal issues. Prepared course outline and homework assignments and delivered lectures. Graded student work. 
+		</description>
+				<manager>Rose Endres, CCSF</manager>
+								<manager>Pierre Thiery</manager>
+
+		<skill type="language">XML</skill>
+		<skill type="language">XSLT</skill>
+		<skill type="language">XPath</skill>
+		<skill type="language">PHP</skill>
+		<skill type="language">PERL</skill>
+		<skill type="language">HTML</skill>
+		<skill type="language">XHTML</skill>
+		<skill type="language">tcsh</skill>
+		<skill type="language">csh</skill>
+		<skill type="language">sh</skill>
+		<skill type="language">Javascript</skill>
+		<skill type="technology">IIS</skill>
+		<skill type="technology">TCP/IP</skill>
+		<skill type="technology">CGI</skill>
+		<skill type="technology">ODBC</skill>
+		<skill type="technology">Apache</skill>
+		<skill type="technology">Unix</skill>
+		<skill type="technology">DOS</skill>
+		<skill type="software">MySQL</skill>
+	</job>
+	<job>
+		<company href="http://navis.com">
+			<name>
+				Navis LLC
+			</name>
+			<description>
+			The leading supplier of software solutions for container terminals, shipping ports and lines, and distribution centers.
+			</description>
+		</company>
+		<date year="1992.06">
+			6/1992 - 2/1999
+		</date>
+		<title>Senior Software Engineer and Software Development Manager</title>
+		<description>
+			I helped Navis Corporation grow from just a few clients when I joined (employee number eleven) to the world-wide market leader. I focused on the SPARCS product, a real-time, decision-support, client/server system that manages over 100 containership terminals around the world. I served many varied roles (often simultaneously) while at Navis.
+		</description>
+		<role>
+			<title>Software Development Manager (shared)</title>
+			<description>
+				I built the development team, helped set the strategic direction of the company, and managed 4-10 major projects each year (and countless minor projects). I advocated for, and helped institute strategic planning, source code control, a coding style guide, task tracking and scheduling systems. Coordinated weekly technical meetings, project plans and roadmap.
+			</description>
+		</role>
+		<role>
+			<title>Senior Software Engineer</title>
+			<description>
+				Designed, wrote, installed, maintained, and supported two of the software products with a team of five to ten engineers. I created several key features of the product. I performed successful on-site installations and upgrades around the world. With team members, ported from 68k to PPC (MacOS), and later to WindowsNT. I solved y2k problems.
+			</description>
+		</role>
+		<role>
+			<title>Tools Manager</title>
+			<description>
+				I managed a source code system that supported over a hundred releases a year, with people working worldwide. I created a build system and trained a non-technical staff to use it while travelling.
+			</description>
+		</role>
+		<role>
+			<title>QA Manager</title>
+			<description>
+				I created a QA department and established a bug tracking and release process.
+			</description>
+		</role>
+		<skill type="language">Object Pascal</skill>
+		<skill type="language">AppleScript</skill>
+		<skill type="technology">TCP/IP</skill>
+		<skill type="technology">SDKs</skill>
+		<skill type="software">MPW</skill>
+		<skill type="technology">MacOS</skill>
+		<skill type="technology">Microsoft Windows</skill>
+		<skill type="software">Metrowerks CodeWarrior</skill>
+		<skill type="software">FileMaker Pro</skill>
+		<skill type="software">Projector</skill>
+		<skill type="software">Eudora Pro</skill>
+		<skill type="software">MacApp</skill>
+		<skill type="designer">Object-oriented Design (OOD)</skill>
+		<skill type="designer">Object-oriented Programming (OOP)</skill>
+		<skill type="software">source code control</skill>
+	</job>
+	<job>
+		<company>
+			<name>
+				Self-employed
+			</name>
+		</company>
+		<date year="1992.03">
+			3/1992 - 1/1993
+		</date>
+		<title>Independent Contractor</title>
+		<project>
+			<company>
+				<name>
+					Software Ventures Corporation (SVC)
+				</name>
+			</company>
+			<title>Free-lance Technical Writer</title>
+			<description>
+				Wrote 80-page user's manual on TCP/IP.
+			</description>
+			<skill type="software">Microsoft Word</skill>
+		</project>
+		<project>
+			<company>
+				<name>
+					Software Ventures Corporation (SVC)
+				</name>
+			</company>
+			<title>Software Developer</title>
+			<description>
+				Developed installation tools.
+			</description>
+			<skill type="software">MPW</skill>
+			<skill type="technology">TCP/IP</skill>
+		</project>
+	</job>
+	<job>
+		<company href="http://www.farallon.com/">
+			<name>
+				Farallon
+			</name>
+			<description>
+				Farallon Computing was a leading supplier of MacOS software and hardware.
+			</description>
+		</company>
+		<company href="http://www.netopia.com/">
+			<name>
+				Netopia
+			</name>
+		</company>
+		<date year="1990.01">
+			1/1990 - 1/1992
+		</date>
+		<title>Senior Software Engineer Team Leader</title>
+		<description>
+			Led a six-engineer team in the creation of the top-selling <b> SoundEdit Pro / SoundEdit 16 </b> (<a href="http://www.MacroMedia.com" target="_blank">MacroMedia</a>). To improve software quality, I founded (with three co-workers) the User Interface Task Force, which began user testing company-wide.
+		</description>
+		<skill type="language">C++</skill>
+		<skill type="language">C</skill>
+		<skill type="language">Object Pascal</skill>
+		<skill type="technology">SDKs</skill>
+		<skill type="software">MPW</skill>
+		<skill type="technology">MacOS</skill>
+		<skill type="software">Apple Projector</skill>
+		<skill type="software">MacApp</skill>
+		<skill type="designer">Object-oriented Design (OOD)</skill>
+		<skill type="designer">Object-oriented Programming (OOP)</skill>
+	</job>
+	<job>
+		<company href="http://www.harvardgraphics.com/">
+			<name>
+				Software Publishing Corporation
+			</name>
+			<description>
+				Software Publishing Corporation is a leading supplier of commercial PC software.
+			</description>
+		</company>
+		<date year="1988.08">
+			8/1988 - 12/1989
+		</date>
+		<title>Software Engineer</title>
+		<description>
+			Designed and coded three cross-platform projects: a high-end word processor, a database and a presentation graphics product (<b>Harvard Graphics</b>). I analysed and recommended potential product acquisitions. I advocated quality, initiated internal documentation requirements and set programming style guidelines.
+		</description>
+		<skill type="language">C++</skill>
+		<skill type="language">C</skill>
+		<skill type="software">MPW</skill>
+		<skill type="software">Symantec compilers</skill>
+		<skill type="technology">MacOS</skill>
+		<skill type="technology">Microsoft Windows</skill>
+		<skill type="technology">DOS</skill>
+		<skill type="designer">Object-oriented Design (OOD)</skill>
+		<skill type="designer">Object-oriented Programming (OOP)</skill>
+	</job>
+	<job>
+		<company>
+			<name>
+				Mansfield Systems, Inc.
+			</name>
+		</company>
+		<date year="1986.07">
+			7/1986 - 9/1986, 7/1987 - 8/1988
+		</date>
+		<title>Software Engineer</title>
+		<description>
+			As employee number four at this start-up company, I created a technical desktop publishing application for MacOS. I started as a summer intern and grew to a primary developer of the word processor.
+		</description>
+		<skill type="language">C</skill>
+		<skill type="software">Lightspeed C compiler</skill>
+		<skill type="technology">MacOS</skill>
+		<skill type="designer">Object-oriented Programming (OOP)</skill>
+	</job>
+	<job>
+		<company href="http://cc.uoregon.edu/">
+			<name>
+				University of Oregon Computing Center
+			</name>
+			<description>
+				The Computing Center provides computer services to the campus community.
+			</description>
+		</company>
+		<date year="1985">
+			9/1985 - 6/1987
+		</date>
+		<title>Student Programmer</title>
+		<date year="1984">
+			1984 - 1985
+		</date>
+		<title>Lab Assistant</title>
+		<description>
+			I administrated, installed, and maintained labs serving 800 students per term. I maintained libraries and organized electronic conferences, planned and taught classes, solved problems, tutored students and sold computers.
+		</description>
+		<skill type="language">Cobol</skill>
+		<skill type="language">Fortran</skill>
+		<skill type="language">Object Pascal</skill>
+		<skill type="technology">MacOS</skill>
+		<skill type="technology">DOS</skill>
+	</job>
+	<job>
+		<company>
+			<name>
+				Applied Navigational Devices
+			</name>
+			<description>
+				Supplies hardware for mapping underground oil exploration sites.
+			</description>
+		</company>
+		<date year="1985">
+			Summer 1985
+		</date>
+		<title>Programmer</title>
+		<description>
+			Maintained quality assurance software.
+		</description>
+		<skill type="language">Fortran</skill>
+		<skill type="technology">DOS</skill>
+	</job>
+	<job>
+		<company>
+			<name>
+				University of Oregon Institute of Molecular Biology
+			</name>
+		</company>
+		<date year="1984">
+			1984 - 1985
+		</date>
+		<title>Programmer</title>
+		<description>
+			Wrote plotting and spectrometer data-acquisition programs.
+		</description>
+		<skill type="language">BASIC</skill>
+		<skill type="technology">DOS</skill>
+	</job>
+	<job>
+		<company>
+			<name>
+				Quality Educational Designs
+			</name>
+		</company>
+		<date year="1981">
+			1981 - 1983
+		</date>
+		<title>Programmer</title>
+		<description>
+			Ported more than 50 small educational programs from the Apple II to the Commodore PET. These programs sold successfully for years on the Q.E.D. label.
+		</description>
+		<skill type="language">BASIC</skill>
+	</job>
+	<education>
+		<institution href="http://uoregon.edu">
+			<name>University of Oregon</name>
+			<degree>
+				B.A. in Computer Science, 1987
+			</degree>
+			<honors>
+				Dean's List, Phi Beta Kappa, Presidential Scholar, Honors College, Student Senator
+			</honors>
+		</institution>
+		<institution>
+			<name>UC Berkeley Extension</name>
+			<class>
+				Technical Marketing
+			</class>
+		</institution>
+		<!--institution>
+			<name>Management and Leadership Seminars</name>
+		</institution>
+		<institution>
+			<name>Casa de Espa&#241;ol Xelaj&#250;, Quetzaltenango, Guatemala</name>
+			<degree>
+				Proficient in Spanish
+			</degree>
+		</institution>
+		<institution href="http://ccsf.edu">
+			<name>City College of San Francisco</name>
+			<class>
+				Spanish
+			</class>
+		</institution-->
+	</education>
+	<community>
+		<organization href="http://streetside.org">
+			<name>Streetside Stories</name>
+			<date year="2000">
+			2000 - 2005
+			</date>
+			<title>President and Member of Board of Directors</title>
+			<description>
+				Streetside Stories builds literacy, critical thinking, and community among middle school students through volunteer-led storytelling literacy arts programs in Bay Area schools. Initiated and oversaw transition of board to a committee structure. Hired and managed Executive Director.
+			</description>
+		</organization>
+	</community>
+	<strengths>
+		<strength goal="manager">
+			10 years leading software development teams.
+		</strength>
+		<strength goal="engineer, manager">
+			15 years delivering commercial and vertical market software.
+		</strength>
+		<strength goal="engineer">
+			Strong software design: excellent problem analysis, object-oriented analysis, design methods, human interface design and database design. Software includes enterprise level client applications, vertical market software, successful commercial products, and web-based applications.
+		</strength>
+		<strength goal="engineer">
+			Solid understanding of the software development process, including requirements gathering, analysis and design, development tools and technologies, release and version control, contemporary testing methodologies, and deployment management.
+		</strength>
+		<strength goal="manager">
+			Expert in the full lifecycle of software development, software methodologies, software architecture, software engineering, and usability.
+		</strength>
+		<strength goal="engineer, manager">
+			Excellent written and verbal communication skills.
+		</strength>
+		<strength goal="engineer, manager">
+			Versatile and pro-active leader, team-player and problem-solver. Capable of working with tight deadlines. Fast learner.
+		</strength>
+		<strength goal="manager">
+			Proven track record of shipping successful, usable software under pressure.
+		</strength>
+		<strength goal="manager">
+			Experienced collaborator in defining product vision and strategy.
+		</strength>
+		<strength goal="manager, engineer">
+			Technical expertise in popular development tools, web technologies, languages, servers, and applications.
+		</strength>
+	</strengths>
+</resume>

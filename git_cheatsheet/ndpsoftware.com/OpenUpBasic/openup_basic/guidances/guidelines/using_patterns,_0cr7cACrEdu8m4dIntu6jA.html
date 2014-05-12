@@ -1,0 +1,156 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/using_patterns,_0cr7cACrEdu8m4dIntu6jA.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Using Patterns</title>
+<meta content="Guideline" name="uma.type">
+<meta content="using_patterns" name="uma.name">
+<meta content="Using Patterns" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Using Patterns</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guidance discusses the practical application of patterns in a project.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" guid="_0fshwMlgEdmt3adZL5Dmdw">Design the Solution</a>
+</li>
+<li>
+<a href="layering%2c_0gpkAMlgEdmt3adZL5Dmdw.html" guid="_0gpkAMlgEdmt3adZL5Dmdw">Layering</a>
+</li>
+<li>
+<a href="../concepts/design_mechanism%2c_w2ACwA4LEduibvKwrGxWxA.html" guid="_w2ACwA4LEduibvKwrGxWxA">Design Mechanism</a>
+</li>
+<li>
+<a href="../concepts/business_pattern%2c_Z53x0BapEduSTJywppIxVQ.html" guid="_Z53x0BapEduSTJywppIxVQ">Business Pattern</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    In software design, it is primarily the development method and not the pattern and its pattern language that influences
+    the process of pattern selection and use. As discussed in <a class="elementLinkWithType" href="../concepts/patterns%2c_0YJvUMlgEdmt3adZL5Dmdw.html" guid="_0YJvUMlgEdmt3adZL5Dmdw">Concept: Patterns</a>, Alexander developed the concept of generative pattern languages
+    to guide a designer’s application of individual patterns to the entire design. In software design, however, as
+    Alexander observed [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html" guid="_9ToeIB83Edqsvps02rpOOg">OOP96</a>] there is little evidence of using generative pattern languages.
+</p>
+<p>
+    For iterative development methods, software patterns and pattern languages support the development method through their
+    ability to be applied incrementally, or by piecemeal growth, and by providing extensible structures. From an
+    architectural perspective, these two qualities allow software architecture to be designed and refactored incrementally,
+    thus so avoid the need for a so-called "big, up-front design."
+</p>
+<h4>
+    Piecemeal growth
+</h4>
+<p>
+    The term <strong>piecemeal growth</strong>, as it applies to patterns, originates in Alexander's work. It refers to a
+    top-down design process in which a design starts from a high-level structure that is embellished or refined through the
+    implementation of lower-level patterns. For software development, this corresponds to using hierarchies of
+    architectural and design patterns and idioms like those proposed by Buschmann et. al. [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html" guid="_9ToeIB83Edqsvps02rpOOg">BUS96</a>]. Using the idea of piecemeal growth, an architect can start with one or more
+    architectural patterns to provide an architectural vision for the design, and then progressively extend the design
+    using design patterns. For example, an interactive application may use the Model-View-Controller pattern as its
+    architectural vision, then during implementation the Command pattern may be selected to implement the Controller
+    component.
+</p>
+<h4>
+    Extensibility
+</h4>
+<p>
+    A key aspect of object oriented design patterns is their ability to support extension without causing the rewriting of
+    existing code. This feature allows a bottom up approach to the design process through code refactoring. When a problem
+    is encountered during coding such as duplicate code, the developer can weighed up various patterns and their tradeoffs
+    and select the appropriate solution in the context of the application.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../concepts/patterns%2c_0YJvUMlgEdmt3adZL5Dmdw.html" guid="_0YJvUMlgEdmt3adZL5Dmdw">Patterns</a>
+</li>
+<li>
+<a href="../concepts/design_mechanism%2c_w2ACwA4LEduibvKwrGxWxA.html" guid="_w2ACwA4LEduibvKwrGxWxA">Design Mechanism</a>
+</li>
+<li>
+<a href="../concepts/business_pattern%2c_Z53x0BapEduSTJywppIxVQ.html" guid="_Z53x0BapEduSTJywppIxVQ">Business Pattern</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="layering%2c_0gpkAMlgEdmt3adZL5Dmdw.html" guid="_0gpkAMlgEdmt3adZL5Dmdw">Layering</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/using_patterns,_0cr7cACrEdu8m4dIntu6jA.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+</html>

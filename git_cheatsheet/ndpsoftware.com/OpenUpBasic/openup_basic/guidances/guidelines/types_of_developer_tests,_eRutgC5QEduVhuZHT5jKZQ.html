@@ -1,0 +1,333 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/types_of_developer_tests,_eRutgC5QEduVhuZHT5jKZQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:27 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Types of Developer Tests</title>
+<meta content="Guideline" name="uma.type">
+<meta content="types_of_developer_tests" name="uma.name">
+<meta content="Types of Developer Tests" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Types of Developer Tests</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline describes various types of developer tests.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../workproducts/developer_test%2c_0YuXEclgEdmt3adZL5Dmdw.html" guid="_0YuXEclgEdmt3adZL5Dmdw">Developer Test</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    This guideline describes a number of types of tests.&nbsp; To perform these types of testing you need to define, and
+    then run, a series of tests against&nbsp;the source code. A developer test is a single test that needs to be performed.
+</p>
+<p>
+    It is valuable&nbsp;to augment automated tests with human readable test scripts in order to implement developer test
+    cases, scripts that include the information discussed below. A test script is the actual steps, sometimes either
+    written procedures to follow or the source code of a test. Developer test scripts are run against testing targets:
+    either one unit of source code, a more complex portion of your system (such as a component), or the entire system
+    itself to test&nbsp;some developer issue such&nbsp;as integration.
+</p>
+<h3>
+    Regression Testing
+</h3>
+<p>
+    Regression testing is the act of ensuring that changes to&nbsp;the code have not adversely affected existing
+    functionality. It is important to recognize that incremental development makes regression testing critical. Whenever
+    you release an application, you must ensure its previous functionality still works, and because you release
+    applications more often when taking the incremental approach, this means regression testing becomes that much more
+    important. Regression testing is the first thing you should be thinking about when testing for the following reasons:
+</p>
+<ol>
+    <li>
+        You want to be able to modify code and know that you can rerun your tests to see if you broke anything.
+    </li>
+    <li>
+        Existing users get very angry when things that previously worked don’t work anymore.
+    </li>
+</ol>
+<p>
+    Regression testing is fairly straightforward conceptually – you just need to run all of&nbsp;the previous test cases
+    against the new version of&nbsp;the code. Regression testing tools help immensely because they are designed with
+    regression testing in mind. However, there are potential challenges to regression testing:
+</p>
+<ul>
+    <li>
+        When you change your production, either to enhance it or to refactor it, you will need to rework existing test
+        cases coupled to that code.
+    </li>
+    <li>
+        If your updates affect only a component of the system, then potentially you only need to run the test cases that
+        affect this single component. Although this approach is a little risky because your changes may have had a greater
+        impact than you suspect, it does help to reduce both the time and cost of regression testing.
+    </li>
+    <li>
+        The more non-code artifacts that you decide to keep, the greater the effort to regression test your work and
+        therefore the greater the risk to your project because you are more likely to skimp on your testing efforts.
+    </li>
+</ul>
+<p>
+    Regression testing is critical to success as an agile developer. Many software developers use the xUnit family of open
+    source tools, such as <a href="http://www.junit.org/" target="_blank">JUnit</a> and <a href="http://www.vbunit.org/" target="_blank">VBUnit</a>, to test their code. The advantage of these tools is that they implement a testing framework
+    with which you can regression test all of your source code. Commercial testing tools are also viable options.
+</p>
+<h3>
+    Traditional Code Testing Techniques
+</h3>
+<p>
+    Although object and procedural technologies are different, several important testing concepts from the procedural world
+    are valid regardless of the underlying technology. These traditional testing techniques are:
+</p>
+<ul>
+    <li>
+        Black-box testing
+    </li>
+    <li>
+        Clear-box testing
+    </li>
+    <li>
+        Boundary-value testing
+    </li>
+    <li>
+        Coverage/Path testing
+    </li>
+</ul>
+<h4>
+    Black-Box Testing
+</h4>
+<p>
+    Black-box testing, also called interface testing, is a technique in which you create test cases based only on the
+    expected functionality of a method, class, or application without any knowledge of its internal workings. One way to
+    define black-box testing is that given input A you should obtain expected results B.
+</p>
+<p>
+    The goal of black-box testing is to ensure the system can do what it should be able to do, but not how it does it. For
+    example, if you invoke differenceInDays(June 30 2006, July 3 2006) the expected result should be three. The creation of
+    black-box tests is often driven by the requirements for&nbsp;the system. The basic idea is&nbsp;to look at the user
+    requirement and ask what needs to be done to show that the user requirement is met.
+</p>
+<p>
+    The primary advantage of black-box testing is that it enables you to prove that your application fulfills the
+    requirements defined for it.&nbsp;&nbsp; The primary disadvantage is that it does not show that the internals
+    of&nbsp;the system work (hence the need for clear-box testing).
+</p>
+<h4>
+    Clear-Box Testing
+</h4>
+<p>
+    Clear-box testing, also called white-box testing, is based on the idea that&nbsp;the program code can drive the
+    development of test cases. The basic concept is you look at&nbsp;the code, and then create test cases that exercise it.
+    For example, assume you have access to the source code for differenceInDays(). When you look at it, you see an IF
+    statement determines whether the two dates are in the same year. If&nbsp;they are in the same year then&nbsp;a simple
+    strategy based on Julian dates is used; if not then a more complex&nbsp;strategy is used. This indicates that you need
+    at least one test that uses dates from the same year and one from different years. By looking at the code, you are able
+    to determine new test cases to exercise the different logic paths within it.
+</p>
+<p>
+    The primary advantage of this concept is that it motivates you to create tests that exercise specific lines of
+    code.&nbsp; The disadvantages are that it does not ensure that your code fulfils the actual requirements (hence the
+    need for black-box testing) and that your testing code becomes highly coupled to your application code.
+</p>
+<h4>
+    Boundary-Value Testing
+</h4>
+<p>
+    This is based on the knowledge that you need to test your code to ensure it can handle unusual and extreme situations.
+    For example, boundary-value test cases differenceInDays() would include passing it the same date, two wildly different
+    dates, one date on the last day of the year and the second on the first day of the following year, and one date on
+    February 29th of a leap year. The basic idea is you want to look for limits defined either by your business rules or by
+    common sense, and then create test cases to test attribute values in and around those values.
+</p>
+<p>
+    The primary advantage of boundary value testing is that it motivates you to confirm that your program code is able to
+    handle “unusual” or “extreme” cases.
+</p>
+<h4>
+    Coverage and Path Testing
+</h4>
+<p>
+    Two critical “traditional” concepts are coverage and path testing. Coverage testing is a technique in which you create
+    a series of test cases designed to test all the code paths in your code. In many ways, coverage testing is simply a
+    collection of clear-box test cases that together exercise every line of code in your application at least once. Path
+    testing is a superset of coverage testing that ensures not only have all lines of code been tested, but all paths of
+    logic have also been tested. The main difference occurs when you have a method with more than one set of case
+    statements or nested IF statements: to determine the number of test cases with coverage testing you would count the
+    maximum number of paths between the sets of case/nested IF statements and, with path testing, you would multiply the
+    number of logic paths.
+</p>
+<h4>
+    Unit and Integration Testing
+</h4>
+<p>
+    Unit testing is the testing of an item, such as an operation, in isolation. For example, the tests defined so far for
+    differenceInDays() are all unit tests. Integration testing, on the other hand, is the testing of a collection of items
+    to validate that they work together. In the case of the data library/class, do the various functions work together?
+    Perhaps the differenceInDays() function has a side effect that causes the dayOfWeek() function to fail if
+    differenceInDays() is called first. Integration testing looks for problems like this.
+</p>
+<h3>
+    Object-Oriented Testing Techniques
+</h3>
+<p>
+    When testing systems built using object technology it is important to understand that your source code is composed of
+    several constructs, including methods (operations), classes, and inheritance. Therefore you need testing techniques
+    that reflect the fact that you have these constructs. These techniques are:
+</p>
+<ul>
+    <li>
+        Method testing
+    </li>
+    <li>
+        Class testing
+    </li>
+    <li>
+        Class-integration testing
+    </li>
+    <li>
+        Inheritance-regression testing
+    </li>
+</ul>
+<h4>
+    Method Testing
+</h4>
+<p>
+    Method testing is the act of ensuring that your methods (operations) perform as defined. In procedural testing this
+    would have been called function/procedure testing. Issues to address via method testing include:
+</p>
+<ul>
+    <li>
+        Ensure that your getter/setter methods work as intended
+    </li>
+    <li>
+        Ensure that each method returns the proper values, including error messages and exceptions
+    </li>
+    <li>
+        Validate the parameters being passed to a method
+    </li>
+    <li>
+        Ensure that a method does what it should
+    </li>
+</ul>
+<p>
+    The advantage of method testing is that it ensures that methods work well in isolation but it does not help to find
+    unintended side effects.
+</p>
+<h4>
+    Class Testing
+</h4>
+<p>
+    The main purpose of class testing is to test classes in isolation, and it is effectively the combination of traditional
+    unit testing and integration testing. It is unit testing because you are testing the class and its instances as single
+    units in isolation, but it is also integration testing because you need to verify the methods and attributes of the
+    class work together. The one assumption you need to make while writing “class tests” is that all other classes in the
+    system work. Issues to address via class testing include:
+</p>
+<ul>
+    <li>
+        Validate that the attributes of an object are initialized properly
+    </li>
+    <li>
+        Validate the invariants of the class
+    </li>
+</ul>
+<p>
+    The primary advantages of class testing are that it validates that the operations and properties of a class work
+    together and that the class works in isolation. However, it does not guarantee that a class works well with the rest of
+    your system.
+</p>
+<h4>
+    Class-integration Testing
+</h4>
+<p>
+    Also known as component testing, this technique addresses the issue of whether the classes in your system, or a
+    component of your system, work together properly. The relationships between classes can be used to drive the
+    development of class integration test cases. Issues to address via class-integration testing include:
+</p>
+<ul>
+    <li>
+        Validate that objects do what other objects expect of them
+    </li>
+    <li>
+        Validate that return values are acted upon appropriately
+    </li>
+    <li>
+        Validate that exceptions/errors are processed appropriately
+    </li>
+</ul>
+<p>
+    The technique helps to validate that the various classes within a component, or a system, work together. However, it
+    can be difficult to define and develop the test cases to fully perform this level of testing.
+</p>
+<h4>
+    Inheritance-regression&nbsp;Testing
+</h4>
+This is the act of running of test cases defined for the superclasses on the instances of a subclass because errors have
+not been introduced by that new subclass. New methods are added and existing methods may be redefined by subclasses,
+methods which access and potentially change the value of the attributes defined in the superclass. It is possible that a
+subclass may change the value of the attributes in a way that was never intended in the superclass, or at least was never
+expected. The point is that you need to invoke the test suite of the superclass(es) when testing a subclass. <br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/types_of_developer_tests,_eRutgC5QEduVhuZHT5jKZQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:27 GMT -->
+</html>

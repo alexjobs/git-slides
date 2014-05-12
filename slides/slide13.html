@@ -1,0 +1,17 @@
+<h3>Ignoring Files <em>.gitignore</em></h3>
+                The rules for the patterns you can put in the .gitignore file are :-
+<ul>
+    <li> Blank lines or lines starting with # are ignored.</li>
+    <li>  Standard glob patterns work.</li>
+    <li> You can end patterns with a forward slash (/) to specify a directory.</li>
+    <li> You can negate a pattern by starting it with an exclamation point (!).</li>
+</ul>
+                Here is example .gitignore file:
+<pre><code style="margin-top: 20px;">
+  # a comment this is ignored
+  *.a		# no .a files
+  !lib.a		# but do track lib.a, even though you're ignoring .a files above
+  /TODO		# only ignore the root TODO file, not subdir/TODO
+  build/		# ignore all files in the build/ directory
+  doc/*.txt	# ignore doc/notes.txt, but not doc/server/arch.txt
+</code></pre>

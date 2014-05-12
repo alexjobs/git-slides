@@ -1,0 +1,254 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/data_modeling,_ienXEEyAEdu-df7p0PuRvQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:14 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Physical Data Modeling</title>
+<meta content="Guideline" name="uma.type">
+<meta content="data_modeling" name="uma.name">
+<meta content="Physical Data Modeling" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Physical Data Modeling</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">A physical data model (PDM) captures the design of a persistent data store such as a relational database or data file. Data modeling is the act of creating such a model.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" guid="_0fshwMlgEdmt3adZL5Dmdw">Design the Solution</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><h3>
+    Overview
+</h3>
+Physical data models (PDMs) are used to design the structure of a persistent data store. Typically a PDM is created for a
+single data store, although sometimes a PDM will cover several related data stores (this is particularly true with the data
+storage mechanism is file based). The assumption in this guideline is that you are modeling the schema of a single
+relational database. 
+<h3>
+    The Data Model in OpenUP
+</h3>
+The PDM is part of the Work Product: Design. It’s described as different views or perspectives of a portion of the design. 
+<h3>
+    Data Model Types
+</h3>
+<p dir="ltr" style="MARGIN-RIGHT: 0px">
+    Traditionally, there are three types of data models:
+</p>
+<ol>
+    <li>
+        <div style="MARGIN-RIGHT: 0px">
+            Conceptual. A conceptual model, also referred to as a domain model, depicts the critical business entities and
+            the relationships between them.
+        </div>
+    </li>
+    <li>
+        <div style="MARGIN-RIGHT: 0px">
+            Logical. A logical data model (LDM) adds detail, in particular data attributes and more entities. LDMs will
+            optionally indicate candidate keys (one or more attributes of an entity which uniquely identify it) of an
+            entity. LDMs describe how the design of the system handles the data that will be actually maintained in the
+            PDM.
+        </div>
+    </li>
+    <li>
+        <div style="MARGIN-RIGHT: 0px">
+            <p>
+                Physical. A PDM depicts the table structure (in the case of a relational database design), the
+                relationships between the tables, and the primary and foreign keys implemented by the tables. PDMs
+                potentially indicate views, stored procedures, and other database elements.
+            </p>
+        </div>
+    </li>
+</ol>
+<p>
+    For systems built using object and/or component-based technology, the LDM is usually not created in favor of a class
+    model.
+</p>
+<h4 style="MARGIN-RIGHT: 0px">
+    Physical Data Modeling
+</h4>
+<p>
+    The PDM consists of the detailed database table designs and their relationships. The tables in the PDM have
+    well-defined columns, as well as keys and indexes as needed. The tables might also have triggers defined as necessary
+    to support the database functionality and referential integrity of the system. In addition to the tables, stored
+    procedures have been created, documented, and associated with the database in which the stored procedure will reside.
+</p>
+<p>
+    The diagram below shows an example of some of the elements of a PDM. A UML-based notation is used, although other
+    notations such as “crow's feet” or Information Engineering (IE) are also common. This example model is a part of the
+    PDM of a fictional order entry system. It depicts three tables (Order, OrderItem, and Item), three stored procedures
+    (GetOrders, GetTotalBusiness, and TestDatabase), and a trigger on Order named deleteOrderItems. The figure also depicts
+    the columns of each table, the primary key for each table, and any foreign keys to other tables.
+</p>
+<p>
+    <strong>Example Physical Data Model</strong>
+</p>
+<p>
+    &nbsp;<img height="309" alt="" src="resources/PDMSample.jpg" width="597" />
+</p>
+<p>
+    An existing database can be reverse-engineered to populate the PDM if the team has access to a tool that can transform
+    a database into a model.
+</p>
+<h3>
+    How to Model Database Schemas
+</h3>
+<p>
+    Perform the following in an iterative manner:
+</p>
+<ol>
+    <li>
+        Identify tables. A table is similar conceptually to object-orientation’s concept of a class – a table contains a
+        collection of rows of data whereas a class defines a collection of objects. A table could contain rows representing
+        people, places, things, events, or concepts. Examples of tables include Customer, Order, and OrderItem.
+    </li>
+    <li>
+        Identify columns. Each table has one or more columns. A column stores a single data attribute for each row. For
+        example, the Customer table may have columns such as First Name and Surname. A column has a single data type, such
+        as INT, DATETIME, or VARCHAR.
+    </li>
+    <li>
+        Follow accepted modeling conventions. Your organization should have standards and guidelines applicable to data
+        modeling, in particular naming conventions,&nbsp;that you should follow.
+    </li>
+    <li>
+        Identify relationships between tables. In the real world entities have relationships with other entities. For
+        example, customers PLACE orders, customers LIVE AT addresses, and line items ARE PART OF orders. These
+        relationships will exist between the rows of data stored in the corresponding tables.
+    </li>
+    <li>
+        Assign keys. A key is one or more columns that uniquely identify a row in a table. A primary key is the preferred
+        key for a table. For example, the Customer table may have two potential keys, CustomerID and SocialSecurityNumber.
+        You could choose to use CustomerID as the primary key, thereby making SocialSecurityNumber a secondary key. Foreign
+        keys are used to maintain relationships between rows.
+    </li>
+    <li>
+        Normalize to reduce data redundancy. Data normalization is a process in which columns within a PDM are organized to
+        increase the cohesion of tables. In other words, the goal of data normalization is to reduce and even eliminate
+        data redundancy, an important consideration for application developers because it is incredibly difficult to store
+        objects in a relational database that maintains the same information in several places.
+    </li>
+    <li>
+        De-normalize to improve performance. Normalized data schemas, when put into production, often suffer from
+        performance problems. An important part of data modeling is to de-normalize portions of&nbsp;the data schema, to
+        increase data redundancy by storing the same information in several places or manners, to improve database access
+        times.
+    </li>
+</ol>
+<h3>
+    Data Modeling Throughout the Lifecycle
+</h3>
+<h4>
+    Inception Phase
+</h4>
+<p>
+    During the Inception phase the goal is to identify high-level requirements for the system so that the scope may be
+    identified and project funding obtained. Little, if any, data modeling is performed at this point although some
+    conceptual modeling may occur. Detailed data models are usually not needed at this point.
+</p>
+<h4>
+    Elaboration Phase
+</h4>
+<p>
+    The goal of the Elaboration phase is to eliminate technical risk and to produce a stable (baselined) architecture for
+    the system. One of several architectural issues that is likely to arise is data architecture. To support this effort,
+    you will need to model the major database structures (tables, indexes, and primary and foreign key columns) and then
+    create the database schema from the model (ideally it would be generated from a modeling tool).
+</p>
+<p>
+    Additionally, representative data volumes may be loaded into the database to support performance testing. Based on the
+    results of performance testing, the PDM might need to be adjusted with optimization techniques, including but not
+    limited to de-normalizing, optimizing physical storage attributes, or distribution and indexing.
+</p>
+<h4>
+    Construction Phase
+</h4>
+<p>
+    During the Construction phase the goal is to build a working system that is ready to be released. During each
+    iteration&nbsp;the&nbsp;design, implementation, and tests are fleshed out to implement that iteration's requirements.
+    In other words development artifacts, including your data-oriented artifacts, evolve over time. To support data model
+    changes you may discover the need to refactor your existing database schema.
+</p>
+<h4>
+    Transition Phase
+</h4>
+<p>
+    The PDM is maintained during the Transition phase in response to approved change requests. You should keep the PDM
+    synchronized with the database as the application goes through final acceptance test and is deployed into production.
+</p>
+<h3>
+    Round-trip Engineering Considerations
+</h3>
+<p>
+    If a development team is using modern visual modeling tools that have the ability to convert classes to tables (and
+    vice versa) or has the ability to reverse and forward engineer databases, then the team needs to establish guidelines
+    for managing the transformation and engineering processes. The development team must define the points in the
+    development of the application (build-and-release cycle) at which it will be appropriate to perform the class-to-table
+    transformations and to forward-engineer the database. Once the initial database is created, the development team must
+    define guidelines for the team to manage the synchronization of the PDM and database as the design and code of the
+    system evolve throughout the project.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/data_modeling,_ienXEEyAEdu-df7p0PuRvQ.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:16 GMT -->
+</html>

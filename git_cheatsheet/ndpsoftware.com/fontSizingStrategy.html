@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ndpsoftware.com/fontSizingStrategy.php by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:17:33 GMT -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>
+      NDP Software ::
+CSS Font Size Strategies Explored and Explained    </title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"/>
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <meta name="msvalidate.01" content="B24F365C5258BA8C65E423307692C32E" />
+        <link rel="stylesheet" href="fonts/Impact-Label-fontfacekit/stylesheet.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/ndp-print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="css/ndp.css" media="screen" />
+            <script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/csster.js"></script>
+    <script type="text/javascript" src="js/color_factory.js"></script>
+    <script type="text/javascript" src="js/jquery.boxes.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1458227-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </head>
+  <body class="" onload="">
+    <div id="margin">
+      <div id="page">
+        <div id="new_header">
+           <h1><span>&nbsp;NDP Software&nbsp;</span></h1>
+           <h2>Compelling Software &bull; Design & Construction</h3>
+        </div>
+      
+        <div id="header" class="screenOnly">
+          <h1>
+            Andrew J. Peterson
+          </h1>
+        <h1>
+          Compelling Software, Design and Development
+        </h1>
+      <h1>
+        NDP Software
+      </h1>
+    <h1>
+      Andrew Peterson, Consultant
+    </h1>
+</div>
+<div id="menu" class="screenOnly">
+  <div class="menu">
+    <ul>
+      <!--li>
+        NDP Software 
+      </li-->
+      <li>
+        <a href="index-2.html" title="Overview of the software consulting business">
+          About NDP Software
+        </a>
+      </li>
+      <li>
+        <a href="visualization.html" title="Interactions and Visualizations">
+          Visualization
+        </a>
+      </li>
+      <li>
+        <a href="prototype.html" title="Prototypes">
+          Prototype
+        </a>
+      </li>
+      <li>
+        <a href="consulting.html" title="Consulting projects and areas of expertise">
+          Software Consultant
+        </a>
+      </li>
+<!--      <li>
+        <a href="web.php" title="Web-related software projects">
+          Web Development
+        </a>
+      </li>
+      <li>
+        <a href="software.php" title="Custom-built software">
+          Software Development
+        </a>
+      </li> -->
+      <li>
+        <a href="clients.html" title="Clients of NDP Software">
+          Clients
+        </a>
+      </li>
+      <li>
+        <a href="http://blog.ndpsoftware.com/" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="http://github.com/ndp" target="_blank">Github Repo</a>
+      </li>
+      <li>
+        <a href="http://amp-what.com/" target="_blank">Amp What</a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/111325326458556506982/posts?rel=author">Google+</a>
+      </li>
+      <li class="email">
+         <a href="mailto:andy@ndpsoftware.com">Email</a>
+      </li>
+      <li class="linked_in">
+        <script src="../platform.linkedin.com/in.js" type="text/javascript"></script>
+        <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/ndpsoftware" data-format="hover" data-related="false"></script>
+      </li>
+      <!--li class="social">
+        <g:plusone size="small" annotation="inline" width="160"></g:plusone>
+      </li-->
+    </ul>
+  </div>
+</div>
+<div id="content">
+  <h2>
+CSS Font Size Strategies Explored and Explained  </h2>
+<p>Maintaining all the different font-sizes for your web site driving you bonkers?
+  This article looks at how they behave in the laboratory and makes recommendations
+  about how to harness them back in the wild.</p>
+<p>This page analyzes <a href="experiment/css/fontSize.html" target="_blank">the experiment found here.</a> It
+was originally written circa 2009. It was updated April 2013.</p>
+
+<h3>Background Experiment</h3>
+<p>
+  I designed this experiment to understand and document the behaviors of the various "font-size" settings available in
+  CSS. I created a test page, and then viewed it on various user agents, recording the behavior. I used the <em>View
+  &gt; Text Size</em> and captured the behavior.
+  <a href="experiment/css/fontSize.html" target="_blank">View the experiment page</a>
+</p>
+
+<p>I limited my experiment to the five most popular font-sizing techniques. Yes, I know there are others, but these are
+  the
+  most common and recommended. I didn't explore the Javascript-enhanced techniques, which help eliminate some of these
+  differences. Nor did I explore the "browser-hack" techniques, as my goal
+  here is to find a low-maintenance and predictable approach.</p>
+
+
+<h3>Questions</h3>
+
+<p>The questions that are most interesting:</p>
+<ul>
+  <li>Scaling: Do fonts scale if the user picks a new setting from the
+    View &gt; Text Size menu?
+    <table class="result" style="margin: 10px auto 40px 100px">
+      <tr>
+        <th>
+
+        </th>
+        <th>
+          words
+        </th>
+        <th>
+          px
+        </th>
+        <th>
+          %
+        </th>
+        <th>
+          em
+        </th>
+      </tr>
+      <tr>
+        <th>
+          IE 6 (XP, W2k)
+        </th>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <th>
+          Firefox (1.0, 1.5; Mac, XP, W2k)
+        </th>
+        <td colspan="4">Yes</td>
+      </tr>
+      <tr>
+        <th>
+          Safari
+        </th>
+        <td colspan="4">Yes</td>
+      </tr>
+
+    </table>
+  </li>
+
+  <li>Minimum: Does the browser enforce a minimum "readable" font size?<br/> (or just draw microscopic
+    text?)
+    <table class="result" style="margin: 10px auto 40px 100px">
+      <tr>
+        <th>
+
+        </th>
+        <th>
+          words
+        </th>
+        <th>
+          px
+        </th>
+        <th>
+          %
+        </th>
+        <th>
+          em
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          IE 6 (XP, W2k)
+        </th>
+        <td>No limit</td>
+        <td>n/a</td>
+        <td colspan="2">No limit</td>
+      </tr>
+
+
+      <tr>
+        <th>
+          Firefox (1.0, 1.5; Mac, XP, W2k)
+        </th>
+        <td colspan="4">No limit - users can shrink to extremes</td>
+      </tr>
+
+
+      <tr>
+        <th>
+          Safari
+        </th>
+        <td>Yes</td>
+        <td>No limit</td>
+        <td colspan="2">Yes</td>
+      </tr>
+    </table>
+  </li>
+  <li>Nesting: If font-size rules get applied recursively, are they
+    applied cumulatively?
+    <table class="result" style="margin: 10px auto 40px 100px">
+      <tr>
+        <th>
+
+        </th>
+        <th>
+          words
+        </th>
+        <th>
+          px
+        </th>
+        <th>
+          %
+        </th>
+        <th>
+          em
+        </th>
+      </tr>
+
+      <tr>
+
+        <th>
+          IE 6 (XP, W2k)
+        </th>
+        <td colspan="2">absolute</td>
+        <td colspan="2">combined</td>
+      </tr>
+
+
+      <tr>
+        <th>
+          Firefox (1.0, 1.5; Mac, XP, W2k)
+        </th>
+        <td colspan="2">absolute</td>
+        <td colspan="2">combined</td>
+      </tr>
+
+
+      <tr>
+        <th>
+          Safari
+        </th>
+        <td colspan="2">absolute</td>
+        <td colspan="2">combined</td>
+      </tr>
+    </table>
+  </li>
+</ul>
+<p>If you get different results, please let me know and I'll post corrections.
+</p>
+
+
+<h3>Findings When Using Small, Medium, Large keywords</h3>
+<h4>What you might think</h4>
+<p>The words like "small" and "medium" don't specify a specific size, but are basically good, reasonable choices if you
+  don't care about pixel accuracy.</p>
+<h4>The reality</h4>
+<p>These are what they seem: good general size specifications. If you can give up pixel-level control of your web site,
+  (or parts of it) this is an excellent technique. Some
+  browser (note Firefox) don't enforce a minimum
+  size to these values, but the defaults are fine from all my tests.
+
+<h3>Findings When Using Pixels</h3>
+<h4>What you might think</h4>
+<p>These represent pixels on the screen.</p>
+<h4>The reality</h4>
+<p>Pixels are not actually pixels, but they are consistent and predictable.
+  There are all sorts of complications if you really need to know exactly what a pixel
+  is (based on screen resolution and browser settings), but if you can live with
+  the lie, pixels are predictable.
+</p>
+<p>
+  As you can see on many sites, pixel font sizes vary quite a bit between
+  user agents (see <a href="#references">References</a>). In addition, your
+  site will react differently to user's changing their font size.
+</p>
+
+<h3>Findings When Using Percent</h3>
+<h4>What you might think</h4>
+<p>These adjust relative to the "default" size of the text.</p>
+<h4>The reality</h4>
+<p>The cascade of CSS dictates what the percent figure means, and it appears
+  that user agents tend to follow this. This difficulty with this is that
+  the size is relative to another element. The size of an element's font
+  depends on its context. If you have deep nesting
+  of elements, it is quite common to run into text styled identically ending
+  up different sizes because of the nesting. This then results in more styles
+  to undo the extra shrinkage.
+</p>
+<p>
+  I also learned that <code>font-size: 1em</code> at regular <em>View &gt; Text Size</em> is the same as
+  <code>font-size: 100%</code>. In other words, <code>100%</code> appears to be the equivalent of <code>1em</code>,
+  for what it's worth.
+</p>
+<p>There are all sorts of posts around about "rounding errors" in
+  different browsers. I haven't dug into the details of these to understand
+  them. There is one particularly annoying bug where fonts go "microscopic" in IE. Watch for it. It's a bad one.</p>
+<p>When using this technique, you must be very careful of the nesting
+  of the elements. If you set a font size for an div, it will affect all
+  elements inside it by multiplying.
+</p>
+<p>Determining what a workable strategy here is difficult, because of the
+  dependencies. I can imagine with a rather fixed and consistent hierarchy of
+  elements this technique could be used successfully. Or some strategy to only
+  specify font-sizes for "leaf" elements.</p>
+
+<h3>Findings When Using Ems</h3>
+<h4>What you might think</h4>
+<p>Represent a measurement relative to a default font in the browser.</p>
+<h4>The reality</h4>
+<p>This seems to be detached from the typographical definition of an <strong>em</strong> (in my opinion). What I found
+  was that this seems to be implemented identically to the percent measurement, with 1em
+  equivalent to 100%. It comes with all those behaviors and problems.
+</p>
+<p>Like percent, when using this technique, you must be very careful of the nesting
+  of the elements. If you set a font size for an div, it will affect all
+  elements inside it by multiplying.
+</p>
+<p>Update as of 2012: <code>rem</code>s is a new unit designed to remove the nesting behavior.</p>
+
+<h3>Findings When Using Hybrid Techniques</h3>
+<h4>What you might think</h4>
+<p>You find a recommendation to use a combination of pixels and ems and %s on your page. It seems reasonable.</p>
+<h4>The reality</h4>
+<p>Around the web you'll find various recommendations to neutralize these behaviors. A popular and highly recommended
+  one I tried (prompting this article) involved setting an enclosing
+  font-size on the whole page, like <code>76%</code>, and then using <code>em</code>s
+  throughout (magical ems). (This seems to me it's the same as wrapping the page in <code>.76em</code> or using
+  percentages universally, but I didn't verify this.) I found that this technique
+  ultimately confusing, and didn't solve the problems for me. It's just our site was changing too much, elements were
+  nested deeply, and we needed to support a wide array of browsers.</p>
+
+
+<h3>Recommendations 1: Analyze Your Site</h3>
+<p>There are really two important questions to ask before selecting a strategy:</p>
+<h4>How critical is it that fonts are consistent size across browsers?</h4>
+<p>Don't assume that looking identical across all browser is critical. Think and ask.
+  There are many resources addressing this, but it is expensive to achieve. For most sites,
+  looking <em>good</em> across
+  browsers is a sufficient. Very few people switch between computers and browsers and expect consistency. Do your
+  viewers?
+</p>
+<h4>How precise control do you need over fonts?</h4>
+<p>Many designers will start out by fitting elements together in
+  PhotoShop so they are precisely positioned. This is costly to replicate on the web in HTML. You should ask how
+  critical it is to fill every pixel with content. People are usually viewing quickly and culling small pieces of
+  information. Trying to pack lots of stuff on a page ignores this reality of user behavior. Consider a simple,
+  spacious layout and limit your content to the essential.
+</p>
+<h4>How complex and modular is the site design?</h4>
+<p>If you have a site with nested modules that can appear in different contexts, that's
+  a nice design to implement. But if you using a font-sizing strategy that uses nesting,
+  you may end up fighting with your stylesheets.</p>
+
+<h3>Recommendations 2: Select the Simplest Solution</h3>
+<p>Once you have a clear understanding of your needs, you can pick the simplest technique to satisfy them.</p>
+<p>If you use a design that is fairly <em>flexible</em>, the
+  <code>small, medium, large, xx-large</code> keywords are ideal. They won't be
+  exactly the same across browsers, but large will be large, small will be large, and xx-small will be nearly
+  unreadable. They scale similarly
+  across browsers and aren't affected by their surrounding elements. The downside
+  is that you only have a certain set of sizes at your disposal (without reverting to some
+  other technique). I have adopted this for all my work.</p>
+
+<p><strong>Precise Layout</strong> Here's a general approach when the flexible design is not appropriate.
+<ul>
+  <li>If you have a fairly fixed element hierarchy, <code>em</code>s or percents may work well for you.
+    Spend some time up-front
+    coming up with a strategy and writing down the rules.
+  </li>
+  <li>If you have a fairly flexible element hierarchy, you may need to design more of the styles up-front.</li>
+  <li>After you've developed most of the pages for Firefox, assess where you are in IE. If you are pretty close,
+    judiciously use browser hacks.
+  </li>
+  <li>If your site looks awful in IE, consider developing separate style sheets for each browsers.</li>
+</ul>
+
+<p>I do <strong>not</strong> recommend <code>px</code> measurements, since they behave so differently between the two
+  most popular user agents.</p>
+
+<h3>Testing Font-Sizing Strategies</h3>
+<h4>What you might think</h4>
+<p>Building the page with
+  <del>Firefox</del>
+  (update: Chrome) and previewing it with IE is a good approach.
+</p>
+<h4>The reality</h4>
+<p>Yes, this is great. But you must do more. The other important factors are:
+<ul>
+  <li>the browser version: IE 6 differs quite a bit form IE 5 and 5.5 in how it renders fonts. Firefox 1.5 differs from
+    earlier versions.
+  </li>
+  <li>operating system: not only Mac and Windows, but make sure you test XP and Windows 2000 separately (I am told).
+  </li>
+  <li>the "Text Size" option available in the View menu for most browsers. Some people will browse the web in "small" so
+    they can maximize the usage of their pixels, while others must browse at "large" size for visual comfort. No matter
+    what your site is, you probably should support these people, since they make up a large segment. You may be able to
+    ignore the extremes.
+  </li>
+</ul>
+
+
+<h3>References</h3>
+To compare sizes between browsers, this site is much better:
+<a href="http://www.thenoodleincident.com/tutorials/box_lesson/font/">
+  the noodle incident
+</a>. This also has pointers to the various Javascript techniques.
+
+</div>
+<!--id content -->
+<div id="footer" >
+  <table class="sitemap screenOnly">
+    <tr>
+      <td>
+        <div class="menu cheatsheets">
+          <ul>
+            <li title="Short summaries of detailed technical topics">
+              Cheat Sheets 
+            </li>
+            <li>
+              <a class="new" href="git-cheatsheet.html">
+                Visual Git Cheatsheet
+              </a>
+            </li>
+            <li>
+              <a href="HibernateMappingCheatSheet.html" title="Short hibernate mapping examples, without the detailed explanations.">
+                Hibernate Mapping
+              </a>
+            </li>
+            <li>
+              <a class="updated" href="JSPXMLCheatSheet.html" title="JSPs with XML? A simple summary of the most useful and used constructs">
+                JSP 2.0 XML Documents
+              </a>
+            </li>
+            <li>
+              <a href="http://amp-what.com/" title="A quick, interactive reference of 11,500 HTML character entities">&amp;what (amp-what.com)</a>
+            </li>
+            <li>
+              XSLT 
+            </li>
+            <li>
+              <a href="downloads-xsl-struts.html">
+                Struts Xslt
+              </a>
+            </li>
+            <li>
+              <a href="downloads-xsl-resume.html">
+                Xslt for My Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu technical">
+          <ul>
+            <li>
+              CSS 
+            </li>
+            <li>
+              <a class="updated" href="CssBestPractices.html">
+                CSS Best Practices
+              </a>
+            </li>
+            <li>
+              <a href="cssExperiments.html">
+                CSS Experiments
+              </a>
+            </li>
+            <li>
+              <a href="css.html">
+                CSS Links
+              </a>
+            </li>
+            <li>
+              Javascript 
+            </li>
+            <li>
+              <a href="http://github.com/ndp/csster" class="new" >
+                Csster
+              </a>
+            </li>
+            <li>
+              <a href="ScriptaculousEffectsDemo.html" class="new" >
+                Scriptaculous Effects Demo
+              </a>
+            </li>
+            <li>
+                <a href="http://github.com/ndp/jsutils" class="new" >
+                    Javascript Playground
+                </a>
+            </li>
+            <li>
+              jQuery Plugins
+            </li>
+            <li>
+              <a href="show_char_limit.html" class="new" >
+                Show Char Limit
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/align-column" class="new" >
+                Align Column
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/fixie" class="new" >
+                Fixie
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/wizardize" class="new" >
+                Wizardize
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/color_spy" class="new" >
+                Color Spy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu technical">
+          <ul>
+            <li>
+              Other Technical 
+            </li>
+            <!--li>
+              <a href="books.php" title="Books we like">
+                Books
+              </a>
+            </li-->
+            <li>
+              <a href="isbn.html">
+                ISBN Excel Converter
+              </a>
+            </li>
+            <li>
+              <a class="new" href="agile_methods/agile_methods.html">
+                Agile Methods Visualization
+              </a>
+            </li>
+            <li>
+              <a class="new" href="softwareDevMaturityModel.html">
+                Software Development Maturity Model
+              </a>
+            </li>
+            <li>
+              <a class="new" href="OpenUpBasic/index.html" target="_blank">
+                OpenUP/Basic
+              </a>
+            </li>
+            <li>
+              <a class="new" href="other.html">
+                Other Projects
+              </a>
+            </li>
+            <li>
+              <a href="http://blog.ndpsoftware.com/" target="_blank">My Blog</a>
+            </li>
+            <li>
+              <a href="about.html"> 
+                About This Site
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu nontechnical">
+          <ul>
+            <li>
+              Non-technical 
+            </li>
+            <li>
+              <a href="http://delicious.com/ndp" target="_blank">
+                  delicious/ndp
+              </a>
+            </li>
+            <li>
+              <a href="http://ical.mac.com/WebObjects/iCal.woa/wa/default?u=ndp&amp;n=ndp.ics" target="_blank">
+                Calendar
+              </a>
+            </li>
+            <li>
+              <a href="construction.html">
+                Construction
+              </a>
+            </li>
+            <!--<li>-->
+              <!--<a href="http://priita.com" target="_blank">-->
+                <!--Priita.com-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="http://homepage.mac.com/ndp" target="_blank">-->
+                <!--Photos-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="http://tanyandy.com" target="_blank">-->
+                <!--Tanyandy.com-->
+              <!--</a>-->
+            <!--</li>-->
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="footnotes screenOnly">
+    <div class="menu technical">
+      <ul>
+        <li>
+          <span class='st_email'></span>
+            <span class='st_stumbleupon'></span>
+             <span class='st_twitter'></span>
+            <span class='st_googleplus'></span>
+            <span class='st_facebook'></span>
+            <span class='st_wordpress'></span>
+            <span class='st_hatena'></span>
+            <span class='st_delicious'></span>
+            <span class='st_blogger'></span>
+            <span class='st_tumblr'></span>
+            <span class='st_reddit'></span>
+            <span class='st_linkedin'></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    Copyright (c) 1999-2013 Andrew J. Peterson.
+    <a href="mailto:andy@ndpsoftware.com">
+      andy@ndpsoftware.com</a>. 
+  </div>
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = '../apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>      
+<script type="text/javascript">var switchTo5x=false;</script><script type="text/javascript" src="../w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'34a76a8b-d635-4885-8b9c-78fbf9a6d08d'});</script>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/fontSizingStrategy.php by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:17:33 GMT -->
+</html>

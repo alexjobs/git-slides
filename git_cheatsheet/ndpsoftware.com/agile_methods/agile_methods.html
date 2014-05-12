@@ -1,0 +1,425 @@
+<html>
+
+<!-- Mirrored from ndpsoftware.com/agile_methods/agile_methods.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:54 GMT -->
+<head>
+
+    <title>Agile Practices... Visualized?</title>
+    <link rel="stylesheet" type="text/css" href="../../yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+    <script type="text/javascript">
+        if (typeof console === 'undefined') {
+            console = {
+                log: function() {
+                }
+            }
+        }
+    </script>
+
+    <script src="force.js"></script>
+    <script src="agile_methods.js"></script>
+    <script src="jquery-1.3.2.min.js"></script>
+    <script src="jquery-ui-1.8.5.custom.min.js"></script>
+    <script src="csster.js"></script>
+    <script src="once.js"></script>
+    <script src="pullout_panel.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="fonts/Impact-Label-fontfacekit/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="agile_methods.css"/>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1458227-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+<body>
+
+<div id="hd">
+    <h1>Agile Software Exploration</h1>
+
+    <h2><a href="../index.html">an interaction
+        from NDP Software</a>
+        <span>(c) Andrew Peterson 2009-2011 All Rights Reserved.</span></h2>
+</div>
+<div id="controls">
+</div>
+
+<div id="body" style="position: relative; float: left;">
+
+    <div id="origin"></div>
+
+    <div id="frame" style="position:absolute;top:0px;left:0px;"></div>
+
+</div>
+
+
+<div id="about">
+    <h4 style="padding-bottom: 25px">What's going on here?<span>click to hide</span></h4>
+
+    <p>The values and practices of
+        popular agile software
+        methodologies are represented by words on the page. They float freely, but they
+        are connected to each practice
+        based on how much they are valued-- the closer the more valuable.
+    </p>
+
+    <p>
+        &raquo; Select different methodologies. <br/>&raquo; Drag phrases around to
+        see how they relate.
+    </p>
+
+    <p>
+        See blog post here: <a
+            href="http://blog.ndpsoftware.com/2009/09/scrum-xp-agile-and-visualizing.html">http://blog.ndpsoftware.com/2009/09/scrum-xp-agile-and-visualizing.html</a>
+    </p>
+
+
+    <p>
+        Based on a force directed graph at <a
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            href="http://www.kylescholz.com/blog/2006/06/force_directed_graphs_in_javas.html" rel="dc:source">www.kylescholz.com</a>.
+        <br/><span
+            xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource"
+            property="dc:title" rel="dc:type">Agile Software Methodologies Visualization</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#" href="agile_methods.html"
+            property="cc:attributionName" rel="cc:attributionURL">Andrew J. Peterson</a> is licensed under a <a
+            rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons
+        Attribution-Share Alike 3.0 United States License</a>.
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img
+                alt="Creative Commons License" style="border-width:0"
+                src="../../i.creativecommons.org/l/by-sa/3.0/us/88x31.png"/></a>
+    </p>
+</div>
+
+<script type="text/javascript">
+
+Csster.style({
+    '#hd': {
+        height: 50,
+        padding: 10,
+        '>*': {
+            'float': 'left',
+            paddingTop: 10,
+            paddingLeft: 10,
+            margin: 0,
+            padding: 0
+        },
+        h1: {
+            paddingRight: 10,
+            font: '40px ImpactLabelRegular, verdana'
+        },
+        h2: {
+            color: 'black',
+            font: 'normal 25px ImpactLabelReversedRegular,  verdana',
+            a: {
+                textDecoration: 'none'
+            },
+            'a:hover': {
+                textDecoration: 'underline'
+            },
+            span: {
+                display: 'block',
+                font: '15px courier, monospaced'
+            }
+        }
+    }
+});
+
+$(function() {
+    $('#about')
+            .pulloutPanel({open:true,
+                              css:
+                              {
+                                  has:[boxShadow([0,0], 10, 'black'),roundedCorners('tr', 10)]
+                              }
+                          })
+            .click(
+            function() {
+                $(this).trigger('toggle');
+            })
+            .bind('opened closed',
+            function() {
+                $(this).find('h4 span').text('click to ' + ($(this).hasClass('opened') ? 'hide' : 'find out'));
+            }).trigger('close');
+});
+
+
+Csster.style({
+    '#about': {
+        fontFamily: 'georgia',
+        width: 500,
+        padding: '10px 20px',
+        maxHeight: '75%',
+        backgroundColor: 'black',
+        color: 'white',
+        h1: {
+            font: '35px/40px ImpactLabelReversedRegular, georgia',
+            padding: '10px 0 0 0',
+            margin: 0
+        },
+        h4: {
+            color: 'white',
+            font: '20px/20px ImpactLabelReversedRegular, georgia',
+            padding: '5px 0',
+            margin: '0 0 20px 0',
+            fontStyle: 'plain',
+            span: {
+                paddingTop: 0,
+                'float': 'right',
+                color: 'white',
+                fontWeight: 'bold',
+                font: '20px/25px ImpactLabelRegular, georgia'
+            }
+        },
+        '&:hover h4 span': {opacity: 1},
+        h2: {
+            font: '20px/20px ImpactLabelReversedRegular, georgia',
+            padding: '10px 0 0 0',
+            margin: 0,
+            fontStyle: 'plain'
+        },
+        p: {
+            font: '15px/20px georgia',
+            margin: '0 0 10px 0'
+        },
+        h5: {
+            font: '12px/20px ImpactLabelReversedRegular, georgia',
+            padding: '10px 0 0 0',
+            margin: 0,
+            fontStyle: 'plain'
+        },
+        '.copyright': {
+            font: '12px/20px georgia'
+        },
+        'a:link, a:visited': {
+            color: 'white',
+            textDecoration: 'none'
+        },
+        'a:hover': {
+            textDecoration: 'underline'
+        }
+    }
+})
+
+
+var controls = document.getElementById('controls');
+for (n in methods) {
+    $(controls).
+            append('<label><input type="checkbox" class="' + n + '" />&nbsp;' + methods[n] + '</label>');
+
+}
+$(controls).find('input.agile_manifesto').attr('checked', 'checked');
+
+
+function activePractices() {
+    return $('#controls input:checked').map(function() {
+        return this.className
+    });
+}
+
+function activeValues(practices) {
+    practices = practices || activePractices();
+    var activeValues = [];
+
+    for (p in weightings) {
+        var weighting = weightings[p];
+        var practice = weighting[0];
+        if (activeValues.indexOf(weighting[1]) == -1 &&
+                isPracticeActive(practice, practices)) {
+            activeValues.push(weighting[1]);
+        }
+    }
+
+    return activeValues;
+}
+
+Array.prototype.indexOf = function(x) {
+    for (var i = 0; i < this.length; i++) {
+        if (x == this[i]) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+function isPracticeActive(m, ap) {
+    var ap = ap || activePractices();
+//    return (ap.indexOf(m) != -1 || ap.indexOf(methods[ap[i]]) != -1 );
+    for (var i = 0; i < ap.length; i++) {
+        if (m == ap[i] || m == methods[ap[i]]) {
+            return true;
+        }
+    }
+}
+
+
+function shouldDrawNode(node) {
+    var s = node.label;
+    var cls = node.cssClass
+//    console.log("shouldDrawNode(" + s + "," + cls + ") isPracticeActive=" + isPracticeActive(s));
+    if (cls == 'method') {
+        return isPracticeActive(s);
+    } else {
+//        console.log(node);
+
+        for (var v in values) {
+            if (node.label == values[v]) {
+                var av = activeValues();
+                return av.indexOf(v) != -1;
+            }
+        }
+        return false;
+    }
+}
+
+
+/* --------------------------- */
+function eachNode(f) {
+    for (n in nodes) {
+        f(nodes[n]);
+    }
+}
+
+function eachEdge(f) {
+    for (e in edges) {
+        var edge = edges[e];
+        var nodeA = nodes[edge.nodeA]['node'];
+        var nodeB = nodes[edge.nodeB]['node'];
+        f(edge, nodeA, nodeB);
+    }
+}
+
+
+function eachMissingEdge(f) {
+    eachEdge(function(edge, nodeA, nodeB) {
+        if (nodeA && nodeB && !edge['edge']) {
+            f(edge, nodeA, nodeB);
+        }
+    });
+}
+
+function eachMissingEdgeForOnPractices(f) {
+    eachMissingEdge(function(edge, nodeA, nodeB) {
+        if (isPracticeActive(edge.nodeA) || isPracticeActive(edge.nodeB)) {
+            f(edge, nodeA, nodeB);
+        }
+    });
+}
+
+function createMissingNodes() {
+    eachNode(function(node) {
+        if (!node.node && shouldDrawNode(node)) {
+            node.node = control.addNode(node.label, node.mass, node.origin, 55);
+            graphui.getNode(node.node.id).className = node.cssClass;
+        }
+    });
+}
+
+
+function createMissingEdges() {
+    eachMissingEdgeForOnPractices(function(edge, nodeA, nodeB) {
+        edge['edge'] = control.addEdge(nodeA, nodeB, edge.weight);
+    });
+}
+
+
+/* --------------------------- */
+
+var frame = (function() {
+    var width, height;
+
+    if (IE) {
+        width = document.body.offsetWidth;
+        height = document.body.offsetHeight;
+    } else {
+        width = window.innerWidth;
+        height = window.innerHeight;
+    }
+
+    width -= (parseInt(document.getElementById('frame').style.left) * 2);
+    height -= (parseInt(document.getElementById('frame').style.top));
+    return {width:width, height: height};
+})();
+
+var timer = new TimerControl();
+timer.initialize(20);
+
+var graphui = new GraphUI();
+graphui.initialize(document.getElementById('frame'),
+        document.getElementById('origin'),
+        true,
+        true
+        );
+
+var graph = new Graph();
+graph.initialize(frame.width, frame.height);
+graph.setUI(graphui);
+timer.subscribe(graph);
+
+var control = new UserControl();
+control.initialize(timer, graph, graphui);
+
+
+createMissingNodes();
+createMissingEdges();
+
+
+$('#controls input').change(function(event) {
+    var s = this.className;
+    var on = isPracticeActive(s);
+//    console.log(s + ' ' + on);
+    //event.preventDefault();
+    if (on) {
+        updateAddingNecessary();
+    } else {
+        console.log('turning off ' + s);
+
+        eachEdge(function(edge, nodeA, nodeB) {
+            if (nodeA && nodeB) {
+                console.log('should remove node? ' + edge.nodeA + ' / ' + edge.nodeB);
+                if ((edge.nodeA == s ||
+                        edge.nodeB == s)) {
+                    console.log('YES! ', edge.nodeA, edge.nodeB);
+                    graph.removeEdge(nodeA, nodeB);
+                }
+            }
+        });
+    }
+
+    eachNode(function(node) {
+        if (node && node.node) {
+            var elem = graphui.getNode(node.node.id);
+            $(elem).css('opacity', shouldDrawNode(node) ? '1' : '0');
+        }
+    })
+
+});
+
+function updateAddingNecessary() {
+    createMissingNodes();
+    createMissingEdges();
+}
+
+$(function() {
+    timer.start();
+});
+</script>
+
+</body>
+
+
+<!-- Mirrored from ndpsoftware.com/agile_methods/agile_methods.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:17:02 GMT -->
+</html>
+

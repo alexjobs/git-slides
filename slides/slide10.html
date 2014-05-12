@@ -1,0 +1,48 @@
+<section>
+    <h2>Inspection and Comparison</h2>
+    <h3><a href="http://git-scm.com/docs/git-show" target="_new">show</a></h3>
+    <p>git-show - Show various types of objects</p>
+    <pre><code style="margin-top: 20px;">
+  $ git show v1.5
+  tag v1.5
+  Tagger: Scott Chacon &lt;schacon@gee-mail.com&gt;
+  Date: Mon Feb 9 15:22:20 2009 -0800
+	</code></pre>
+    <h3><a href="http://git-scm.com/docs/git-log" target="_new">log</a></h3>
+    <p>git-log - Show commit logs</p>
+    <pre><code style="margin-top: 20px;">
+  $ git log --pretty=oneline
+  15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'
+  a6b4c97498bd301d84096da251c98a07c7723e65 beginning write support
+  0d52aaab4479697da7686c15f77a3d64d9165190 one more thing
+  6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch 'experiment'
+	</code></pre>
+</section>
+
+<section>
+    <h3><a href="http://git-scm.com/docs/git-show" target="_new">diff</a></h3>
+    <p>git-diff - Show changes between commits, commit and working tree, etc</p>
+    <pre><code style="margin-top: 20px;">
+  $ git diff
+  $ git diff --cached
+  $ git diff 32d1776b1ˆ 32d1776b1
+	</code></pre>
+    <h3><a href="http://git-scm.com/docs/git-shortlog" target="_new">shortlog</a></h3>
+    <p><a href="http://simonharrer.wordpress.com/tag/git-shortlog/" target="_new">git-shortlog</a>- Summarize git log output</p>
+    <pre><code style="margin-top: 20px;">
+  $ git shortlog -nse
+  102  Steve McQueen &lt;steve@mcqueen.com&gt;
+   87  Paul Newman &lt;paul@newman.com&gt;
+   57  Humphrey Bogart &lt;humphrey@bogart.com>
+	</code></pre>
+
+</section>
+
+<section>
+    <h3><a href="http://git-scm.com/docs/git-describe" target="_new">describe</a></h3>
+    <p>if you want to have a human-readable name to go with a commit, you can run git describe on that commit. Git gives you the name of the nearest tag with the number of commits on top of that tag and a partial SHA–1 value of the commit you're describing</p>
+    <pre><code style="margin-top: 20px;">
+  $ git describe master
+  v1.6.2-rc1-20-g8c5b85c
+	</code></pre>
+</section>

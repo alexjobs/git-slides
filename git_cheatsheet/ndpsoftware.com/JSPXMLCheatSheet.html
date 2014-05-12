@@ -1,0 +1,351 @@
+<html>
+
+<!-- Mirrored from ndpsoftware.com/JSPXMLCheatSheet.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:29 GMT -->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="SHORTCUT ICON" href="favicon.ico">
+		<link rel="stylesheet" href="css/cheatSheet.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/ndp-print.css" media="print" />
+	<style type="text/css">
+.scriptlets dt {
+	color: #000;
+}
+.scriptlets dd {
+	padding-right:20em;
+}
+.scriptlets dt code.javaClass {
+	padding-right: 1em;
+	font-size: 80%;
+	float:right;
+}
+.scriptlets dd span.scope {
+	float: right;
+	margin-right: -5em;
+	color: #555;
+}
+.deprecated {
+	color: #888;
+}
+			
+	</style>
+	<title>JSP XML CheatSheet</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1458227-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+</head>
+<body>
+<div class="screenOnly"  id="header">
+    Also from <a href="index.html" title="Web-related software projects">
+        NDP Software</a>:
+  <ul>
+    <li>
+      <a href="git-cheatsheet.html">
+          Visual Git Cheatsheet
+      </a>
+    </li>
+    <li>
+      <a href="HibernateMappingCheatSheet.html">
+          Hibernate Mapping Cheatsheet
+      </a>
+    </li>
+    <li>
+      <a href="http://amp-what.com/">&amp;what?</a>
+    </li>
+    <li>
+      <a href="http://blog.ndpsoftware.com/">Blog</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/ndp8" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="medium">Follow @ndp8</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </li>
+    <li>
+      <g:plusone size="small" annotation="inline" width="160"></g:plusone>
+    </li>
+  </ul>
+
+</div>
+<h1>JSP 2.0 XML Cheat Sheet</h1>
+<h6><a href="#footer">Copyright (c) 2005-2012 NDP Software. Some Rights Reserved.</a></h6>
+
+
+
+<h2>General</h2>
+<ul>
+<li><span class="code deprecated">&lt;%@</span> <code>&lt;jsp:directive.[directiveName]...</code></li>
+<li><span class="code deprecated">&lt;%!</span> 
+<code>&lt;jsp:declaration> int i=0; &lt;/jsp:declaration></code></li>
+<li><span class="code deprecated">&lt;%=</span> 
+<code>&lt;jsp:expression> myVar.getProp() &lt;/jsp:expression></code></li>
+<li><span class="code deprecated">&lt;% </span> 
+<code>&lt;jsp:scriptlet> if (... &lt;/jsp:scriptlet></code></li>
+</ul>
+
+<p>scope is <code>page|request|session|application</code></p>
+
+<p class="code">&lt;?xml version="1.0" ?&gt;
+   &lt;<em>jsp:root</em> version="1.2|2.0" 
+   [ xmlns:taglibPrefix="URI" ]+ ...	
+   xmlns     = "http://www.w3c.org/1999/xhtml" 
+   xmlns:<em>jsp</em> = "http://java.sun.com/JSP/Page"
+   xmlns:<em>c</em>   = "http://java.sun.com/jstl/core"
+   xmlns:<em>x</em>   = "http://java.sun.com/jstl/xml"
+   ...</p>
+
+<h2>JSTL</h2>	
+<p class="code"><em>xmlns:c</em>="http://java.sun.com/jsp/jstl/core"</p>
+<p class="code">&lt;c:<em>url</em> value="" var="var" scope="SCOPE" ... &lt;c:param
+&lt;c:<em>out</em> value=" " escapeXml="true"</p>
+
+<p class="code">&lt;c:<em>if</em> test=""
+&lt;c:<em>choose</em>
+   &lt;c:<em>when</em> test=""
+   &lt;c:<em>otherwise</em>
+&lt;c:<em>forEach</em> var="" varStatus="" items="" begin="startIndex" end="" step=""
+</p>
+
+<p class="code">&lt;c:<em>forTokens</em>  var="" varStatus="" items="" delims="" begin="startIndex" end="" step=""
+</p>
+<p class="code">&lt;c:<em>catch</em> var="" </p>
+<p class="code">&lt;c:<em>set</em> value="or element body" var="" scope="SCOPE" target="" property=""
+&lt;c:<em>remove</em> var="" scope=""
+</p>
+<p class="code">&lt;c:<em>import</em> url="" var="" scope="SCOPE" charEncoding="" ... 
+   &lt;c:param name="" value=""
+&lt;c:<em>redirect</em>   ... 
+   &lt;c:param name="" value=""
+</p>
+<p class="code"><em>xmlns:fmt</em>="http://java.sun.com/jsp/jstl/fmt"
+&lt;fmt:<em>requestEncoding</em> value="encoding name"
+</p>
+<p class="code">&lt;fmt:<em>message</em> ... &lt;fmt:<em>param</em> ... TBD
+&lt;fmt:<em>bundle</em> basename="" prefix=""
+&lt;fmt:<em>setBundle</em>  basename="" 
+   var="" scope="SCOPE" value="" 
+&lt;fmt:<em>formatNumber</em> ... TBD
+</p>
+
+<p class="code">&lt;fmt:<em>formatDate</em> 
+   var="" scope="SCOPE" value="" 
+   pattern="see java.text.SimpleDateFormat" type="date|time|both"
+   dateStyle="default|short|medium|long|full"
+   timeStyle="default|short|medium|long|full"
+   timeZone=""
+</p>
+
+<p class="code">&lt;fmt:<em>timeZone</em> value=""
+&lt;fmt:<em>setTimeZone</em> value=""
+   var="" scope="SCOPE" value="" 
+</p>
+
+<p class="code">&lt;fmt:<em>setLocale</em> value=""
+   var="" scope="SCOPE" value="" 
+</p>
+
+<p class="code">&lt;fmt:<em>parseDate</em> 
+</p>
+<p class="code">&lt;fmt:<em>parseNumber</em> 
+</p>
+
+
+
+
+
+
+
+
+<h2>Tag or JSP Files</h2>
+<p class="code">&lt;jsp:directive.<em>include</em> 
+   file="a page relative or context relative URI path for the file to include"
+</p>
+
+<p class="code">&lt;jsp:<em>include</em> page="page- or context-relative URI" flush="false"
+   &lt;jsp:param name="" value=""
+</p>
+
+<p class="code">&lt;jsp:<em>element</em> name="" 
+   &lt;jsp:<em>attribute</em> name="" trim="true" (body is value)
+   &lt;jsp:<em>body</em> (required when &lt;jsp:attribute is used)
+   <i>(It's not possible have conditional attributes using these tags.)</i>
+</p>
+
+<p class="code">&lt;jsp:<em>output</em> 
+   omit-xml-declaration="<span class="default">true</span>|yes|false|no" 
+   doctype-root-element="" 
+   doctype-public="publicID" doctype-system="systemID"
+</p>
+
+<p class="code">&lt;jsp:<em>getProperty</em> name="bean variable name" property=""
+</p>
+<p class="code">&lt;jsp:<em>setProperty</em> name="bean variable name" property="*|names" 
+   param="name of request parameter" value=""
+</p>
+
+<p class="code">&lt;jsp:<em>useBean</em> id="" class="" beanName="" type="" scope="SCOPE"
+</p>
+
+
+<p><code>&lt;jsp:<em>text</em></code> preserves whitespace
+</p>
+<p class="code">&lt;jsp:<em>plugin</em> ... &lt;jsp:fallback
+   &lt;jsp:params
+   	&lt;jsp:param name="" value=""
+</p>
+
+
+
+
+
+<h2>Tag Files Only</h2>
+<p class="code">&lt;jsp:directive.<em>tag</em>  description="" example=""
+   body-content="empty|<span class="default">scriptless</span>|tagdependent" 
+   dynamic-attributes="the name of the variable to hold dynamic attributes" 
+   import="" 
+   pageEncoding="ISO-8859-1" 
+</p>
+<p class="code">&lt;jsp:directive.<em>attribute</em> name="" 
+   description="" 
+   required="true|<span class="default">false</span>"
+   fragment="true|<span class="default">false</span>"
+   rtexprvalue="<span class="default">true</span>|false"
+   type="<span class="default">String</span> classes and interfaces (no primitive types)"
+</p>
+
+
+<p class="code">&lt;jsp:directive.<em>variable</em> 
+   alias="name of the local page scope variable the tag file uses to hold the value" 
+   name-from-attribute="page-scope variable name receiving value"
+   declare="true (false to prevent export of variable)"
+   description=""
+   name-given="name of the invoking page's variable used to export the value"
+   scope="<span class="default">NESTED</span>|AT_BEGIN|AT_END"
+   variable-class="class or interface"
+</p>
+
+<p class="code">&lt;jsp:<em>doBody</em> var="" varReader="" scope="SCOPE" 
+</p>
+
+<p class="code">&lt;jsp:<em>invoke</em> fragment="attribute that defines the fragment" 
+   scope="SCOPE" var="" varReader=""
+</p>
+
+
+<h2>Page Only</h2>
+<p class="code"><a href="http://java.sun.com/products/jsp/syntax/1.2/syntaxref1210.html">&lt;jsp:directive.<em>page</em></a> autoFlush="true" buffer="8kb" 
+   contentType="mimeType and encoding <span class="default">UTF-8</span>, eg. 'text/html; charset=UTF-8'" 
+   errorPage="page or context relative path" 
+   extends="class name" 
+   import="package list" 
+   isErrorPage="false" isThreadSafe="true" 
+   pageEncoding="encoding of JSP page file and default contentType encoding" 
+   session="true"
+</p>
+<p class="code">&lt;jsp:<em>forward</em> page="page or context relative path". 
+   &lt;jsp:param name="" value=""
+</p>
+
+
+
+
+
+
+<h2>Scriptlets</h2>
+
+<dl class="scriptlets">
+   <dt><code class="javaClass">javax.servlet.jsp.PageContext</code>pageContext</dt>
+   <dd><span class="scope">Page</span>findAttribute, getAttribute, getAttributesScope, getAttributeNamesInScope, setAttribute</dd>
+   <dt><code class="javaClass">javax.servlet.jsp.JspWriter</code>out</dt>
+   <dd><span class="scope">Page</span>clear, clearBuffer, flush, getBufferSize, getRemaining</dd>
+   <dt><code class="javaClass">javax.servlet.ServletConfig</code>config</dt>
+   <dd><span class="scope">Page</span>getInitParameter, getInitParameterNames</dd>
+   <dt><code class="javaClass">java.lang.Throwable</code>exception</dt>
+   <dd><span class="scope">Page</span>getMessage, getLocalizedMessage, printStackTrace, toString</dd>
+   <dt><code class="javaClass">java.lang.Object</code>page</dt>
+   <dd><span class="scope">Page</span>&nbsp;</dd>
+   <dt><code class="javaClass">javax.servlet.ServletResponse</code>response</dt>
+   <dd><span class="scope">Page</span>&nbsp;</dd>
+   <dt><code class="javaClass">javax.servlet.ServletRequest</code>request</dt>
+   <dd><span class="scope">Request</span> getAttribute, getParameter, getParameterNames, getParameterValues, setAttribute</dd>
+   <dt><code class="javaClass">javax.servlet.http.HttpSession</code>session</dt>
+   <dd><span class="scope">Session</span>getAttribute, getId, setAttribute</dd>
+   <dt><code class="javaClass">javax.servlet.ServletContext</code>application</dt>
+   <dd><span class="scope">Application</span>getAttribute, getMimeType, getRealPath, setAttribute</dd>
+</dl>
+
+
+<h2>EL</h2>
+
+
+<dl>
+<dt>operations</dt><dd>and | &amp;amp;&amp;amp; | or | || | '+' | '-' | * | / | div | % | mod | gt
+| lt | ge | le | ==| eq | ne
+{'-'| ! | not | empty}</dd>
+<dt>pageContext</dt><dd>The context for the JSP page. Provides access to various objects, including servletContext, session, request, and
+response.</dd>
+<dt>pageScope</dt><dd>Maps page-scoped variable names to their values.</dd>
+<dt>requestScope</dt><dd>Maps request-scoped variable names to their values.</dd>
+<dt>sessionScope</dt><dd>Maps session-scoped variable names to their values.</dd>
+<dt>applicationScope</dt><dd>Maps application-scoped variable names to their values.</dd>
+<dt>param</dt><dd>Maps a request parameter to a single String parameter value (obtained by calling
+ServletReqwuest.getParameter(String name)).</dd>
+<dt>paramValues</dt><dd>Maps a request parameter name to an array of String values for that parameter name (obtained by calling
+ServletRequest.getParameterValues(String name)).</dd>
+<dt>header</dt><dd>Maps a request header name to a single String header value (obtained by calling ServletRequest.getHeader(String name)).</dd>
+<dt>headerValues</dt><dd>Maps a request header name to an array of String values for that header (obtained by calling
+ServletRequest.getHeaders(String)).</dd>
+<dt>cookie</dt><dd>Maps a cookie name to a single Cookie object. Cookies are retrieved according to the semantics of
+HttpServletRequest.getCookies(). If same name is shared by multiple cookies, an implementation must use the
+first encountered in the array of Cookie objects returned by the getCookies() method. However, the ordering of
+cookies currently unsspecified in the Servlet specification.</dd>
+<dt>initParam</dt><dd>Maps a context initialization parameter name to a String parameter value (obtained by calling ServletContext.getInitparameter(String name)).</dd>
+</dl>
+
+<ul class="code">
+<li>boolean  fn:contains(string, substring)</li>
+<li>boolean  fn:containsIgnoreCase(string, substring)</li>
+<li>boolean  fn:startsWith(string, prefix)</li>
+<li>boolean  fn:endsWith(string, suffix)</li>
+<li>String[] fn:split(string, separator)</li>
+<li>String   fn:substring(string, begin, end)</li>
+<li>String   fn:substringBefore(string, substring)</li>
+<li>String   fn:substringAfter(string, substring)</li>
+<li>String   fn:replace(string, before, after)</li>
+<li>String   fn:toLowerCase(string)</li>
+<li>String   fn:toUpperCase(string)</li>
+<li>String   fn:trim(string)</li>
+<li>int      fn:indexOf(string, suffix)</li>
+<li>int      fn:length(String or Collection)</li>
+<li>String   fn:join(String[], separator)</li>
+<li>String   fn:escapeXml(string)</li>
+</ul>
+
+<br>
+<br>
+<!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+  <div id="footer" class="screenOnly" >
+<a href="http://blog.ndpsoftware.com/" target="_blank" >Blog</a>	|
+<a href="index-2.html" >About NDP Software</a>
+</div>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = '../apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+</body>
+
+<!-- Mirrored from ndpsoftware.com/JSPXMLCheatSheet.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:29 GMT -->
+</html>

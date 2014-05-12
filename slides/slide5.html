@@ -1,0 +1,88 @@
+<section>
+    <h3>Help and Config</h3>
+    <h3>Help</h3>
+<pre>
+<code style="margin-top: 20px;">
+  $ git help "command name"
+  $ git "command name" --help
+  $ man git-"command name"
+  
+</code></pre>
+    For example, you can get the manpage help for the config command by running
+<pre>
+<code style="margin-top: 20px;">
+  $ git help config
+  
+</code></pre>
+</section>
+
+<section>
+    <h3>Config</h3>
+<pre><code style="margin-top: 20px;">
+  $ git config user.name "Alen Jobs"
+  $ git config user.email "4008@dothejob.org"
+</code></pre>
+    <p>When reading, the values are read from the system, global and repository local configuration files by default, and options --system, --global, --local and --file &lt;filename&gt; can be used to tell the command to read from only that location.</p>
+    <p>When writing, the new value is written to the repository local configuration file by default, and options --system, --global, --file &lt;filename&gt; can be used to tell the command to write to that location (you can say --local but that is the default).</p>
+</section>
+
+<section>
+    <h3>OPTIONS</h3>
+    <ul>
+        <li>
+            <em>--global</em> :<br />
+            writing : write to global ~/.gitconfig file rather than the repository .git/config, write to $XDG_CONFIG_HOME/git/config file if this file exists and the ~/.gitconfig file doesn't.<br />
+            reading : read only from global ~/.gitconfig and from $XDG_CONFIG_HOME/git/config.
+        </li>
+        <li>
+            <em>--system</em> :<br />
+            writing : write to system-wide $(prefix)/etc/gitconfig.<br />
+            reading : read only from system-wide $(prefix)/etc/gitconfig.
+        </li>
+        <li>
+            <em>--local</em> :<br />
+            writing : write to the repository .git/config file. This is	the default behavior.<br />
+            reading : read only from the repository .git/config.
+        </li>
+    </ul>
+</section>
+
+
+<section>
+    <h3>MORE OPTIONS.....</h3>
+    <ul>
+        <li>
+            <em>-l or --list</em> : List all variables set in config file.
+        </li>
+        <li>
+            <em>--get</em> : Get the value for a given key (optionally filtered by a regex matching the value).
+        </li>
+        <li>
+            <em>--get-all</em> : get all values.
+        </li>
+        <li>
+            <em>--add</em> : Adds a new line to the option without altering any existing values.
+        </li>
+        <li>
+            <em>-e or --edit</em> : Opens an editor to modify the specified config file; either --system, --global, or repository (default).
+        </li>
+        <li>
+            <em>--unset</em> : Remove the line matching the key from config file.
+        </li>
+        <li>
+            <em>--unset-all</em> : Remove all lines matching the key from config file.
+        </li>
+    </ul>
+    <p style="margin-top: 20px;">for all options go <a href="http://git-scm.com/docs/git-config" target="_new">here</a></p>    
+</section>
+
+
+<section>
+    <h3>Config Variables</h3>
+    <ul>
+        <li><em>core.fileMode</em> : true or false.</li>
+        <li><em>core.editor</em> : "vim" or "nano" or any text editor .</li>
+
+    </ul>
+    <p style="margin-top: 20px;">for all variables go <a href="http://git-scm.com/docs/git-config#_variables" target="_new">here</a></p>
+</section>

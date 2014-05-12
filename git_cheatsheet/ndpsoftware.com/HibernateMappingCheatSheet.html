@@ -1,0 +1,1085 @@
+<html lang="en">
+
+<!-- Mirrored from ndpsoftware.com/HibernateMappingCheatSheet.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:25 GMT -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title> Hibernate Mapping Cheat Sheet </title>
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+    <link rel="stylesheet" href="css/cheatSheet.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/ndp-print.css" media="print"/>
+    <style type="text/css">
+        code {
+            padding: 5px 0;
+            display: block
+        }
+        code.mapping {
+            background-color: #e0e0b8;
+            padding: 5px 0 5px 10px;
+            margin: 5px -10px 5px 0px;
+        }
+        code.mapping:before {
+            content: 'Mapping';
+            float: right;
+            padding: 1px 5px 2px 5px;
+            font-size: x-small;
+            background-color: #999900;
+            font-family: arial,verdana;
+            color: white;
+            margin-top: -5px;
+        }
+
+        dt {
+            margin-top: 0;
+            border-top: 1px dotted #bbb;
+            margin-left: 10px;
+            line-height: 16px;
+        }
+        dd {
+            margin-top: -16px;
+            margin-left: 18em;
+            padding-bottom: .2em;
+            line-height: 16px;
+        }
+
+        body>div {
+            width: 32em;
+            float: left;
+            padding: 10px 20px 10px 10px;
+        }
+
+        div#header {
+          width: 420px;
+        }
+    </style>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1458227-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</head>
+<body>
+<div class="screenOnly"
+     id="header">
+Also from  <a href="index.html" title="Web-related software projects">
+      NDP Software</a>:
+  <ul>
+    <li>
+      <a href="git-cheatsheet.html">
+          Visual Git Cheatsheet
+      </a>
+    </li>
+    <li>
+      <a href="JSPXMLCheatSheet.html">
+          JSP XML Cheatsheet
+      </a>
+    </li>
+    <li>
+      <a href="http://amp-what.com/">&amp;what?</a>
+    </li>
+    <li>
+      <a href="http://blog.ndpsoftware.com/">Blog</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/ndp8" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="medium">Follow @ndp8</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </li>
+    <li>
+      <g:plusone size="small" annotation="inline" width="160"></g:plusone>
+    </li>
+  </ul>
+  <br>
+  <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+        alt="Creative Commons License"
+        style="border-width:0"
+        src="../i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
+  <div style="font-size: small">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</div>
+</div>
+<h1>Hibernate Mapping Cheat Sheet</h1>
+<h6>Copyright (c) 2005-2012 NDP Software. Some Rights Reserved.</h6>
+
+<p>
+    Based on
+    http://www.xylax.net/hibernate/intro.html (no longer live)
+</p>
+
+<div>
+<h2>Types</h2>
+
+<dl>
+    <dt>integer, long, short</dt>
+    <dd>
+        <p>
+            Java primitives or wrapper classes to appropriate (vendor-specific) SQL column types. </tt>
+        </p>
+    </dd>
+    <dt>float, double</dt>
+    <dd>
+        <p>
+            Java primitives or wrapper classes to appropriate (vendor-specific) SQL column types. </tt>
+        </p>
+    </dd>
+    <dt>character, byte</dt>
+    <dd>
+        <p>
+            Java primitives or wrapper classes to appropriate (vendor-specific) SQL column types. </tt>
+        </p>
+    </dd>
+    <dt>boolean, yes_no, true_false</dt>
+    <dd>
+        <p>
+            Alternative encodings for a Java boolean</tt> or java.lang.Boolean</tt>
+        </p>
+    </dd>
+    <dt>string</dt>
+    <dd>
+        <p>
+            java.lang.String</tt> to VARCHAR</tt> (or Oracle VARCHAR2</tt>).
+        </p>
+    </dd>
+    <dt>date, time, timestamp</dt>
+    <dd>
+        <p>
+            java.util.Date</tt> and its subclasses to SQL types DATE</tt>, TIME</tt> and TIMESTAMP</tt> (or equivalent).
+        </p>
+    </dd>
+    <dt>calendar, calendar_date</dt>
+    <dd>
+        <p>
+            java.util.Calendar</tt> to SQL types TIMESTAMP</tt> and DATE</tt> (or equivalent).
+        </p>
+    </dd>
+    <dt>big_decimal, big_integer</dt>
+    <dd>
+        <p>
+            java.math.BigDecimal</tt> and java.math.BigInteger</tt> to NUMERIC</tt> (or Oracle NUMBER</tt>).
+        </p>
+    </dd>
+    <dt>locale, timezone, currency</dt>
+    <dd>
+        <p>
+            java.util.Locale</tt>, java.util.TimeZone</tt> and java.util.Currency</tt> to VARCHAR</tt> (or Oracle
+            VARCHAR2</tt>). Instances of Locale</tt> and Currency</tt> are mapped to their ISO codes. Instances of
+            TimeZone</tt> are mapped to their ID</tt>
+        </p>
+    </dd>
+    <dt>class</dt>
+    <dd>
+        <p>
+            java.lang.Class</tt> to VARCHAR</tt> (or Oracle VARCHAR2</tt>). A Class</tt> is mapped to its fully
+            qualified name.
+        </p>
+    </dd>
+    <dt>binary</dt>
+    <dd>
+        <p>
+            Maps byte arrays to an appropriate SQL binary type.
+        </p>
+    </dd>
+    <dt>text</dt>
+    <dd>
+        <p>
+            Maps long Java strings to a SQL CLOB</tt> or TEXT</tt> type.
+        </p>
+    </dd>
+    <dt>serializable</dt>
+    <dd>
+        <p>
+            Maps serializable Java types to an appropriate SQL binary type. You may also indicate the Hibernate type
+            serializable</tt> with the name of a serializable Java class or interface that does not default to a basic
+            type.
+        </p>
+    </dd>
+    <dt>clob, blob</dt>
+    <dd>
+        <p>
+            Type mappings for the JDBC classes java.sql.Clob</tt> and java.sql.Blob</tt>These types may be inconvenient
+            for some applications, since the blob or clob object may not be reused outside of a transaction.
+            (Furthermore, driver support is patchy and inconsistent.)
+        </p>
+    </dd>
+</dl>
+</div>
+
+<div>
+
+    <h2>Object Declaration</h2>
+
+<div>
+
+<code class="mapping">&lt;class name="Foo" table="foo"&gt;
+    &lt;id name="id" column="id" type="int"&gt;
+      &lt;generator class="assigned"/&gt;
+    &lt;/id&gt;
+    &lt;property name="propertyName" type="typename"
+      <em>access</em>="field|property|ClassName"
+      <em>lazy</em>="true|false"
+      <em>column</em>="column_name" unique="true|false"
+      <em>not-null</em>="true|false" length="L"
+      <em>index</em>="index_name" unique_key="unique_key_id"
+      <em>optimistic-lock</em>="true|false"
+      <em>node</em>="element-name|@attr-name|element/@attr|."
+    /&gt;
+&lt;/class&gt;</code>
+    </div>
+</div>
+
+
+<div>
+    <h2>Simple Association (one-to-one)</h2>
+    <div>
+
+        <code class="mapping">&lt;class name="Foo" table="foo"
+  <em>&lt;one-to-one name="bar" class="Bar"/&gt;</em>
+&lt;/class&gt;</code>
+
+        <code>Bar Foo.getBar() // corresponding Bar instance</code>
+        <p>No extra columns are needed to support this relationship; Foo and Bar share the same PK values.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+        <p>
+            This relationship can be bidrectional, with Bar having getFoo(), by simply adding a similar mapping and Foo
+            property to Bar.
+        </p>
+    </div>
+</div>
+
+
+<div>
+    <h2>Simple Reference (many-to-one)</h2>
+
+    <div>
+        <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;many-to-one name="bar" class="Bar"
+               column="bar_id"/&gt;</em>
+&lt;/class&gt;
+</code>
+
+        <p>
+            Foo's table has an extra column which holds the FK to Bar. Foo and Bar can have completely different PKs and
+            the relationship will still hold.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            This relationship can be declared both ways, with Bar having <em>getFoo()</em>, by simply adding a similar
+            mapping and property to Bar. This will result in Bar's table getting an extra column <i>foo_id</i>.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Basic Collection (one-to-many)</h2>
+
+    <div>
+        <p>
+            We have two classes, Foo and Bar which are related to each other as follows:
+        </p>
+        <code>Set Foo.getBars() // of Bar instances</code>
+
+
+        <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;set role="bars" table="bar"&gt;
+   &lt;key column="foo_id"/&gt;
+   &lt;one-to-many class="Bar"
+     not-found="ignore|exception"/&gt;
+   &lt;/set&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            The <i>&lt;set&gt;</i> collection is respresentative of many collection types.
+        </p>
+
+        <p>
+            Bar's table requires an extra column, which holds the FK to Foo. This allows Foo to be assigned a collection
+            of Bars based on the value of the foo_id column in Bar.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            This relationship can be declared both ways, with Bar having getFoo(), by suitable code changes to Bar and
+            the following schema change:
+        </p>
+        <code class="mapping">&lt;class name="Bar" table="bar"&gt;
+  ...
+<em>    &lt;many-to-one name="foo" class="Foo"
+    column="foo_id"/&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            Now your Bars will know who their Foo is. No extra columns are generated for the bidirectionality.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Collection (many-to-many)</h2>
+
+    <div>
+        <p>
+            A many-to-many reference is basically a collection. Class A holds a reference to a set of class B instances
+            (as in the one-to-many case), but B might have multiple A's.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have two classes, Foo and Bar which are related to each other as follows:
+        </p>
+        <code>Set Foo.getBars() // of Bar instances</code>
+
+         <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;set role="bars" table="foo_bar"&gt;
+     &lt;key column="foo_id"/&gt;
+     &lt;many-to-many column="bar_id" class="Bar"/&gt;
+  &lt;/set&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            This time we cannot have an extra column on Bar as that would dictate that each Bar has only one Foo. So
+            instead we have an extra table, <i> foo_bar</i>, which holds the relationship between instances.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            This relationship can be declared both ways, with Bar having getFoos(), by suitable code changes to Bar and
+            the following schema change:
+        </p>
+<code class="mapping">&lt;class name="Bar" table="bar"&gt;
+  ...
+  <em>&lt;set role="foos" table="foo_bar" readonly="true"&gt;
+    &lt;key column="bar_id"/&gt;
+    &lt;many-to-many column="foo_id" class="Foo"/&gt;
+  &lt;/set&gt;</em>
+&lt;/class&gt;</code>
+        <p>
+            Now your Bars will know who their Foos are.
+            <br/>
+            <br/>
+            No extra columns are generated for the bidirectionality.
+            <br/>
+            Note that one end of the relationship must be declared "readonly".
+        </p>
+
+        <p>
+            If you want independent collections of Foos on Bars and Bars on Foos (i.e. membership one way doesn't imply
+            the other), you need to declare Bar's table to be <i> bar_foo</i>. That way an independent table will be
+            used to keep track of the Foo set on Bar.
+        </p>
+        <br/>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Collection (raw data)</h2>
+
+    <div>
+        <p>
+            A raw data collection is a collection on a class that contains second-rank classes. First- rank class A
+            holds a reference to a set of second-rank class B instances. This is not limited to full classes - B could
+            even be of primitive type.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have one class, Foo, and a collection of Strings (e.g. people's names)
+        </p>
+        <code>Set Foo.getPeople() // of String instances</code>
+
+         <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;set role="people" table="Person"&gt;
+    &lt;key column="foo_id"/&gt;
+    &lt;element column="name" type="string"/&gt;
+  &lt;/set&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            Note that Person does not represent a class. It is simply a collection of second-rank persistent data - in
+            this case String objects.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            There's no bidirectional relationship available here as there is only one class involved.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Top-level Collections</h2>
+
+    <div>
+        <p>
+            A top-level collection is a collection defined outside of the scope of an individual class and available for
+            use in all classes in the mapping files.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have one class, Foo, and a collection of Strings (e.g. people's names) which we wish to make available to
+            other classes without constantly declaring set definitions inside each one.
+        </p>
+        <code>Set Foo.getNames() // of String instances</code>
+
+ <code class="mapping"><em>&lt;set role="names" table="names"&gt;
+  &lt;key column="id" type="string"&gt;
+  &lt;generator class="uuid.hex"/&gt; &lt;/key&gt;
+  &lt;element column="name" type="string"/&gt;
+&lt;/set&gt;</em>
+&lt;class name="Foo" table="foo"&gt;
+...
+<em>&lt;collection name="names" column="name_id"
+    role="names"/&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            Note that a top-level collection needs its own key generator, and that this cannot be of the <i>
+            assigned </i> type since it is never exposed to a calling application.
+        </p>
+
+        <p>
+            Again, Person does not represents a class. It is simply a collection of second-rank persistent objects - in
+            this case Strings. Note also that Names simply has <i> id </i> not <i> foo_id</i>. This is to allow it to be
+            used by a variety of classes. Also, because we cannot use Person's <i> id </i> as a <i> foo_id</i>, we have
+            added a <i> person_id </i> FK to Foo.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            There's no bidirectional relationship available here as there is only one class involved.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Map</h2>
+
+    <div>
+        <p>
+            A map is a simple name-value pair list stored on a first rank collection.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            First rank class Foo has a map containing people's ages indexed by their names
+        </p>
+        <code>Map Foo.getAges() // of String name-value pairs</code>
+
+         <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;map role="ages"&gt;
+    &lt;key column="id"/&gt;
+    &lt;index column="name" type="string"/&gt;
+    &lt;element column="age" type="string"/&gt;
+  &lt;/map&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            A simple extra table, <i> Ages</i>, is used to store the name and age string-value pair. Note that the map
+            needs its own identity column too: <i> id</i>.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+        <p>
+            Bidirectionality has no meaning for a map.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Entity Map</h2>
+
+    <div>
+        <p>
+            An entity map is a map who is keyed by an entity class rather than a simple property.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            Foo holds a Map of people's ages. This map is keyed by the Name entity class. Name holds a person's name as
+            a string property.
+        </p>
+        <code>Map Foo.getAges() // of Person-String instances</code>
+
+         <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;map role="ages"&gt;
+     &lt;key column="id"/&gt;
+     &lt;index-many-to-many column="person_id"
+         class="Person"/&gt;
+     &lt;element column="age" type="string"/&gt;
+  &lt;/map&gt;</em>
+&lt;/class&gt;
+&lt;class name="Person" table="person"&gt;
+  ...
+  <em>&lt;property name="name" column="name"
+      type="string"/&gt;</em>
+&lt;/class&gt;</code>
+        <p>
+            As for the normal map a simple extra table, <i> Ages</i>, is used to store the Person FK and age data.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            Bidirectionality has no meaning for an entity map.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Subclasses</h2>
+
+    <div>
+        <p>
+            Subclasses are classes that extend another class in a standard OO inheritance relationship.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have one class, Foo, and another class, Bar, which is a subclass of Foo.
+        </p>
+        <code>public class Bar extends Foo</code>
+
+         <code class="mapping">&lt;class name="Foo" table="foo" </code>
+        <br/>
+<code class="mapping"><em>discriminator-value="F"&gt;</em>
+  ...
+  <em>&lt;discriminator column="class"/&gt;</em>
+  ...
+  <em>&lt;subclass name="subclass.Bar"
+          discriminator-value="B"&gt;
+    &lt;property name="name" column="name"
+          type="string"/&gt;
+  &lt;/subclass&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            The <i> class </i> field holds a discriminator value. This value tells Hibernate which Java class to
+            instantiate on loading. The subclass, Bar, has its properties stored in the Foo table.
+        </p>
+
+        <p>
+            In this case we've used one table per class hierarchy. An alternative would be one table per concrete class.
+            We could map that by simply including two class definitions and repeating the attrs of Foo in the Bar
+            definition.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            Inheritance relationships are only unidirectional in Java. A child can determine its parent class but the
+            reverse has no meaning.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Joined Subclass</h2>
+
+    <div>
+        <p>
+            Joined subclasses are those that are mapped to a table-per-subclass design rather than a
+            table-per-hierarchy.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have one class, Foo, and another class, Bar, which is a subclass of Foo.
+        </p>
+        <code>public class Bar extends Foo</code>
+
+         <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+<em>  &lt;property name="name" column="name" type="string"/&gt;
+  &lt;joined-subclass name="subclass.Bar" table="bar"&gt;
+    &lt;key column="foo_id"/&gt;
+    &lt;property name="age" column="age" type="string"/&gt;
+  &lt;/joined-subclass&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            Here Bar inherits from Foo and so is joined using the PK <i> foo_id </i> and adds the extra data column <i>
+            age</i>.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            Inheritance relationships are only unidirectional in Java. A child can determine its parent class but the
+            reverse has no meaning.
+        </p>
+
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Components</h2>
+
+    <div>
+        <p>
+            Components are Java classes that are populated from selected columns of a parent class' table. This allows
+            second-rank classes to exist within a class whilst still mapping to a single table for efficiency.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have one class, Foo, and a second-rank class, FooSecond.
+        </p>
+<code>FooSecond Foo.getSecond() // returns
+    // enclosed second-rank instance</code>
+
+         <code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;component name="second" class="FooSecond"
+      lazy="true|false"&gt;
+      &lt;property name="firstName"/&gt;
+      &lt;property name="lastName"/&gt;
+  &lt;/component&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            Here, Foo is mapped using <i> id </i> from table <i> Foo</i>. FooSecond is mapped from the same table using
+            <i> firstName </i> and <i> lastName</i>.
+        </p>
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Collections of Components</h2>
+
+    <div>
+        <p>
+            Collections of components are also possible. These can be especially useful when dealing with a complex
+            top-level collection.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have one class, Foo, and a top-level collection of second-rank class FooSecond which Foo holds.
+        </p>
+        <code>Set Foo.getSeconds() // of FooSecond instances</code>
+
+ <code class="mapping"><em>&lt;set role="seconds"&gt;
+  &lt;key column="id" type="string"&gt;
+    &lt;generator class="uuid.hex"/&gt;
+  &lt;/key&gt;
+  &lt;composite-element class="FooSecond"&gt;
+    &lt;property name="firstName"/&gt;
+    &lt;property name="lastName"/&gt;
+  &lt;/composite-element&gt;
+&lt;/set&gt;</em>
+&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;collection name="seconds" column="seconds_id"
+    role="seconds"/&gt;</em>
+&lt;/class&gt;</code>
+
+        <p>
+            This time we have two tables. Foo has a <i> seconds_id </i> FK column and Seconds appears as a collection
+            table in its own right. The table structure is the same as for a standard top-level collection, but this
+            time Seconds is being treated as a component object - a composite of two columns in the collection table -
+            and set as a single property of Foo.
+        </p>
+
+        <h3 class="bidirectionality">Bidirectionality</h3>
+
+        <p>
+            There's no bidirectional relationship available here as there is only one class involved.
+        </p>
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Composite Id</h2>
+
+    <div>
+        <p>
+            Composite Identifiers are PK identifiers for classes that consist of more than one column.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            Foo has a primary key that is of type Person. Person is made up of a String name and an Address type.
+        </p>
+        <code>Person Foo.getId() // PK is multi-column mapped </code>
+
+
+<code class="mapping">&lt;class name="Foo" table="foo"&gt;
+<em>  &lt;composite-id name="id" class="Person"&gt;
+    &lt;key-property name="name" type="string"
+         column="name"/&gt;
+    &lt;key-many-to-one name="address" class="Address"
+    column="addr_id"/&gt;
+  &lt;/composite-id&gt;</em>
+  &lt;property name="age" column="age" type="string"/&gt;
+&lt;/class&gt;
+&lt;class name="Address" table="address"&gt;
+  ...
+&lt;/class&gt;</code>
+
+        <p>
+            Foo has a composite id of type Person. This is mapped to two columns: 1) Name, 2) a many-to-one relationship
+            with the Address class.
+        </p>
+        <p>
+            Either <i> &lt;key-property&gt; </i> or <i> &lt;key-many-to-one&gt; </i> declarations may exist within a
+            composite id.
+        </p>
+        <p>
+            So Foo has two PK-columns: <i> addr_id </i> and <i> name</i>. These are combined to initialise Person
+            instances.
+        </p>
+    </div>
+</div>
+
+
+<div>
+    <h2>Composite Index</h2>
+
+    <div>
+        <p>
+            A Composite Index is used to provide a multi-column Map key. The semantics are very similar to Composite Id.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            Foo contains a map of ages (strings). The map is keyed by Person, where Person is mapped as a String column
+            (name) and Address instance.
+            <br/>
+            <code>Map Foo.getAges()
+    // Foo contains a map of ages, keyed by Person</code>
+
+        
+<code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;map role="ages"&gt;
+    &lt;key column="id"/&gt;
+    &lt;composite-index class="Person"&gt;
+    &lt;key-property name="name" type="string"
+         column="name"/&gt;
+    &lt;key-many-to-one name="address" class="Address"
+        column="addr_id"/&gt;
+  &lt;/composite-index&gt;
+  &lt;element column="age" type="string"/&gt;
+  &lt;/map&gt;</em>
+&lt;/class&gt;
+&lt;class name="Address" table="address"&gt;
+...
+&lt;/class&gt;</code>
+
+        <p>
+            Here the table <i> Ages </i> is created to hold the map. The key is made up of the columns <i> name </i> and
+            <i> addr_id </i> which are used to map Person keys. The <i> age </i> field holds the map value. Finally, the
+            map table needs its own id which is stored in the <i> id </i> field.
+        </p>
+
+    </div>
+</div>
+
+
+<div>
+    <h2>Ternary Associations (and beyond)</h2>
+
+    <div>
+        <p>
+            Ternary associations are those that involve three classes. Classes A, B and C are associated together in a
+            relationship.
+        </p>
+
+        <h3 class="scenario">Scenario</h3>
+
+        <p>
+            We have classes Foo, Bar and Snafu which are all related together. We choose to store their relationship in
+            Foo using a composite class BarSnafu:
+        </p>
+        <code>Bar BarSnafu.getBar()
+            Snafu BarSnafu.getSnafu()
+            Set Foo.getBarSnafus()</code>
+
+        
+<code class="mapping">&lt;class name="Foo" table="foo"&gt;
+  ...
+  <em>&lt;set role="barsnafus" table="foo_bar_snafu"&gt;
+    &lt;key column="foo_id"/&gt;
+    &lt;composite-element class="BarSnafu"&gt;
+      &lt;many-to-one name="bar" class="Bar"
+           column="bar_id"/&gt;
+      &lt;many-to-one name="snafu" class="Snafu"
+           column="snafu_id"/&gt;
+    &lt;/composite-element&gt;
+  &lt;/set&gt;</em>
+&lt;/class&gt;
+...</code>
+
+        <p>
+            So here we've got three classes. They are related together in table <i> foo_bar_snafu</i>. The result is
+            stored as a set of BarSnafu instances on each Foo. Each BarSnafu instance references one Bar and one Snafu.
+        </p>
+
+        <p>
+            Using composite elements we can go beyond this and support 4 and more elements in a relationship.
+        </p>
+
+
+    </div>
+
+</div>
+
+<!--
+
+
+
+<div>
+<code>
+&lt;many-to-one
+        name="propertyName"                                          (1)
+        column="column_name"                                         (2)
+        class="ClassName"                                            (3)
+        cascade="cascade_style"                                      (4)
+        fetch="join|select"                                          (5)
+        update="true|false"                                          (6)
+        insert="true|false"                                          (6)
+        property-ref="propertyNameFromAssociatedClass"               (7)
+        access="field|property|ClassName"                            (8)
+        unique="true|false"                                          (9)
+        not-null="true|false"                                        (10)
+        optimistic-lock="true|false"                                 (11)
+        lazy="true|proxy|false"                                      (12)
+        not-found="ignore|exception"                                 (13)
+        entity-name="EntityName"                                     (14)
+        formul="arbitrary SQL expression"                            (15)
+        node="element-name|@attr-name|element/@attr|."
+        index="index_name"
+        unique_key="unique_key_id"
+        foreign-key="foreign_key_name"/&gt;
+</code>
+</div>
+
+<div>
+<code>
+&lt;component 
+        name="propertyName"                 (1)
+        class="className"                   (2)
+        insert="true|false"                 (3)
+        update="true|false"                 (4)
+        access="field|property|ClassName"   (5)
+        lazy="true|false"                   (6)
+        optimistic-lock="true|false"        (7)
+        unique="true|false"                 (8)
+        node="element-name|."
+>
+        
+        <property ...../>
+        <many-to-one .... />
+        ........
+</component&gt;
+</code>
+</div>
+
+<div>
+<code>
+&lt;column
+        name="column_name"
+        length="N"
+        precision="N"
+        scale="N"
+        not-null="true|false"
+        unique="true|false"
+        unique-key="multicolumn_unique_key_name"
+        index="index_name"
+        sql-type="sql_type_name"
+        check="SQL expression"/&gt;
+</code>
+</div>
+
+<div>
+ Apart from <set>, there is also <list>, <map>, <bag>, <array> and <primitive-array> mapping elements. The <map> element is representative:
+<code>
+&lt;map
+    name="propertyName"                                         (1)
+    table="table_name"                                          (2)
+    schema="schema_name"                                        (3)
+    lazy="true|false"                                           (4)
+    inverse="true|false"                                        (5)
+    cascade="all|none|save-update|delete|all-delete-orphan"     (6)
+    sort="unsorted|natural|comparatorClass"                     (7)
+    order-by="column_name asc|desc"                             (8)
+    where="arbitrary sql where condition"                       (9)
+    fetch="join|select|subselect"                               (10)
+    batch-size="N"                                              (11)
+    access="field|property|ClassName"                           (12)
+    optimistic-lock="true|false"                                (13)
+    node="element-name|."
+    embed-xml="true|false"
+>
+
+    <key .... />
+    <map-key .... />
+    <element .... />
+</map/&gt;
+</code>
+</div>
+
+
+<div>The index of an array or list is always of type integer and is mapped using the <list-index> element. The mapped column contains sequential integers (numbered from zero, by default).
+
+<list-index 
+        column="column_name"                (1)
+        base="0|1|..."/>
+<code>
+&lt;/&gt;
+</code>
+</div>
+
+
+<div>
+<code>
+&lt;<map-key 
+        column="column_name"                (1)
+        formula="any SQL expression"        (2)
+        type="type_name"                    (3)
+        node="@attr-name"
+        length="N"/>/&gt;
+</code>
+</div>
+
+
+<div>
+<code>
+&lt;<map-key-many-to-many
+        column="column_name"                (1)
+        formula="any SQL expression"        (2)(3)
+        class="ClassName"
+/>/&gt;
+</code>
+</div>
+
+
+
+
+<div>
+<code>
+&lt;array name="addresses" 
+        table="PersonAddress" 
+        cascade="persist">
+    <key column="personId"/>
+    <list-index column="sortOrder"/>
+    <many-to-many column="addressId" class="Address"/>
+</array/&gt;
+</code>
+</div>
+
+
+
+<div>
+<code>
+&lt;map name="holidays" table="holidays" schema="dbo" order-by="hol_name asc"&gt;
+    &lt;key column="id"/&gt;
+    &lt;map-key column="hol_name" type="string"/&gt;
+    &lt;element column="hol_date" type="date"/&gt;
+&lt;/map&gt;
+</code>
+</div>
+
+
+
+<div>
+<code>
+&lt;list name="carComponents" 
+        table="CarComponents">
+    <key column="carId"/>
+    <list-index column="sortOrder"/>
+    <composite-element class="CarComponent">
+        <property name="price"/>
+        <property name="type"/>
+        <property name="serialNumber" column="serialNum"/>
+    </composite-element>
+</list/&gt;
+</code>
+</div>
+
+
+
+<code>
+&lt;map name="holidays" table="holidays" schema="dbo" order-by="hol_name asc"&gt;
+    &lt;key column="id"/&gt;
+    &lt;map-key column="hol_name" type="string"/&gt;
+    &lt;element column="hol_date" type="date"/&gt;
+&lt;/map&gt;
+</code>
+
+
+-->
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = '../apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/HibernateMappingCheatSheet.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:29 GMT -->
+</html>

@@ -1,0 +1,521 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/uc_model,_0VAUsMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:25:40 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Use-Case Model</title>
+<meta content="Guideline" name="uma.type">
+<meta content="uc_model" name="uma.name">
+<meta content="Use-Case Model" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Use-Case Model</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline provides guidance on how to ensure consistency of the use-case  model and how to document it.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../workproducts/uc_model%2c_W2SgEDR5EdutE_HNDTJk5Q.html" guid="_W2SgEDR5EdutE_HNDTJk5Q">Use Case Model</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><h3>
+    <a id="How the Use-Case Model Evolves" name="How the Use-Case Model Evolves">How the Use-Case Model Evolves</a>
+</h3>
+<p>
+    Use the requirements of&nbsp;stakeholders and potential users as vital information to help you find both the actors and
+    use cases. As you discover them, briefly describe the use cases and the actors. Before you describe the use cases in
+    detail, the use-case model should be reviewed by the stakeholders to verify that you have found all of the use cases
+    and actors and that, together, they can provide what the&nbsp;stakeholder wants. For more information on finding actors
+    and use cases see <a class="elementLinkWithType" href="find_and_outline_actors_and_ucs%2c_eyL0wCu-EdqSxKAVa9kmvA.html" guid="_eyL0wCu-EdqSxKAVa9kmvA">Guideline: Find and Outline Actors and Use Cases</a>.
+</p>
+<p>
+    When you have found the actors and use cases, describe the flow of events for each use case in detail. These
+    descriptions show how the system interacts with the actors and what the system does in each case. In an iterative
+    development environment, you will select particular scenarios of the use cases, or parts of a scenario, to be detailed
+    in each iteration. For more information on detailing use cases and scenarios, see <a class="elementLinkWithType" href="detail_ucs_and_scenarios%2c_4BJ_YCxSEdqjsdw1QLH_6Q.html" guid="_4BJ_YCxSEdqjsdw1QLH_6Q">Guideline: Detail Use Cases and Scenarios</a>.
+</p>
+<p>
+    Finally, the completed use-case model (including the descriptions of use cases) is reviewed, and the developers
+    and&nbsp;stakeholders&nbsp;use it to agree on what the system should do.
+</p>
+<h3>
+    <a id="Avoiding Functional Decomposition" name="Avoiding Functional Decomposition">Avoiding Functional
+    Decomposition</a>
+</h3>
+<p>
+    It is not uncommon that the use-case model degenerates into a functional decomposition of the system. To avoid this,
+    watch for the following symptoms:
+</p>
+<ul>
+    <li>
+        <strong>Small</strong> use cases, meaning that the description of the flow of events is only one or a few
+        sentences.
+    </li>
+    <li>
+        <strong>Many</strong> use cases, meaning that the number of use cases is some multiple of a hundred, rather than a
+        multiple of ten.
+    </li>
+    <li>
+        Use-case names that are constructions such as "do this operation on this particular data" or "do this function with
+        this particular data". For example, "Enter Personal Identification Number in an ATM machine" should not be modeled
+        as a separate use case for the ATM machine, because no one would use the system to do just this. A use case is a
+        complete flow of events that results in something of value to an actor.
+    </li>
+</ul>
+<p>
+    To avoid functional decomposition, make sure that the use-case model helps answer these kinds of questions:
+</p>
+<ul>
+    <li>
+        What is the context of the system?
+    </li>
+    <li>
+        Why are you building this system?
+    </li>
+    <li>
+        What does the user want the system to do?
+    </li>
+    <li>
+        How&nbsp;do the users benefit from the system?
+    </li>
+</ul>
+<h3>
+    <a id="Non-Functional Requirements" name="Non-Functional Requirements">Nonfunctional Requirements</a>
+</h3>
+<p>
+    It is quite easy to see that use cases are a very good way of capturing functional requirements on a system. But what
+    about the nonfunctional requirements? What are they, and where are they captured?
+</p>
+<p>
+    Usability, reliability, performance, and supportability requirements are often categorized as nonfunctional
+    requirements (also see <a class="elementLinkWithType" href="supporting_requirements%2c_wr24gNcGEdqz_d2XWoVt6Q.html" guid="_wr24gNcGEdqz_d2XWoVt6Q">Guideline: Supporting Requirements</a>). They often specify statutory&nbsp;or regulatory
+    requirements that you must comply with, by law. They can specify design constraints, such as the operating system used,
+    the platform environment, interface requirements, business rules, or any application standards that apply. In general,
+    you can say that any requirement that does not allow for more than one design option should be regarded as a design
+    constraint.
+</p>
+<p>
+    Many nonfunctional requirements apply to an individual use case and are captured within the flow of events of that use
+    case or as a special requirement of that use case (see <a class="elementLinkWithType" href="../concepts/use_case%2c_KudM0NcJEdqz_d2XWoVt6Q.html" guid="_KudM0NcJEdqz_d2XWoVt6Q">Concept: Use Case</a>).
+</p>
+<p class="exampleheading">
+    <strong>Example</strong>
+</p>
+<p class="example">
+    In&nbsp;a recycling machine system, a nonfunctional requirement specific to the Return Deposit Items use case could be:
+</p>
+<blockquote>
+    <p class="example">
+        The machine must be able to recognize deposit items with a reliability of more than 95%.
+    </p>
+</blockquote>
+<p>
+    Often, the nonfunctional requirements apply to the whole system. Such requirements are captured in the <a class="elementLinkWithType" href="../../workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" guid="_BVh9cL-CEdqb7N6KIeDL8Q">Artifact: Supporting Requirements</a>.
+</p>
+<p class="exampleheading">
+    <strong>Example</strong>
+</p>
+<p class="example">
+    In the recycling machine system, a nonfunctional requirement that applies to the whole system could be:
+</p>
+<blockquote>
+    <p class="example">
+        The machine will allow only one user at a time.
+    </p>
+</blockquote>
+<h3>
+    <a id="Structuring the Use-Case Model" name="Structuring the Use-Case Model">Structuring the Use-Case Model</a>
+</h3>
+<p>
+    There are three main reasons for structuring the use-case model:
+</p>
+<ul>
+    <li>
+        To make the use cases easier to understand.
+    </li>
+    <li>
+        To partition common behavior described within many use cases
+    </li>
+    <li>
+        To make the use-case model easier to maintain.
+    </li>
+</ul>
+<p>
+    Structuring is not the first thing you do, however. There is no point in structuring the use cases until you know a bit
+    more about their behavior than a one-sentence description. You should at least have established a step-by-step outline
+    for the flow of events of the use case to make sure that your decisions are based on an accurate understanding of the
+    behavior.
+</p>
+<p>
+    To structure the use cases, you use three kinds of relationships. You will use these relationships to factor out pieces
+    of use cases that can be reused in other use cases, or that are specializations or options for the use case. The use
+    case that represents the modification is called the <b>addition use case</b>. The use case that is modified is called
+    the <b>base use case</b>.
+</p>
+<ul>
+    <li>
+        If there is a part of a base use case that represents only the result of a function that the use case depends on,
+        not the method used to produce the result, you can factor that part out to an addition use case. The addition is
+        <strong>explicitly</strong> inserted in the base use case, using the <em>include
+        relationship</em><strong>.</strong> For more information on the <em>include relationship</em>, see <a class="elementLinkWithType" href="../concepts/use_case_model%2c_2jyfUAhVEduRe8TeoBmuGg.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Concept: Use-Case Model</a>.
+    </li>
+    <li>
+        If there is a part of a base use case that is optional, or it is not necessary to understand the primary purpose of
+        the use case, you can factor that part out to an addition use case to simplify the structure of the base use case.
+        The addition is <strong>implicitly</strong> inserted in the base use case, using the <em>extend</em>
+        relationship.&nbsp;For more information on the <em>extend relationship</em>, see <a class="elementLinkWithType" href="../concepts/use_case_model%2c_2jyfUAhVEduRe8TeoBmuGg.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Concept: Use-Case Model</a>.
+    </li>
+    <li>
+        If there are use cases that have commonalities in behavior and structure, as well as similarities in purpose, their
+        common parts can be factored out to a base use case (parent) that is inherited by addition use cases (children).
+        The child use cases can insert new behavior and modify existing behavior in the structure they inherit from the
+        parent use case.&nbsp;For more information on&nbsp;<em>use case generalization</em>, see <a class="elementLinkWithType" href="../concepts/use_case_model%2c_2jyfUAhVEduRe8TeoBmuGg.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Concept: Use-Case Model</a>.
+    </li>
+</ul>
+<p>
+    You can use <em>actor generalization</em>&nbsp;to show how actors are specializations of one another. For more
+    information on <em>actor generalization</em>, see <a class="elementLinkWithType" href="../concepts/use_case_model%2c_2jyfUAhVEduRe8TeoBmuGg.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Concept: Use-Case Model</a>.
+</p>
+<p class="exampleheading">
+    <strong>Example</strong>
+</p>
+<p class="example">
+    Consider part of the use-case model for an order management system.
+</p>
+<p class="example">
+    It is useful to separate an ordinary Customer from an Internet Customer, because they have slightly different
+    properties. However, given that Internet Customer does exhibit all properties of a Customer, you can say that Internet
+    Customer is a specialization of Customer, which you indicate with an actor generalization.
+</p>
+<p class="example">
+    The concrete use cases in this diagram are Telephone Order (initiated by the Customer actor) and Internet Order
+    (initiated by Internet Customer). These use cases are both variations of the more general Place Order use case, which
+    in this example is abstract. The Request Catalog use case represents an optional segment of behavior that is not part
+    of the primary purpose of Place Order. It has been factored out to an abstract use case to simplify the Place Order use
+    case. The Supply Customer Data use case represents a segment of behavior that was also factored out, because it is a
+    separate function, and only the result affects the Place Order use case. The Supply Customer Data use case can also be
+    reused in other use cases. Both Request Catalog and Supply Customer Data are abstract in this example. Figure 1 is a
+    use-case diagram that shows part of the use-case model for an order management system.
+</p>
+<p class="example" align="center">
+    <img height="366"     alt="Figure 1 . As a use-case diagram that shows part of the use-case model for an order management system. "     src="resources/ucmex2.gif" width="354" />
+</p>
+<p class="example" align="center">
+    Figure 1. Use-case diagram of an order management system
+</p>
+<p class="picturetext">
+    The following table shows a more detailed comparison of the three different use-case relationships:
+</p>
+Table 1: Comparison of different use-case relationships<br />
+<br />
+<table style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"  cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+    <tbody>
+        <tr>
+            <th width="20%">
+                Question
+            </th>
+            <th width="20%">
+                Extend
+            </th>
+            <th width="27%">
+                Include
+            </th>
+            <th width="33%">
+                Generalization
+            </th>
+        </tr>
+        <tr>
+            <td width="20%">
+                What is the direction of the relationship?
+            </td>
+            <td width="20%">
+                The addition use case references the base use case.
+            </td>
+            <td width="27%">
+                The base use case references the addition use case.
+            </td>
+            <td width="33%">
+                The addition use case (child) references the base use case (parent).
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Does the relationship have multiplicity?
+            </td>
+            <td width="20%">
+                Yes, on the addition side.
+            </td>
+            <td width="27%">
+                No. If you want to include the same segment of behavior more than once, that needs to be stated in the base
+                use case.
+            </td>
+            <td width="33%">
+                No.
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Does the relationship have a condition?
+            </td>
+            <td width="20%">
+                Yes.
+            </td>
+            <td width="27%">
+                No. If you want to express a condition on the inclusion. you need to say that explicitly in the base use
+                case.
+            </td>
+            <td width="33%">
+                No.
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Is the addition use case abstract?
+            </td>
+            <td width="20%">
+                Often yes, but not necessarily.
+            </td>
+            <td width="27%">
+                Yes.
+            </td>
+            <td width="33%">
+                Often no, but it can be.
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Is the base use case modified by the addition?
+            </td>
+            <td width="20%">
+                The extension implicitly modifies the behavior of the base use case.
+            </td>
+            <td width="27%">
+                The inclusion explicitly modifies the effect of the base use case.
+            </td>
+            <td width="33%">
+                If the base use case (parent) is instantiated, it is unaffected by the child. To get the effects of the
+                addition, the addition use case (child) must be instantiated.
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Does the base use case have to be complete and meaningful?
+            </td>
+            <td width="20%">
+                Yes.
+            </td>
+            <td width="27%">
+                Together with the additions, yes.
+            </td>
+            <td width="33%">
+                If it is abstract, no.
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Does the addition use case have to be complete and meaningful?
+            </td>
+            <td width="20%">
+                No.
+            </td>
+            <td width="27%">
+                No.
+            </td>
+            <td width="33%">
+                Together with the base use case (parent), yes.
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Can the addition use case access attributes of the base use case?
+            </td>
+            <td width="20%">
+                Yes.
+            </td>
+            <td width="27%">
+                No. The inclusion is encapsulated, and recognizes only itself.
+            </td>
+            <td width="33%">
+                Yes, by the normal mechanisms of inheritance.
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">
+                Can the base use case access attributes of the addition use case?
+            </td>
+            <td width="20%">
+                No. The base use case must be well-formed in the absence of the addition.
+            </td>
+            <td width="27%">
+                No. The base use case knows only about the effect of the addition. The addition is encapsulated.
+            </td>
+            <td width="33%">
+                No. The base use case (parent) must, in this sense, be well-formed, in the absence of the addition (child).
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>
+    Another aspect of organizing the use-case model for easier understanding is grouping the use cases into packages. The
+    use-case model can be organized as a hierarchy of use-case packages. For more information on use-case packages, see <a class="elementLinkWithType" href="../concepts/use_case_model%2c_2jyfUAhVEduRe8TeoBmuGg.html" guid="_2jyfUAhVEduRe8TeoBmuGg">Concept: Use-Case Model</a>.
+</p>
+<p>
+    Figure 2 shows the use-case model hierarchy. Arrows indicate possible ownership.
+</p>
+<p align="center">
+    <img height="235" alt="Figure 2. Diagram showing use-case hierarchy, with arrows indicating possible ownership"     src="resources/md_ucmo6.gif" width="181" />&nbsp;
+</p>
+<p align="center">
+    Figure 2. Use-case hierarchy
+</p>
+<h3>
+    <a id="Use Cases Are Always Related to Actors" name="Use Cases Are Always Related to Actors">Relationship Between Use
+    Cases and Actors</a>
+</h3>
+<p>
+    Running each use case includes communication with one or more actors. A use-case instance is always started by an actor
+    asking the system to do something. This implies that every use case should have communicates-associations with actors.
+    The reason for this rule is to enforce that the system provides only the functionality that users need and nothing
+    else. Having use cases that no one requests is an indication that something is wrong in the use-case model or in the
+    requirements.
+</p>
+<p>
+    However, there are some exceptions to this rule:
+</p>
+<ul>
+    <li>
+        If a use case is abstract (cannot be instantiated), its behavior may not include interaction with any actor. In
+        that case, there will not be any communication-associations to actors from that abstract use case.
+    </li>
+    <li>
+        A child use case in a generalization-relationship does not need to have an actor associated with it if the parent
+        use case describes all actor communication.
+    </li>
+    <li>
+        A base use case in an include-relationship does not need to have an actor associated with it if the inclusion use
+        case describes all actor communication.
+    </li>
+    <li>
+        A use case may be initiated according to a schedule (for example, once a week or once a day), which means that the
+        system clock is the initiator. The system clock is internal to the system; therefore, the use case is not initiated
+        by an actor but by an internal system event. If no other actor interaction occurs in the use case, it will not have
+        any associations to actors. However, for clarity, you can use <strong>time</strong> as an actor to show how the use
+        case is initiated in your use-case diagrams.
+    </li>
+</ul>
+<h3>
+    <a id="The Survey Description" name="The Survey Description">The Survey Description</a>
+</h3>
+<p>
+    The survey description of the use-case model should:
+</p>
+<ul>
+    <li>
+        State the primary use cases of the system (the reason the system is being built).
+    </li>
+    <li>
+        Summarize important technical facts about the system.
+    </li>
+    <li>
+        Delimit things that the system is not supposed to do.
+    </li>
+    <li>
+        Summarize the system's environment, such as target platforms and existing software.
+    </li>
+    <li>
+        Describe any sequences in which use cases are normally performed in the system.
+    </li>
+    <li>
+        Specify functionality not handled by the use-case model.
+    </li>
+</ul>
+<p class="exampleheading">
+    <strong>Example</strong>
+</p>
+<p class="example">
+    Following is a sample survey description of the recycling machine's use-case model:
+</p>
+<blockquote>
+    <p class="example">
+        This model contains three actors and three use cases. The primary use case is <strong>Recycle Items</strong>, which
+        represents the main purpose of the recycling machine.
+    </p>
+    <p class="example">
+        These are the supporting use cases:
+    </p>
+    <ul>
+        <li>
+            <strong>Print Daily Report</strong>, which allows an operator to get a report on how many items have been
+            recycled.
+        </li>
+        <li>
+            A<strong>dminister Deposit Item</strong>, which allows an operator to change a refund value for a type of
+            deposit item or to add new deposit item types.
+        </li>
+    </ul>
+</blockquote></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/uc_model,_0VAUsMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:25:42 GMT -->
+</html>

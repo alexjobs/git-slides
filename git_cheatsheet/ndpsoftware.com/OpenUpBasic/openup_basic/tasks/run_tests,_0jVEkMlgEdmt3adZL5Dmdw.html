@@ -1,0 +1,351 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/tasks/run_tests,_0jVEkMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:25:09 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Task: Run Tests</title>
+<meta content="Task" name="uma.type">
+<meta content="run_tests" name="uma.name">
+<meta content="Run Tests" name="uma.presentationName">
+<meta content="Discipline:test:Test" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Tester">
+<link type="text/css" href="../../css/default.css" rel="StyleSheet">
+<script src="../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script src="../../scripts/steps.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../index-2.html';
+					imgPath = '../../images/index.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../images/index.html'); createStepLinks('div', 'stepHeading');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Task: Run Tests</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../index.html"></a><script src="../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Run the appropriate collections of tests required to evaluate product quality. Capture test results that facilitate ongoing assessment of the product.</td>
+</tr>
+<tr>
+<td>Disciplines: <a href="../disciplines/test%2c_0TkKQMlgEdmt3adZL5Dmdw.html" guid="_0TkKQMlgEdmt3adZL5Dmdw">Test</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Purpose</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell">To execute tests and evaluate the test results</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell">Primary Performer:
+								<ul>
+<li>
+<a href="../roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" guid="_0ZM4MclgEdmt3adZL5Dmdw">Tester</a>
+</li>
+</ul>
+</td><td class="sectionTableCell">Additional Performers:
+								</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Inputs</th><td width="42%" class="sectionTableCell">Mandatory:
+								<ul>
+<li>
+<a href="../workproducts/build%2c_0YuXEMlgEdmt3adZL5Dmdw.html" guid="_0YuXEMlgEdmt3adZL5Dmdw">Build</a>
+</li>
+<li>
+<a href="../workproducts/test_script%2c_0ZfMEMlgEdmt3adZL5Dmdw.html" guid="_0ZfMEMlgEdmt3adZL5Dmdw">Test Script</a>
+</li>
+</ul>
+</td><td class="sectionTableCell">Optional:
+								<ul>
+<li>None</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Outputs</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="../workproducts/test_log%2c_0ZlSsMlgEdmt3adZL5Dmdw.html" guid="_0ZlSsMlgEdmt3adZL5Dmdw">Test Log</a>
+</li>
+<li>
+<a href="../workproducts/work_items_list%2c_rGNWsCbSEdqh1LYUOGRh2A.html" guid="_rGNWsCbSEdqh1LYUOGRh2A">Work Items List</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell">Run the system test, which addresses functional and system integration tests and, potentially, user acceptance tests.</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Steps</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Schedule test execution</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Run your system tests as often as possible. Ideally, run your tests whenever new code is checked into your version
+    control tool.
+</p>
+<p>
+    For larger systems, this will be too expensive. Your tests may take several hours to run; therefore, you'll need to
+    schedule tests less frequently. If possible, however, run the tests several times a day. As a minimum,
+    run&nbsp;automated tests each night, but also run&nbsp;them during working hours, if possible.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Run the test</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Run the test at the scheduled time based on the instructions in the <a class="elementLink" href="../workproducts/test_script%2c_0ZfMEMlgEdmt3adZL5Dmdw.html" guid="_0ZfMEMlgEdmt3adZL5Dmdw">Test Script</a>. It is best that the script&nbsp;be automated.
+</p>
+<p>
+    Good practices:
+</p>
+<ol>
+    <li>
+        Run the test in a separate test environment.
+    </li>
+    <li>
+        Ensure that you run the test against the latest clean build.
+    </li>
+    <li>
+        The first step of the test should be to set up the test environment (ensure that the network is available, that the
+        test database is available and reset to a known state, and so on).
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Close test run</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>Close the actual run as the last step of running the test.&nbsp;To do this, you must: 
+<ol>
+    <li>
+        Close the test logs. The appropriate test log files should be closed and placed in the appropriate folder or
+        directory.
+    </li>
+    <li>
+        Announce results. Send a notice to everyone involved in the project, informing them of the result of the test run
+        and where they can find the test logs.
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Examine the test log</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Collect and compile information from test execution logs so you can:
+</p>
+<ul>
+    <li>
+        Capture the high-impact and risk issues discovered in running the tests.
+    </li>
+    <li>
+        Identify errors in test creation, data inputs, or integrating applications and any architectural anomalies.
+    </li>
+    <li>
+        Isolate the target of the test to determine failure points.
+    </li>
+    <li>
+        Diagnose failure symptoms and characteristics.
+    </li>
+    <li>
+        Assess and identify possible solutions.
+    </li>
+</ul>
+<p>
+    After completing these steps, verify that you have enough details to determine the impact of the results. In addition,
+    make sure that enough information exists to assist individuals who are performing dependent tasks.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identify failures and propose solutions</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Identify whether or not the test has failed and propose a solution based on the type of test and category of
+    failure.&nbsp; The test The approach to testing will determine the identified failures and candidates for solutions.
+</p>
+<p>
+    Tests that are programmer supporting are used to help prepare and ensure confidence in the code.&nbsp;When identifying
+    failures and proposing solutions for programmer supporting tests:
+</p>
+<ul>
+    <li>
+        Failures will be identified at an object or element level
+    </li>
+    <li>
+        Solutions will be to help clarify the problem
+    </li>
+</ul>
+<p>
+    Test that are business supporting are used to uncover prior mistakes and omissions.
+</p>
+<ul>
+    <li>
+        Failures will identify omissions in requirements
+    </li>
+    <li>
+        Solutions will help to clarify expectations of the system
+    </li>
+</ul>
+<p>
+    After you have this information and the steps proposed to resolve the failures, you can effectively categorize the type
+    of failure and the appropriate type of solution.
+</p>
+<p>
+    See <a class="elementLinkWithUserText" href="../guidances/supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html" guid="_9ToeIB83Edqsvps02rpOOg">[MAR03]</a> for more information.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Communicate test results</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Communicate the test results to the team. For failed tests this might involve adding bugs to the <a class="elementLink" href="../workproducts/work_items_list%2c_rGNWsCbSEdqh1LYUOGRh2A.html" guid="_rGNWsCbSEdqh1LYUOGRh2A">Work Items List</a>.
+</p>
+<p>
+    Communicating test results can affect the perception of the effectiveness of the tests. When communicating test
+    results, it is important that you:
+</p>
+<ul>
+    <li>
+        Know the audience, so that appropriate information is communicated appropriately
+    </li>
+    <li>
+        Run tests or scenarios that are likely to uncover the high-impact and risk issues or represent actual use of the
+        system
+    </li>
+</ul>
+<p>
+    When preparing test result reports, answer the following questions:
+</p>
+<ul>
+    <li>
+        How many test cases exist, and what are their states (pass, fail, blocked, and so on)?
+    </li>
+    <li>
+        How many bug reports have been filed, and what are their states (open, assigned, ready for testing, closed,
+        deferred)?
+    </li>
+    <li>
+        What trends and patterns do you see in test case and bug report states, especially opened and closed bug reports
+        and passed and failed test cases?
+    </li>
+    <li>
+        For test cases that were blocked or skipped, why are they in this state?
+    </li>
+    <li>
+        Considering all test cases not yet run (and perhaps not even created yet), what key risks and areas of
+        functionality remain untested?
+    </li>
+    <li>
+        For failed test cases, what are the associated bug reports?
+    </li>
+    <li>
+        For bug reports ready for confirmation testing, when can your team perform the test?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Key Considerations</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><ul>
+    <li>
+        Run the test regularly. Ideally, that means whenever the code changes but, minimally, once a day.
+    </li>
+    <li>
+        It should be possible for anyone on the test team to run the test at any time.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../guidances/guidelines/maintaining_automated_test_suite%2c_0kF5kMlgEdmt3adZL5Dmdw.html" guid="_0kF5kMlgEdmt3adZL5Dmdw">Maintaining Automated Test Suite</a>
+</li>
+<li>
+<a href="../guidances/guidelines/programming_automated_tests%2c_0j5sUMlgEdmt3adZL5Dmdw.html" guid="_0j5sUMlgEdmt3adZL5Dmdw">Programming Automated Tests</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../guidances/supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/tasks/run_tests,_0jVEkMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:25:09 GMT -->
+</html>

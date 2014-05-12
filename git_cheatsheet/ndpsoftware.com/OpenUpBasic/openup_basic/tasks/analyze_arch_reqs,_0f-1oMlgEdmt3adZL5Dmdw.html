@@ -1,0 +1,325 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/tasks/analyze_arch_reqs,_0f-1oMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:24:49 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Task: Analyze Architectural Requirements</title>
+<meta content="Task" name="uma.type">
+<meta content="analyze_arch_reqs" name="uma.name">
+<meta content="Analyze Architectural Requirements" name="uma.presentationName">
+<meta content="Discipline:analysis_and_design:Analysis &amp; Design" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Architect">
+<link type="text/css" href="../../css/default.css" rel="StyleSheet">
+<script src="../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script src="../../scripts/steps.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../index-2.html';
+					imgPath = '../../images/index.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../images/index.html'); createStepLinks('div', 'stepHeading');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Task: Analyze Architectural Requirements</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../index.html"></a><script src="../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Analyze the architecturally significant requirements and define an architecture candidate for the system based on experience gained from similar systems or in similar problem domains. Define the architecture patterns, key mechanisms, and, where applicable, modeling conventions for the system.</td>
+</tr>
+<tr>
+<td>Disciplines: <a href="../disciplines/analysis_and_design%2c_0TX9AMlgEdmt3adZL5Dmdw.html" guid="_0TX9AMlgEdmt3adZL5Dmdw">Analysis & Design</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Purpose</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell">To provide sufficient guidance and direction for the team to be able to perform analysis and design&nbsp;in consistent and
+coherent ways.</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell">Primary Performer:
+								<ul>
+<li>
+<a href="../roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" guid="_0X9iEMlgEdmt3adZL5Dmdw">Architect</a>
+</li>
+</ul>
+</td><td class="sectionTableCell">Additional Performers:
+								<ul>
+<li>
+<a href="../roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" guid="_0VxJsMlgEdmt3adZL5Dmdw">Analyst</a>
+</li>
+<li>
+<a href="../roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" guid="_0YDosMlgEdmt3adZL5Dmdw">Developer</a>
+</li>
+<li>
+<a href="../roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" guid="_0a0o0MlgEdmt3adZL5Dmdw">Project Manager</a>
+</li>
+<li>
+<a href="../roles/stakeholder%2c_dTa6gMAYEdqX-s4mWhkyqQ.html" guid="_dTa6gMAYEdqX-s4mWhkyqQ">Stakeholder</a>
+</li>
+<li>
+<a href="../roles/tester%2c_0ZM4MclgEdmt3adZL5Dmdw.html" guid="_0ZM4MclgEdmt3adZL5Dmdw">Tester</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Inputs</th><td width="42%" class="sectionTableCell">Mandatory:
+								<ul>
+<li>
+<a href="../workproducts/glossary%2c_Wn7HcNcEEdqz_d2XWoVt6Q.html" guid="_Wn7HcNcEEdqz_d2XWoVt6Q">Glossary</a>
+</li>
+<li>
+<a href="../workproducts/uc_model%2c_W2SgEDR5EdutE_HNDTJk5Q.html" guid="_W2SgEDR5EdutE_HNDTJk5Q">Use Case Model</a>
+</li>
+<li>
+<a href="../workproducts/vision%2c_0WVxcMlgEdmt3adZL5Dmdw.html" guid="_0WVxcMlgEdmt3adZL5Dmdw">Vision</a>
+</li>
+</ul>
+</td><td class="sectionTableCell">Optional:
+								<ul>
+<li>
+<a href="../workproducts/arch_poc%2c_PoDR0NbYEdmlO4WLYHrJaQ.html" guid="_PoDR0NbYEdmlO4WLYHrJaQ">Architectural Proof-of-Concept</a>
+</li>
+<li>
+<a href="../workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" guid="_0XAf0MlgEdmt3adZL5Dmdw">Architecture</a>
+</li>
+<li>
+<a href="../workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" guid="_0WuL8slgEdmt3adZL5Dmdw">Design</a>
+</li>
+<li>
+<a href="../workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" guid="_BVh9cL-CEdqb7N6KIeDL8Q">Supporting Requirements</a>
+</li>
+<li>
+<a href="../workproducts/use_case%2c_0VGbUMlgEdmt3adZL5Dmdw.html" guid="_0VGbUMlgEdmt3adZL5Dmdw">Use Case</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Outputs</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="../workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" guid="_0XAf0MlgEdmt3adZL5Dmdw">Architecture</a>
+</li>
+<li>
+<a href="../workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" guid="_0WuL8slgEdmt3adZL5Dmdw">Design</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    This task focuses on defining a candidate&nbsp;architecture&nbsp;that will guide&nbsp;the development, testing, and
+    operation of system. It relies on gathering experience gained in similar systems or problem domains to constrain and
+    focus the architecture so that effort is not wasted in re-inventing architecture.
+</p>
+<p>
+    The work in this task may also be informed by one or more <a class="elementLink" href="../workproducts/arch_poc%2c_PoDR0NbYEdmlO4WLYHrJaQ.html" guid="_PoDR0NbYEdmlO4WLYHrJaQ">Architectural Proof-of-Concept</a>&nbsp;products from previous iterations.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Steps</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Identify architectural goals</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>Describe the goals of the architecture by examining the project <a class="elementLink" href="../guidances/checklists/vision%2c_0WoFUMlgEdmt3adZL5Dmdw.html" guid="_0WoFUMlgEdmt3adZL5Dmdw">Vision</a>&nbsp;and product requirements, including architecturally significant use cases,
+if available. Also, talk to the project <a class="elementLink" href="../roles/stakeholder%2c_dTa6gMAYEdqX-s4mWhkyqQ.html" guid="_dTa6gMAYEdqX-s4mWhkyqQ">Stakeholder</a>
+and <a class="elementLink" href="../roles/analyst%2c_0VxJsMlgEdmt3adZL5Dmdw.html" guid="_0VxJsMlgEdmt3adZL5Dmdw">Analyst</a>. These goals will guide the approach you take to important architecture and
+design decisions.</td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identify architectural constraints</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Work with the analyst&nbsp;and stakeholder&nbsp;to identify any constraints on the solution (or opportunities) that are
+    inherent in the existing environment or organization. If available, examine the <a class="elementLink" href="../workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" guid="_BVh9cL-CEdqb7N6KIeDL8Q">Supporting Requirements</a>&nbsp;for any constraints that have already been
+    identified.&nbsp;Discuss any critical time and resource constraints with the <a class="elementLink" href="../roles/project_manager%2c_0a0o0MlgEdmt3adZL5Dmdw.html" guid="_0a0o0MlgEdmt3adZL5Dmdw">Project Manager</a>, as these&nbsp;will also need to be taken into account when arriving at your decisions. Discuss potential
+    constraints with the tester such as hooks for tests, and to identify architectural areas that may be difficult to test.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Survey, assess, and select available assets</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Establish the availability of any existing software assets as suitable candidates for re-use. Make sure you consult
+    with others who have knowledge of existing assets, particularly the&nbsp;<a class="elementLink" href="../roles/developer%2c_0YDosMlgEdmt3adZL5Dmdw.html" guid="_0YDosMlgEdmt3adZL5Dmdw">Developer</a>(s) and other stakeholders outside the project team (such as production
+    support teams) in order to form a balanced view of the suitability of existing assets for re-use. Identifying reusable
+    assets could be done as a team brainstorming session.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Define approach for structuring the system</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Define the layering strategy for the software architecture. As a minimum, decide on:
+</p>
+<ul>
+    <li>
+        The number of layers.
+    </li>
+    <li>
+        Their names and purposes.
+    </li>
+    <li>
+        Their relationships to one another.
+    </li>
+</ul>
+<p>
+    These decisions should be captured as specific, high level aspects of the <a class="elementLink" href="../workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" guid="_0WuL8slgEdmt3adZL5Dmdw">Design</a>,
+    providing scope and structure that will evolve into a more detailed description of the system.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Develop deployment overview</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>Outline how the software will deploy over the nodes on the network. Work with stakeholders such as as network support and
+deployment&nbsp;teams to ensure that the proposed approach is a good fit for the wider technical environment.</td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identify key abstractions</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Identify the key abstractions that the system needs to handle. You can usually find these by looking for nouns that the
+    requirements emphasize or repeat, because they help identify what is important to the business. The <a class="elementLink" href="../workproducts/glossary%2c_Wn7HcNcEEdqz_d2XWoVt6Q.html" guid="_Wn7HcNcEEdqz_d2XWoVt6Q">Glossary</a> is particularly useful for this. Work with the analyst and stakeholder
+    here, as they will have knowledge and materials that are relevant to this task. Work with the developer to identify key
+    abstractions internal to the system.&nbsp;
+</p>
+<p>
+    Key abstractions should be documented as elements of the design&nbsp;that will evolve into more specific elements of
+    the system as more detailed development work is performed.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identify analysis mechanisms</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Catalog the architectural mechanisms that are necessary to fulfil the requirements (see <a class="elementLink" href="../guidances/concepts/arch_mech%2c_mzxI0A4LEduibvKwrGxWxA.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a>). These will be expressed as <a class="elementLink" href="../guidances/concepts/analysis_mechanism%2c_0gvqoMlgEdmt3adZL5Dmdw.html" guid="_0gvqoMlgEdmt3adZL5Dmdw">Analysis Mechanism</a>s at this point in the process, because there is only a relatively
+    small amount of detail required for each mechanism. Discuss the requirements (especially supplementary requirements)
+    that are being addressed in the mechanisms with the analysts and stakeholders to assure the requirements
+    are&nbsp;unambiguous and well understood.
+</p>
+<p>
+    If explicit traceability to requirements is needed, map each mechanism to one or more use cases. This will show how the
+    mechanisms address the requirements and assist in the setting priorities for development of the mechanisms.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Capture architectural decisions</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Capture&nbsp;important decisions&nbsp;about the architecture for future reference.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Key Considerations</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    This task&nbsp;is primarily beneficial when developing new and unprecedented systems. In systems where there is already
+    a well-defined architecture, this task might be omitted, or at least performed very quickly as a&nbsp;review of the
+    existing architecture.
+</p>
+<p>
+    It is critical that this task is performed collaboratively with active involvement of other team members and project
+    stakeholders, so that consensus and common understanding is reached. It is particularly vital for the architect to
+    involve the developer(s) throughout this task. Remember that the architecture effort&nbsp;is about providing leadership
+    and coordination of the technical work rather than putting in a solo performance.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../guidances/guidelines/analyze_arch_reqs%2c_42UD4A3tEduibvKwrGxWxA.html" guid="_42UD4A3tEduibvKwrGxWxA">Analyze the Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../guidances/supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/tasks/analyze_arch_reqs,_0f-1oMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:24:51 GMT -->
+</html>

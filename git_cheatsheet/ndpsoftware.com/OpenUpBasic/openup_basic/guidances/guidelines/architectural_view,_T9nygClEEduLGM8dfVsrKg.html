@@ -1,0 +1,152 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/architectural_view,_T9nygClEEduLGM8dfVsrKg.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:12 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Architectural View</title>
+<meta content="Guideline" name="uma.type">
+<meta content="architectural_view" name="uma.name">
+<meta content="Architectural View" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Architectural View</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Architecture can be represented from a variety of viewpoints, all of which can be combined to create a holistic view of the system.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" guid="_0XAf0MlgEdmt3adZL5Dmdw">Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p> As an Architect, you may want to consider the following views (not all views 
+  are relevant to all systems or all the Stakeholders). This set of views is known 
+  as the 4+1 Views of Software Architecture</strong> [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html" guid="_9ToeIB83Edqsvps02rpOOg">KRU95</a>].. 
+</p>
+<p>
+    <img height="254" alt="4+1 Views of Software Architecture" src="resources/4plus1_2.jpg" width="405" />
+</p>
+<ul>
+  <li> 
+    <p> Use-case view:</strong> Describes functionality of the system, 
+      its external interfaces, and its principal users. The use-case view&nbsp;contains 
+      the <a class="elementLink" href="../../workproducts/uc_model%2c_W2SgEDR5EdutE_HNDTJk5Q.html" guid="_W2SgEDR5EdutE_HNDTJk5Q">Use Case Model</a>. This view is mandatory when using the 4+1 Views, because all 
+      elements of the architecture should be derived from requirements. </p>
+  </li>
+  <li> 
+    <p> Logical view: </strong>Describes how the system is structured 
+      in terms of units of implementation. The elements are packages, classes, 
+      and interfaces. The relationship between elements shows dependencies, interface 
+      realizations, part-whole relationships, and so forth. Note: </strong>This 
+      view is mandatory when using the 4+1 Views of Software Architecture. </p>
+  </li>
+  <li> 
+    <p>Implementation view: </strong>Describes how development artifacts 
+      are organized in the file system. The elements are files and directories 
+      (any configuration items). This includes development artifacts and deployment 
+      artifacts. This view is optional when using the 4+1 Views. </p>
+  </li>
+  <li> 
+    <p>Process view: </strong>Describes how the run-time system is structured 
+      as a set of elements that have run-time behavior and interactions. Run-time 
+      structure often bears little resemblance to the code structure. It consists 
+      of rapidly changing networks of communication objects. The elements are 
+      components that have run-time presence (processes, threads, Enterprise JavaBeans&#8482; 
+      (EJB&#8482;), servlets, DLLs, and so on), data stores, and complex connectors, 
+      such as queues. Interaction between elements varies, based on technology. 
+      This view is useful for thinking </strong></font>about 
+      run-time system quality attributes, such as performance and reliability. 
+      This view is optional when using the 4+1 Views. </p>
+  </li>
+  <li> 
+    <p> Deployment views: </strong>Describe how the system is mapped to 
+      the hardware. This view is optional when using the 4+1 Views. </p>
+  </li>
+</ul>
+<p>In addition, you may wish to represent the following, </p>
+<ul>
+  <li>
+    <p> Data view:</strong> A specialization of the logical view. Use 
+      this view if persistence is a significant aspect of the system, and the 
+      translation from the design model to the data model is not done automatically 
+      by the persistence mechanism. </p>
+  </li>
+</ul>
+<p><br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="design%2c_0X3bcMlgEdmt3adZL5Dmdw.html" guid="_0X3bcMlgEdmt3adZL5Dmdw">Design</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/architectural_view,_T9nygClEEduLGM8dfVsrKg.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:13 GMT -->
+</html>

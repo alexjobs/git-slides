@@ -1,0 +1,229 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/concepts/arch_mech,_mzxI0A4LEduibvKwrGxWxA.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:03 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Architectural Mechanism</title>
+<meta content="Concept" name="uma.type">
+<meta content="arch_mech" name="uma.name">
+<meta content="Architectural Mechanism" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concept: Architectural Mechanism</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Used during development to minimize complexity, Architectural Mechanisms represent a common solution to a common problem.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="design_mechanism%2c_w2ACwA4LEduibvKwrGxWxA.html" guid="_w2ACwA4LEduibvKwrGxWxA">Design Mechanism</a>
+</li>
+<li>
+<a href="implementation_mechanism%2c_0LcUkA4LEduibvKwrGxWxA.html" guid="_0LcUkA4LEduibvKwrGxWxA">Implementation Mechanism</a>
+</li>
+<li>
+<a href="../../tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" guid="_0fshwMlgEdmt3adZL5Dmdw">Design the Solution</a>
+</li>
+<li>
+<a href="../../tasks/develop_arch%2c_0gRJgMlgEdmt3adZL5Dmdw.html" guid="_0gRJgMlgEdmt3adZL5Dmdw">Develop the Architecture</a>
+</li>
+<li>
+<a href="analysis_mechanism%2c_0gvqoMlgEdmt3adZL5Dmdw.html" guid="_0gvqoMlgEdmt3adZL5Dmdw">Analysis Mechanism</a>
+</li>
+<li>
+<a href="../checklists/architecture%2c_17PYUNd6EdmIm-bsRSNCgw.html" guid="_17PYUNd6EdmIm-bsRSNCgw">Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    Architectural Mechanisms are&nbsp;used to satisfy architecturally significant requirements.&nbsp;They&nbsp;form the
+    basis of&nbsp;common software&nbsp;that will be&nbsp;consistently applied&nbsp;across the product being developed. They
+    also form the basis for standardizing the way that the software works; therefore, they are an important element of the
+    overall software architecture.
+</p>
+<p>
+    When fully described, Architectural Mechanisms show patterns of structure and behavior in the software.
+</p>
+<p>
+    There are three categories of Architectural Mechanism: Analysis, Design and Implementation.&nbsp;These
+    categories&nbsp;reflect the state of the architectural mechanism over time. The state changes as successive levels of
+    detail are uncovered during the refinement of architecturally significant requirements into working software. The
+    categories are summarized in the table that follows.
+</p>
+<strong>Types of Architectural Mechanism</strong> 
+<table style="WIDTH: 806px; HEIGHT: 228px" cellspacing="0" cellpadding="2" width="806" summary="Types of Architectural Mechanism" border="1">
+    <tbody valign="top">
+        <tr>
+            <th scope="col">
+                Mechanism
+            </th>
+            <th scope="col">
+                Description
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Analysis
+            </td>
+            <td>
+                A conceptual solution to a common technical problem. For example,&nbsp;persistence is an abstract solution
+                to the common requirement to store data. The purpose of this category is simply to identify the need for an
+                Architectural Mechanism to be designed and implemented; and capture basic attributes for that mechanism.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Design
+            </td>
+            <td>
+                A refinement of an Analysis Mechanism into a concrete technology (for example, RDBMS). The purpose of this
+                category is to enable initial design specifications to be produced and to guide precise product or
+                technology selection.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Implementation
+            </td>
+            <td>
+                A further refinement of a Design Mechanism into a&nbsp;specific technology or product that implements the
+                required Architectural Mechanism. For example, MySQL, as a database product, implements the Analysis
+                Mechanism <strong>Persistence</strong> and Design Mechanism <strong>RDBMS.</strong> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>
+    The transition from one state to another&nbsp;can be obvious or intuitive. Therefore, it can be achieved in a matter of
+    seconds. It can also require more considered analysis and design, thus take longer. The following diagram illustrates
+    the transition of Architectural Mechanisms from one state to another.
+</p>
+<p>
+    <strong>State Machine for Architectural Mechanisms</strong>
+</p>
+<p>
+    <img style="WIDTH: 876px; HEIGHT: 115px" height="113" alt="Architectural Mechanism States"     src="resources/ArchMechanismsStatemachine.jpg" width="600" />&nbsp;<br />
+</p>
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Checklists</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../checklists/architecture%2c_17PYUNd6EdmIm-bsRSNCgw.html" guid="_17PYUNd6EdmIm-bsRSNCgw">Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="patterns%2c_0YJvUMlgEdmt3adZL5Dmdw.html" guid="_0YJvUMlgEdmt3adZL5Dmdw">Patterns</a>
+</li>
+<li>
+<a href="analysis_mechanism%2c_0gvqoMlgEdmt3adZL5Dmdw.html" guid="_0gvqoMlgEdmt3adZL5Dmdw">Analysis Mechanism</a>
+</li>
+<li>
+<a href="architecturally_significant_requirements%2c_HrZGIA4MEduibvKwrGxWxA.html" guid="_HrZGIA4MEduibvKwrGxWxA">Architecturally Significant Requirements</a>
+</li>
+<li>
+<a href="design_mechanism%2c_w2ACwA4LEduibvKwrGxWxA.html" guid="_w2ACwA4LEduibvKwrGxWxA">Design Mechanism</a>
+</li>
+<li>
+<a href="implementation_mechanism%2c_0LcUkA4LEduibvKwrGxWxA.html" guid="_0LcUkA4LEduibvKwrGxWxA">Implementation Mechanism</a>
+</li>
+<li>
+<a href="design_mechanism%2c_w2ACwA4LEduibvKwrGxWxA.html" guid="_w2ACwA4LEduibvKwrGxWxA">Design Mechanism</a>
+</li>
+<li>
+<a href="implementation_mechanism%2c_0LcUkA4LEduibvKwrGxWxA.html" guid="_0LcUkA4LEduibvKwrGxWxA">Implementation Mechanism</a>
+</li>
+<li>
+<a href="analysis_mechanism%2c_0gvqoMlgEdmt3adZL5Dmdw.html" guid="_0gvqoMlgEdmt3adZL5Dmdw">Analysis Mechanism</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../guidelines/example_analysis_mechanisms_descr%2c_4k_HsA4LEduibvKwrGxWxA.html" guid="_4k_HsA4LEduibvKwrGxWxA">Example Analysis Mechanism Descriptions</a>
+</li>
+<li>
+<a href="../guidelines/example_architectural_mechanisms%2c_4k_HsQ4LEduibvKwrGxWxA.html" guid="_4k_HsQ4LEduibvKwrGxWxA">Example Architectural Mechanisms</a>
+</li>
+<li>
+<a href="../guidelines/example_design_mechanisms%2c_4k_Hsg4LEduibvKwrGxWxA.html" guid="_4k_Hsg4LEduibvKwrGxWxA">Example: Design Mechanisms</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/concepts/arch_mech,_mzxI0A4LEduibvKwrGxWxA.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+</html>

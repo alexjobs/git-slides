@@ -1,0 +1,284 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/concepts/entity_control_boundary_pattern,_uF-QYEAhEdq_UJTvM1DM2Q.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concept: Entity-Control-Boundary Pattern</title>
+<meta content="Concept" name="uma.type">
+<meta content="entity_control_boundary_pattern" name="uma.name">
+<meta content="Entity-Control-Boundary Pattern" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concept: Entity-Control-Boundary Pattern</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This concept introduces a pattern that provides a starting point for the distribution of responsibilities to a set of interacting design elements based on three key perspectives in a collaboration.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../guidelines/repres_interfaces_to_ext_systems%2c_0gjdYMlgEdmt3adZL5Dmdw.html" guid="_0gjdYMlgEdmt3adZL5Dmdw">Representing Interfaces to External Systems</a>
+</li>
+<li>
+<a href="../guidelines/uc_realizations%2c_2uan8NbyEdqu5o2S60g5LA.html" guid="_2uan8NbyEdqu5o2S60g5LA">Use-Cases Realizations</a>
+</li>
+<li>
+<a href="../../tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" guid="_0fshwMlgEdmt3adZL5Dmdw">Design the Solution</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    When identifying the elements for some scenario of system behavior, you can align each participating element with one
+    of three key perspectives: Entity, Control, or Boundary.
+</p>
+<p>
+    This pattern is similar to the Model View Controller pattern (described here [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html#BUS96" guid="_9ToeIB83Edqsvps02rpOOg">BUS96</a>] and here [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html#WIKP-MVC" guid="_9ToeIB83Edqsvps02rpOOg">WIKP-MVC</a>] among other places), but the Entity Control Boundary pattern is not solely
+    appropriate for dealing with user interfaces and it gives the controller a slightly different role to play.
+</p>
+<h5>
+    ECB&nbsp;Pattern Example
+</h5>
+<p>
+    &nbsp;<img height="233" alt="" src="resources/EBCDiagram.jpg" width="493" />
+</p>
+<h3>
+    Entity Elements
+</h3>
+<p>
+    An entity is a long-lived, passive element that is responsible for some meaningful chunk of information. This is not to
+    say that entities are "data" while other&nbsp;design elements&nbsp;are "function". Entities perform behavior organized
+    around some cohesive amount of data.
+</p>
+<p>
+    An example entity for a customer service application would be a Customer entity that manages all information about a
+    customer.&nbsp; A design element for&nbsp;this entity would include data on the customer, behavior to manage the data,
+    behavior to validate customer information&nbsp;and perform other business calculations such as "is this customer
+    allowed to purchase product X?"
+</p>
+<p>
+    The identification of the entities as part of this pattern can be done many times at different levels of abstraction
+    from the code, at different levels of granularity in size, and from the perspectives of different contexts.&nbsp; For
+    example you could do an analysis pass on a scenario of creating a marketing campaign and identify the customer element
+    with various customer data elements such as name and address plus various required behaviors such as the management of
+    the name and address data and the ability to&nbsp;rate the customer based on some algorithm&nbsp;(such an application
+    of this pattern would be abstract from code, coarse-grained, and have no specific context).&nbsp; Later you could do a
+    pass on the same scenario applying an architectural mechanism for database access that breaks the address out into its
+    own element, moves the responsibility for storing and retrieving customers to a new control element, and identifies
+    some specific database decisions&nbsp;such as&nbsp;the usage of primary keys in the entities (such an application of
+    this pattern would be closer to the code, finer-grained, and aligned with a database&nbsp;context).
+</p>
+<h3>
+    Control Elements
+</h3>
+<p>
+    A control element manages the flow of interaction of the scenario. A control element could manage the end-to-end
+    behavior of a scenario or it could manage the interactions between a subset of the elements.&nbsp; Behavior and
+    business rules relating to the information relevant to the scenario should be assigned to the entities; the control
+    elements are just responsible for the flow of the scenario.
+</p>
+<p>
+    An example&nbsp;control element&nbsp;for a customer service application would be CreateMarketingCapmpaign.&nbsp; This
+    design element would&nbsp;be responsive to certain front-end boundary elements and would collaborate with other
+    entities, control&nbsp;elements, and back-end boundary elements to support the creation of a marketing campaign.
+</p>
+<p>
+    As with the entity example above, there might be many passes over the identification of control elements.&nbsp; A first
+    pass might be an analysis pass that identifies one control element for a&nbsp;scenario with behavior to make sure the
+    design can support the flow of events, a&nbsp;subsequent pass might find controllers to manage reusable collaborations
+    of low level elements that will map to a specific code&nbsp;unit to be written.
+</p>
+<h3>
+    Boundary Elements
+</h3>
+<p>
+    A boundary element lies on the periphery of a system or subsystem, but within it. For any scenario being considered
+    either across the whole system or within some subsystem, some boundary elements will be "front-end" elements that
+    accept input from outside the area under design and other elements will be "back-end" managing communication to
+    supporting elements outside the system or subsystem.
+</p>
+<p>
+    Two example boundary elements for a customer service application might be a front-end MarketingCampaignForm and a
+    back-end BugdetSystem element.&nbsp; The MarketingCampaignForm would manage the exchange of information between a user
+    and the system and the BugdetSystem would manage the exchange of information between the system and an external system
+    that manages budgets.
+</p>
+<p>
+    An analysis pass could identify one boundary element for each external relevant to a scenario; subsequently these could
+    be broken down into multiple boundary elements or&nbsp;small communities made up of collaborating&nbsp;elements&nbsp;of
+    all three stereotypes.
+</p>
+<h3>
+    Walking the Scenario
+</h3>
+<p>
+    One can walk through a scenario initiated by something outside the bounds of the system or subsystem being designed and
+    distribute the responsibility to perform behavior supporting the scenario to the elements identified of each
+    type.&nbsp; The appropriate design element responsible for each action in the scenario will be as described in the
+    definition of each of the element types described above.
+</p>
+<p>
+    In addition to identifying the behavior necessary to perform the scenario, the initiation of this behavior from design
+    element to design element&nbsp;identifies the necessary relationships.&nbsp; There are certain
+    appropriate&nbsp;relations between the participating elements.&nbsp;&nbsp;An element can communicate to other elements
+    of the same kind.&nbsp; Control&nbsp;elements can communicate with each of the other two kinds, but entities and
+    boundary elements should not directly communicate.&nbsp;
+</p>
+<p>
+    The table below shows appropriate links between design elements.
+</p>
+<table cellspacing="2" cellpadding="2" width="400" summary="Appropriate Links" border="1">
+    <tbody>
+        <tr>
+            <th scope="col">
+            </th>
+            <th scope="col">
+                <center>
+                    Entity
+                </center>
+            </th>
+            <th scope="col">
+                <center>
+                    Boundary
+                </center>
+            </th>
+            <th scope="col">
+                <center>
+                    Control
+                </center>
+            </th>
+        </tr>
+        <tr>
+            <th scope="row">
+                Entity
+            </th>
+            <td>
+                <center>
+                    X
+                </center>
+            </td>
+            <td>
+            </td>
+            <td>
+                <center>
+                    X
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                Boundary
+            </th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+                <center>
+                    X
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                Control
+            </th>
+            <td>
+                <center>
+                    X
+                </center>
+            </td>
+            <td>
+                <center>
+                    X
+                </center>
+            </td>
+            <td>
+                <center>
+                    X
+                </center>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    By&nbsp;applying this pattern, a robust design can be put together that identifies the elements, behavior, and
+    relationships&nbsp;necessary to support&nbsp;a scenario.&nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../guidelines/repres_interfaces_to_ext_systems%2c_0gjdYMlgEdmt3adZL5Dmdw.html" guid="_0gjdYMlgEdmt3adZL5Dmdw">Representing Interfaces to External Systems</a>
+</li>
+<li>
+<a href="../guidelines/uc_realizations%2c_2uan8NbyEdqu5o2S60g5LA.html" guid="_2uan8NbyEdqu5o2S60g5LA">Use-Cases Realizations</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/concepts/entity_control_boundary_pattern,_uF-QYEAhEdq_UJTvM1DM2Q.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+</html>

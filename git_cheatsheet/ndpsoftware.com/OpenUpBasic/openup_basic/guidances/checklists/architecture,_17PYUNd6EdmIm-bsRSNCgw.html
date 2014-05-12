@@ -1,0 +1,526 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/checklists/architecture,_17PYUNd6EdmIm-bsRSNCgw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:13 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Checklist: Architecture</title>
+<meta content="Checklist" name="uma.type">
+<meta content="architecture" name="uma.name">
+<meta content="Architecture" name="uma.presentationName">
+<meta content="Checklist" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script src="../../../scripts/steps.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+					expandAllText = 'Expand All Check Items';
+					collapseAllText = 'Collapse All Check Items';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html'); createStepLinks('div', 'stepHeading');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Checklist: Architecture</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/checklist.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This checklist provides questions to help in evaluating whether architectural decisions have been captured appropriately.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" guid="_0XAf0MlgEdmt3adZL5Dmdw">Architecture</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Check Items</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">General</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    In general, the architecture must support the needs of the development team for the current iteration:
+</p>
+<ul>
+    <li>
+        Does the architecture appear to be stabilizing? Although the architecture may be unstable during early Inception
+        and Elaboration iterations, it should become more stable toward the end of Elaboration, with sufficient stability
+        during Construction to allow the team to build the software efficiently and with confidence. The architecture
+        should be very stable during the Transition phase.
+    </li>
+    <li>
+        Does the architecture divide the system’s responsibilities into well-defined subsystems with well-defined
+        interfaces?
+    </li>
+    <li>
+        Are all of the subsystem components for the iteration identified?
+    </li>
+    <li>
+        Are the number and types of components reasonable?
+    </li>
+    <li>
+        Does the packaging approach reduce complexity and improve understanding?
+    </li>
+    <li>
+        Are packages defined to be highly cohesive within the package, while the packages themselves are loosely coupled?
+    </li>
+    <li>
+        Can team members understand enough from the architecture to successfully design and code their allocated
+        components?
+    </li>
+    <li>
+        Is the architecture description current?
+    </li>
+    <li>
+        Have the design guidelines been followed?
+    </li>
+    <li>
+        Are all technical risks either mitigated or addressed in a contingency plan?
+    </li>
+    <li>
+        Does the architecture address all of the non-behavioral requirements in the Supplementary Requirements? If not, is
+        there a plan to address them?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Architecture Qualities</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><ul>
+  <li> The architectural qualities are specified, with appropriate <a class="elementLink" href="../concepts/arch_mech%2c_mzxI0A4LEduibvKwrGxWxA.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a> in place to meet them. For example:</li>
+  <li style="LIST-STYLE-TYPE: none"> 
+    <ul>
+      <li><strong> Error recovery </strong></li>
+      <li style="LIST-STYLE-TYPE: none"> 
+        <ul>
+          <li> For each error or exception, a policy defines how the system is 
+            restored to a normal state. </li>
+          <li> For each possible type of user-input 
+            error incorrect data from external systems, 
+            written procedures explain how to restore 
+            the system normal state. </li>
+          <li> There is a consistently applied policy for handling exceptional 
+            situations. </li>
+          <li> There is a consistently applied policy for handling data corruption 
+            in the database. </li>
+          <li> There is a consistently applied policy for handling database unavailability, 
+            including whether data can still be entered into the system and stored 
+            later. </li>
+          <li> If data is exchanged between systems, there is a policy for how 
+            systems synchronize their views of the data. </li>
+          <li> If the system uses redundant processors or nodes to provide fault 
+            tolerance or high availability, there is a strategy for ensuring that 
+            no two processors or nodes act on the assumption that they are primary 
+            and that no processor or node is primary. </li>
+          <li> The failure modes for a distributed system have been identified 
+            and strategies defined for handling the failures. </li>
+        </ul>
+      </li>
+      <li><strong> Performance&nbsp;&nbsp; </strong> </li>
+      <li style="LIST-STYLE-TYPE: none"> 
+        <ul>
+          <li> Performance requirements are reasonable and reflect real constraints 
+            in the problem domain; their specification is not arbitrary. </li>
+          <li> Estimates of system performance exist (using a Workload Analysis 
+            Model as necessary), and these indicate that the performance requirements 
+            are not significant risks. </li>
+          <li> System performance estimates have been validated using architectural 
+            prototypes, especially for performance-critical requirements. </li>
+        </ul>
+      </li>
+      <li><strong> Memory use</strong> </li>
+      <li style="LIST-STYLE-TYPE: none"> 
+        <ul>
+          <li> Memory budgets for the application have been defined. </li>
+          <li> Actions have been taken to detect and prevent memory leaks. </li>
+          <li> There is a consistently applied policy that defines how the virtual 
+            memory system is used, monitored, and tuned.&nbsp; </li>
+        </ul>
+      </li>
+      <li> <strong>Portability </strong> </li>
+      <li style="LIST-STYLE-TYPE: none"> 
+        <ul>
+          <li> Portability requirements have been met. </li>
+          <li> Programming Guidelines provide specific guidance for 
+            creating portable code. </li>
+          <li> Design Guidelines provide specific guidance for designing portable 
+            applications. </li>
+          <li> A test port has been created to verify portability claims.&nbsp; 
+          </li>
+        </ul>
+      </li>
+      <li> <strong>Reliability </strong> </li>
+      <li style="LIST-STYLE-TYPE: none"> 
+        <ul>
+          <li> Measures of quality (MTBF, number of outstanding defects, and so 
+            on) have been met. </li>
+          <li> The architecture provides for recovery in the event of disaster 
+            or system failure&nbsp; </li>
+        </ul>
+      </li>
+      <li><strong> Security </strong> </li>
+      <li style="LIST-STYLE-TYPE: none"> 
+        <ul>
+          <li> Security requirements have been met.<br />
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Architecture Description</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><h4>
+    The Use-Case View
+</h4>
+<p> For the Use-Case View section of the Software Architecture document: </p>
+<ul>
+  <li> Is each architecturally significant Use Case identified as such for these 
+    reasons: 
+    <ul>
+      <li> Is vitally important to the stakeholders?</li>
+      <li> Motivates key elements in the other views?</li>
+      <li> Is a driver for mitigating one or more major risks, including any challenging 
+        non-functional requirements? </li>
+    </ul>
+  </li>
+  <li> Are there any Use Cases whose architectural concerns are already covered 
+    by another Use Case? </li>
+  <li> Are the architecturally significant aspects of the Use Case clear, not 
+    lost in details? </li>
+  <li> Are the Use Cases sufficiently clear and unlikely to change in a way that 
+    affects the architecture, or is there a plan in place for how to achieve such 
+    clarity and stability? </li>
+  <li> Have any architecturally significant Use Cases been missed? <strong>Note: 
+    </strong>This may require analysis of the Use Cases not selected for this 
+    view.</li>
+  <li> Can the architecture handle all Use Case realizations 
+    defined for the current iteration? </li>
+</ul>
+<h4>
+    The Logical View
+</h4>
+<p> For the Logical View section of the Software Architecture document: </p>
+<ul>
+    <li>
+        Does it accurately and completely present an overview of the architecturally significant elements of the design?
+    </li>
+  <li> Does it present the complete set of architectural mechanisms used in the 
+    design, along with the rationale for their selection? </li>
+    <li>
+        Does it present the layering of the design, along with the rationale used to partition the layers?
+    </li>
+  <li> Does it present any frameworks or patterns used in the design, along with 
+    the rationale for selecting those patterns or frameworks?<br />
+        <br />
+    </li>
+</ul>
+<h4>
+    The Process View
+</h4>
+<p> For the Process View section of the Software Architecture document: </p>
+<ul>
+    
+  <li> Are potential race conditions (process <strong></strong>competition for 
+    critical resources) identified, and have you defined avoidance and resolution 
+    strategies? </li>
+    <li>
+        Are the nominal and maximal performance requirements for important operations specified?
+    </li>
+    <li>
+        Is there is a set of performance tests capable of measuring whether performance requirements have been met?
+    </li>
+    <li>
+        Have any architectural weaknesses with the potential for performance bottlenecks been identified?
+    </li>
+  <li> Is there consistent policy for handling errors and 
+    exceptions in the system? </li>
+  <li> Is the system tolerant of errors and exceptions, so that when an error 
+    or exception occurs, the system can revert to a consistent state? </li>
+</ul>
+<h4>
+    The Deployment View
+</h4>
+<p> For the Deployment View section of the Software Architecture document: </p>
+<ul>
+    
+  <li> Does the deployment conform to all Stakeholder’s deployment requirements? 
+  </li>
+  <li> Have the system availability requirements been addressed? </li>
+  <li> Have the system capacity requirements been addressed? </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Models</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><h4>
+    Overall
+</h4>
+<ul>
+    <li>
+        Subsystem and package partitioning and layering is logically consistent.
+    </li>
+    <li>
+        All analysis mechanisms have been identified and described.
+    </li>
+</ul>
+<h4>
+    Subsystems
+</h4>
+<ul>
+    <li>
+        The services (interfaces) of subsystems in upper-level layers have been defined.
+    </li>
+    <li>
+        The dependencies between subsystems and packages correspond to dependency relationships between the contained
+        classes.
+    </li>
+    <li>
+        The classes in a subsystem support the services identified for the subsystem.
+    </li>
+</ul>
+<h4>
+    Classes
+</h4>
+<ul>
+    <li>
+        The key entity classes and their relationships have been identified.
+    </li>
+    <li>
+        Relationships between key entity classes have been defined.
+    </li>
+    <li>
+        The name and description of each class clearly reflects the role it plays.
+    </li>
+    <li>
+        The description of each class accurately captures the responsibilities of the class.
+    </li>
+  <li> The entity classes are mapped to analysis mechanisms, where appropriate. 
+  </li>
+  <li> The role names of aggregations and associations accurately describe the 
+    relationships between the related classes. </li>
+    <li>
+        The multiplicities of the relationships are correct.
+    </li>
+    <li>
+        The key entity classes and their relationships are consistent with the business model (if it exists), domain model
+        (if it exists), requirements, and glossary entries.
+    </li>
+</ul>
+<h4>
+    General Model Considerations
+</h4>
+<ul>
+    
+  <li> The model is at an appropriate level of detail, given the model objectives. 
+  </li>
+  <li> For the business, requirements, or design models during the Elaboration 
+    phase, there is not an over-emphasis on implementation issues. </li>
+  <li> For the design model in the Construction phase, there is a good balance 
+    of functionality across the model elements, and it combines 
+    relatively simple elements to build a more complex design. </li>
+    <li>
+        The model demonstrates familiarity and competence with the full breadth of modeling concepts applicable to the
+        problem domain; modeling techniques are used appropriately for the problem at hand.
+    </li>
+    <li>
+        Concepts are modeled in the simplest way possible.
+    </li>
+  <li> The model can easily evolve, and expected changes can be easily accommodated. 
+  </li>
+  <li> At the same time, the model has not been overly structured to handle unlikely 
+    change at the expense of simplicity and comprehensibility. </li>
+  <li> The key assumptions that the model is based on are 
+    documented and visible to reviewers of the model. If the assumptions are applicable 
+    to a given iteration, then the model should be able to evolve within those 
+    assumptions, but not necessarily outside of those assumptions. Documenting 
+    assumptions is a way of indemnifying designers from not being 
+    expected to consider <em>all </em>possible requirements. In an iterative 
+    process, it is impossible to analyze all possible requirements and to define 
+    a model that will handle every future requirement. </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Transition and Installation</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><ul>
+    <li>
+        The process for upgrading an existing system without loss of data or operational capability is defined and has been
+        tested.
+    </li>
+    <li>
+        The process for converting data used by previous releases is defined and has been tested.
+    </li>
+    <li>
+        The amount of time and resources required to upgrade or install the product is well-understood and documented.
+    </li>
+    <li>
+        The functionality of the system can be activated one Use Case at a time.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Administration</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><ul>
+  <li> Disk space can be reorganized or recovered while the system is running. 
+  </li>
+  <li> The responsibilities and procedures for system configuration have been 
+    identified and documented. </li>
+  <li> Access to the operating system or administration functions is restricted. 
+  </li>
+  <li> Licensing requirements are satisfied. </li>
+  <li> Diagnostics routines can be run while the system is running. </li>
+  <li> The system monitors operational performance (capacity threshold, critical 
+    performance threshold, resource exhaustion). </li>
+  <li> The actions taken when thresholds are reached are defined. </li>
+  <li> The alarm-handling policy is defined. </li>
+  <li> The alarm-handling mechanism is defined and has been prototyped and tested. 
+  </li>
+  <li> The alarm-handling mechanism can be adjusted to 
+    prevent false or redundant alarms. </li>
+  <li> The policies and procedures for monitoring and administration the network 
+    (LAN, WAN) are defined. </li>
+  <li> Faults on the network can be isolated. </li>
+  <li> There is an event-tracing mechanism<strong> </strong>that 
+    can be enabled to aid in troubleshooting. </li>
+  <li> The overhead<strong> </strong>of the facility 
+    is understood. <strong></strong></li>
+  <li> The administrative staff possesses the knowledge to use the facility effectively. 
+  </li>
+  <li> It is not possible for a malicious user to: </li>
+  <li style="LIST-STYLE-TYPE: none"> 
+    <ul>
+      <li> Enter the system</li>
+      <li> Destroy critical data</li>
+      <li> Consume all resources</li>
+    </ul>
+  </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Organizational Issues</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p> By the completion of the Elaboration phase, the architecture should be sufficiently 
+  well-defined to allow decisions about the structure of 
+  the team:</p>
+<ul>
+    
+  <li> Does the component architecture provide a suitable basis for organizing 
+    the development teams? </li>
+    <li>
+        Does each team have the skills required to implement their allocated components?
+    </li>
+    
+  <li> Are responsibilities divided well between 
+    teams? </li>
+    
+  <li> Do all team members share the same understanding 
+    of the architecture as the one presented by the architect? </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Cost and Schedule</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><ul>
+    
+  <li> The actual number of lines of code developed thus far matches the estimated lines of code at the current milestone. </li>
+    
+  <li> The estimation of cost and schedule<strong> </strong>assumptions 
+    have been reviewed and remain valid. </li>
+    
+  <li> Cost and schedule estimates have been recalculated 
+    using the most recent actual project experience and performance. </li>
+</ul></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Concepts</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../concepts/arch_mech%2c_mzxI0A4LEduibvKwrGxWxA.html" guid="_mzxI0A4LEduibvKwrGxWxA">Architectural Mechanism</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/checklists/architecture,_17PYUNd6EdmIm-bsRSNCgw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:13 GMT -->
+</html>

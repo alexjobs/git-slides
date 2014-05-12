@@ -1,0 +1,211 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/capabilitypatterns/define_architecture_0sx7islgEdmt3adZL5Dmdw_desc.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:21 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Capability Pattern: Define the Architecture</title>
+<meta content="CapabilityPattern" name="uma.type">
+<meta content="define_architecture" name="uma.name">
+<meta content="Define the Architecture" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../css/default.css" rel="StyleSheet">
+<script src="../../scripts/elementUrls.js" type="text/javascript" language="JavaScript"></script><script src="../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script src="../../scripts/steps.js" type="text/javascript" language="JavaScript"></script><script src="../../scripts/activitylayout.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../index-2.html';
+					imgPath = '../../images/index.html';
+					
+									// get url parameters here
+					// query string from url take precedence, if not, use the one passed in form xml
+					// this handles both published site, and browsing, where user click in a node, there is no url parameter
+					var defaultQueryStr = '?proc=_0sx7islgEdmt3adZL5Dmdw&path=_0sx7islgEdmt3adZL5Dmdw';
+					var queryStr = location.search;
+					if ( queryStr == null || queryStr == "" )
+					{
+						queryStr = defaultQueryStr;
+					}
+					var parameters = getUrlParameters(queryStr.substring(1));
+					var par_proc = parameters["proc"];
+					var par_path = parameters["path"];
+//					document.write( "queryStr=" + queryStr + "<br/>");
+//					document.write( "proc=" + par_proc + "<br/>");
+//					document.write( "path=" + par_path + "<br/>");
+					
+					
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../images/index.html'); ">
+<script type="text/javascript" language="JavaScript">buildProcessElementBreadCrumb(backPath);</script>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Capability Pattern: Define the Architecture</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../index.html"></a><script src="../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This activity completes the architecture for an iteration.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="activeTab" width="10"><img title="" alt="" height="17" width="10" src="../../images/shim.gif"></td><td class="activeTab" nowrap="nowrap">Description</td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap="nowrap"><a class="tab" href="javascript:location.href=getTabUrl('define_architecture_0sx7islgEdmt3adZL5Dmdw_wbs.html', queryStr);"><span style="white-space:nowrap;">Work Breakdown Structure</span></a></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap="nowrap"><a class="tab" href="javascript:location.href=getTabUrl('define_architecture_0sx7islgEdmt3adZL5Dmdw_tbs.html', queryStr);"><span style="white-space:nowrap;">Team Allocation</span></a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap="nowrap"><a class="tab" href="javascript:location.href=getTabUrl('define_architecture_0sx7islgEdmt3adZL5Dmdw_wpbs.html', queryStr);"><span style="white-space:nowrap;">Work Product Usage</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="2"><img title="" alt="" height="2" src="../../images/shim.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="21" src="../../images/tab_space.gif"></td><td colspan="2"><img title="" alt="" height="2" src="../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Context</th><td class="sectionTableCell">
+<ul>
+<li>
+<a>OpenUPBasic</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    This activity is repeated in each iteration in the Elaboration phase. The main&nbsp;goal of this activity is&nbsp;to
+    propose an <a class="elementLinkWithUserText" href="../workproducts/architecture%2c_0XAf0MlgEdmt3adZL5Dmdw.html" guid="_0XAf0MlgEdmt3adZL5Dmdw">architecture</a> that addresses the requirements with high architectural risks, thus
+    providing a solid, yet resilient, foundation on which to build the system functionality.
+</p>
+<p>
+    The <a class="elementLinkWithUserText" href="../roles/architect%2c_0X9iEMlgEdmt3adZL5Dmdw.html" guid="_0X9iEMlgEdmt3adZL5Dmdw">architect</a> analyzes the architectural constraints, identifies available assets to
+    build the system, defines how the system will be structured, and identifies the initial abstractions and mechanisms
+    that must be provided by the architecture.
+</p>
+<p>
+    Throughout all of the iterations, the architect:
+</p>
+<ul>
+    <li>
+        Identifies commonalities between different requirements to leverage reuse
+    </li>
+    <li>
+        Defines strategies for achieving requirements related to quality
+    </li>
+    <li>
+        Captures and communicates architectural decisions
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Properties</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Event-Driven</th><td align="left" class="sectionTableCell"><img title="" alt="" height="15" width="20" src="../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Multiple Occurrences</th><td align="left" class="sectionTableCell"><img title="" alt="" height="15" width="20" src="../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Ongoing</th><td align="left" class="sectionTableCell"><img title="" alt="" height="15" width="20" src="../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Optional</th><td align="left" class="sectionTableCell"><img title="" alt="" height="15" width="20" src="../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Planned</th><td align="left" class="sectionTableCell"><img title="" alt="" height="15" width="20" src="../../images/true.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Repeatable</th><td align="left" class="sectionTableCell"><img title="" alt="" height="15" width="20" src="../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Staffing</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    These activities are best carried out by a small team staffed by cross-functional team members. Issues that are
+    typically architecturally significant include usability, performance, scaling, process and thread synchronization, and
+    distribution. The team should also include members with domain experience who can identify key abstractions. The team
+    should also have experience with model organization and layering. The team will need to be able to pull all these
+    disparate threads into a cohesive, coherent (albeit preliminary) architecture.
+</p>
+<p>
+    Because the focus of the architecture effort is shifting toward implementation issues, greater attention needs to be
+    paid to specific technology issues. This will force the architecture team to shift members or expand to include people
+    with distribution and deployment expertise (if those issues are architecturally significant). In order to understand
+    the potential impact of the structure on the implementation model on the ease of integration, expertise in the software
+    build management process is useful to have.
+</p>
+<p>
+    At the same time, it is essential that the architecture team not be composed of a large extended team. A strategy for
+    countering this trend is to retain a relatively small core team with a satellite group of extended team members that
+    are brought in as "consultants" on key issues<b>.</b> This structure also works well for smaller projects where
+    specific expertise may be borrowed or contracted from other organizations; they can be brought in as specific issues
+    need to be addressed.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Usage</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Usage Notes</th><td class="sectionTableCell"><p>
+    The work is best done in several sessions, perhaps performed over a few days (or weeks and months for very large
+    systems). The initial focus will be on the identifying <a class="elementLinkWithType" href="../guidances/concepts/design_mechanism%2c_w2ACwA4LEduibvKwrGxWxA.html" guid="_w2ACwA4LEduibvKwrGxWxA">Concept: Design Mechanism</a>s&nbsp;and&nbsp;specifiying the&nbsp;important&nbsp;design
+    elements.&nbsp;Care should also be taken to incorporate existing design elements to ensure that new&nbsp;design do not
+    duplicate existing functionality.
+</p>
+<p>
+    As the design emerges, concurrency and distribution issues are introduced. As these issues are considered, changes to
+    design elements may be required to split behavior across processes, threads or nodes.
+</p>
+<p>
+    As the individual models are refined to incorporate the architectural decisions, the results are documented in the
+    Architecture description. The resulting architecture is reviewed.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../guidances/supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/capabilitypatterns/define_architecture_0sx7islgEdmt3adZL5Dmdw_desc.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:22 GMT -->
+</html>

@@ -1,0 +1,42 @@
+<section>
+    <h2>Debugging</h2>
+    <h3><a href="http://git-scm.com/docs/git-bisect" target="_new">bisect</a></h3>
+    <p>git-bisect - Find by binary search the change that introduced a bug</p>
+    <pre><code style="margin-top: 20px;">
+  git bisect help
+  git bisect start [--no-checkout] [<bad> [<good>...]] [--] [<paths>...]
+  git bisect bad [<rev>]
+  git bisect good [<rev>...]
+  git bisect skip [(<rev>|<range>)...]
+  git bisect reset [<commit>]
+  git bisect visualize
+  git bisect replay <logfile>
+  git bisect log
+  git bisect run <cmd>...
+	</code></pre>
+
+</section>
+
+
+<section>
+    <h3><a href="http://git-scm.com/docs/git-blame" target="_new">blame</a></h3>
+    <p> <a href="http://webchick.net/node/99" target="_new">git-blame</a> - Show what revision and author last modified each line of a file</p>
+    <pre><code style="margin-top: 20px;">
+git blame [-c] [-b] [-l] [--root] [-t] [-f] [-n] [-s] [-e] [-p] [-w] [--incremental] [-L n,m]
+            [-S "revs-file"] [-M] [-C] [-C] [-C] [--since="date"] [--abbrev="n"]
+            [<rev> | --contents "file" | --reverse <rev>] [--] "file"
+	</code></pre>
+
+    <h3><a href="http://git-scm.com/docs/git-grep" target="_new">grep</a></h3>
+    <p>git-grep - Print lines matching a pattern</p>
+    <pre><code style="margin-top: 20px;">
+  $ git grep 'time_t' -- '*.[ch]'
+  # Looks for time_t in all tracked .c and .h files in the working directory and its subdirectories.
+  $ git grep -e '#define' --and \( -e MAX_PATH -e PATH_MAX \)
+  # Looks for a line that has #define and either MAX_PATH or PATH_MAX.
+  $ git grep --all-match -e NODE -e Unexpected
+  #Looks for a line that has NODE or Unexpected in files that have lines that match both.
+	</code></pre>
+
+
+</section>

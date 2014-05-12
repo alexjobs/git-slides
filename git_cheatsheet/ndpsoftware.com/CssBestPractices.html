@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from ndpsoftware.com/CssBestPractices.php by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:35 GMT -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>
+      NDP Software ::
+CSS Best Practices    </title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"/>
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <meta name="msvalidate.01" content="B24F365C5258BA8C65E423307692C32E" />
+        <link rel="stylesheet" href="fonts/Impact-Label-fontfacekit/stylesheet.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/ndp-print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="css/ndp.css" media="screen" />
+            <script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/csster.js"></script>
+    <script type="text/javascript" src="js/color_factory.js"></script>
+    <script type="text/javascript" src="js/jquery.boxes.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1458227-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </head>
+  <body class="" onload="">
+    <div id="margin">
+      <div id="page">
+        <div id="new_header">
+           <h1><span>&nbsp;NDP Software&nbsp;</span></h1>
+           <h2>Compelling Software &bull; Design & Construction</h3>
+        </div>
+      
+        <div id="header" class="screenOnly">
+          <h1>
+            Andrew J. Peterson
+          </h1>
+        <h1>
+          Compelling Software, Design and Development
+        </h1>
+      <h1>
+        NDP Software
+      </h1>
+    <h1>
+      Andrew Peterson, Consultant
+    </h1>
+</div>
+<div id="menu" class="screenOnly">
+  <div class="menu">
+    <ul>
+      <!--li>
+        NDP Software 
+      </li-->
+      <li>
+        <a href="index-2.html" title="Overview of the software consulting business">
+          About NDP Software
+        </a>
+      </li>
+      <li>
+        <a href="visualization.html" title="Interactions and Visualizations">
+          Visualization
+        </a>
+      </li>
+      <li>
+        <a href="prototype.html" title="Prototypes">
+          Prototype
+        </a>
+      </li>
+      <li>
+        <a href="consulting.html" title="Consulting projects and areas of expertise">
+          Software Consultant
+        </a>
+      </li>
+<!--      <li>
+        <a href="web.php" title="Web-related software projects">
+          Web Development
+        </a>
+      </li>
+      <li>
+        <a href="software.php" title="Custom-built software">
+          Software Development
+        </a>
+      </li> -->
+      <li>
+        <a href="clients.html" title="Clients of NDP Software">
+          Clients
+        </a>
+      </li>
+      <li>
+        <a href="http://blog.ndpsoftware.com/" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="http://github.com/ndp" target="_blank">Github Repo</a>
+      </li>
+      <li>
+        <a href="http://amp-what.com/" target="_blank">Amp What</a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/111325326458556506982/posts?rel=author">Google+</a>
+      </li>
+      <li class="email">
+         <a href="mailto:andy@ndpsoftware.com">Email</a>
+      </li>
+      <li class="linked_in">
+        <script src="../platform.linkedin.com/in.js" type="text/javascript"></script>
+        <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/ndpsoftware" data-format="hover" data-related="false"></script>
+      </li>
+      <!--li class="social">
+        <g:plusone size="small" annotation="inline" width="160"></g:plusone>
+      </li-->
+    </ul>
+  </div>
+</div>
+<div id="content">
+  <h2>
+CSS Best Practices  </h2>
+<p>
+	CSS doesn't get the love it deserves. But it's what allows us to have beautiful, post-1994 web pages.</p>
+	<p>It grows organically and is often a developer's secondary responsibility or priority. 
+	It's an all too common appearance to see a developer futzing around with a stylesheet, typing seemingly random characters to get a selector to "select". </p>
+	<p>Even though it gets less attention than the "code" (Java, C++, etc.),  it's a level harder to manage. The cascade makes it complex: CSS rules come from multiple files (or are built into the browser chrome), and there is no "compile-time" or run-time checking. When they don't work, things just don't draw right. It's easy to miss for a week or month. At least Javascript-- notoriously hard to debug-- generates an error message.  
+</p>
+<p>
+	I've collected success stories from my own experiences, colleagues, and the web. This is what I call "CSS Best Practices". I've put them in a rough order, based on the ones that I think are most valuable first. </p>
+	
+	<p>
+	It's a work in progress, but I trust it will be valuable. If you have additions or corrections, please let me know 
+	<a href="mailto:andy@ndpsoftware.com?subject=CSS Best Practices Feedback">
+		via email</a>.
+</p>
+<h3>CSS-Specific Guidelines</h3>
+<ol>
+    <li>
+    	<h3>Undo CSS</h3>
+    	<p>It's become fairly standard practice to use a style sheet that removes all the
+    	browser's default stylings. This removes all the browser-specific default
+    	padding, font sizing, etc. Pioneer Tantek Celik called this <a href="css/undohtml.css" target="_blank">undo html</a>, but it's
+    	more often called <a href="http://developer.yahoo.com/yui/reset/" target="_blank">reset.css</a>, based on its appearance in YUI.</p>
+    	<p>This is the biggest time saver you can adopt.
+    	Starting with this will keep you from creating all sorts of cross-browser
+    	inconsistencies. </p>
+    	<p>There's the not-so-well known notion of how to "get it back". YUI has one called
+    	 <a href="http://developer.yahoo.com/yui/base/" target="_blank">CSS Base</a>. 
+    	 I have found it's useful to have a little more control, so I'm created
+    	 a class I can put on any element. (I call it <code>html</code>.) Its behavior
+    	 is to re-style HTML elements inside it. Mine looks like:
+    	<pre>
+.html :link,.html :visited { text-decoration:underline; color: blue }
+.html h1 { font-size: x-large }    	
+.html h2 { font-size: large }    	
+...    
+    	</pre>
+    	This needn't be complete, but it's useful very early on in page mock up, 
+    	and when you're displaying someone else's HTML.
+    </li>
+	<li>
+		<h3>
+			Pick an appropriate font sizing approach and consistent measurement units 
+		</h3>
+		<p>
+			Pick the right font-sizing strategy for your site. If the design is flexible, use the simple <code>font-size: small</code>, <code>medium</code>, <code>large</code> model. This avoids the pitfalls of the other schemes. If the design needs pixel-level control, spend some time researching the choices-- they all present some difficult trade-offs. 
+		</p>
+		<p>The same goes for all your other measurement units. Decide what you need, and stick too it. For example, decide from the start to only use <code>em</code>s. This may not be the ideal technique, but you will get advantages because you have a consistent, understandable system. </p>
+		<p>For larger graphically demanding sites, consider YUI's approach and implementation. It's complicated to get used to, but will provide reliable, cross-browser control. 
+		</p>
+		<p>Mostly, though, it's important to be consistent, so gather the
+		team together, debate for a few minutes, and then pick a scheme that everyone can follow.
+			<a href="fontSizingStrategy.html">
+				Font Sizing Strategy
+			</a>
+		</p>
+	</li>
+
+
+		<li>
+		<h3>
+			XML
+		</h3>
+		<p>
+		If possible, use XHTML for your HTML. This will guarantee that elements are closed and properly nested. This will reduce your debugging burden significantly. If this isn't possible, see what incremental steps you can take towards this ideal. 
+		</p>
+	</li>
+
+
+	<li>
+		<h3>
+			Use semantic markup
+		</h3>
+		<p>
+		Things have gone a long way since the <code>blink</code> tag. Know and use the built-in HTML elements. Don't be bullied into using 
+		<tt>
+			div</tt>'s and 
+		<tt>
+			span</tt>'s everywhere-- that's less readable than older alternatives. For example, if an element is body text, simply use a &lt;p&gt; tag. Avoiding it leads to the all-too-common &lt;div class="bodytext"&gt;.  Here's <a target="_blank" href="http://www.w3schools.com/tags/default.asp">a few you might not know about</a>: 
+<ul>
+	<li>			abbr</li>
+	<li>			acronym</li>
+	<li>			address</li>
+	<li>			blockquote</li>
+	<li>			caption (for tables)</li>
+	<li>			cite</li>
+	<li>			code</li>
+	<li>			dl, dt, dd</li>
+	<li>			dfn</li>
+	<li>			kbd</li>
+	<li>			q</li>
+</ul>
+		</p>
+	</li>
+
+
+
+	<li>
+		<h3>Use tables for tables</h3>
+		<p>Don't be afraid of using tables when appropriate. A few simple tables will be faster and easier to understand than &lt;div&gt;s nested four levels deep.</p>
+	</li>
+
+
+
+	<li>
+		<h3>
+			Add elements to support styling
+		</h3>
+		<p>
+		Although having clean, semantic markup is important, don't be afraid to add elements to facilitate styling later on. For an example of this, see 
+		<a href="experiment/css/stretch.html">
+			Stretchy/Fixed Page Layout Experiment
+		</a>
+		</p>
+	</li>
+
+	<li>
+	
+	
+		<h3>
+			Add classes and IDs at the highest level possible
+		</h3>
+		<p>
+		Use an enclosing style or class when possible. For example: <pre>
+&lt;ul&gt;
+&lt;li class="album"&gt;Let It Be&lt;/li&gt;
+&lt;li class="album"&gt;Abbey Road&lt;/li&gt;
+&lt;/li&gt;
+</pre> is more concisely expressed as: <pre>
+&lt;ul  class="albums"&gt;
+&lt;li&gt;Let It Be&lt;/li&gt;
+&lt;li&gt;Abbey Road&lt;/li&gt;
+&lt;/ul&gt;
+</pre> This may seem obvious, but quite common. There are more complex cases, that are harder to see. Basically, try to determine the meaningful outside element, and write selectors in terms of that. 
+		</p>
+		
+		</li>
+
+		
+		<li>
+		<h3>Identify "outermost" elements</h3>
+
+
+		<p>
+			Any modular piece of HTML code, whether in a JSP file, tag file, PHP function or whatever, should have a class (or id) on the outermost element. Name the outermost class identical to the function that creates it. Write the CSS relative to this. For example,
+		</p>
+<pre>
+function writeSideNav() {
+	&lt;php 
+	&lt;ul class="SideNav"&gt;
+		&lt;li&gt;Menu 1&lt;/li&gt;
+		&lt;li&gt;Menu 2&lt;/li&gt;
+		&lt;li&gt;Menu 3&lt;/li&gt;
+	&lt;/ul&gt;
+	?&gt;
+}
+</pre>
+		<p>Write the CSS in terms of that outermost selector, in this case <tt>.SideNav</tt> and put it in a separate file called <tt>SideNav.css</tt>:
+		</p>
+<pre>
+ul.SideNav {
+	margin: 0;
+	border: 1px solid red;
+	padding: 5px;
+	display: block;
+	width: 800px;
+}
+ul.SideNav li {
+	background-color: green;
+	color: white;
+}
+ul.SideNav li a:link {
+	background-color: yellow;
+	color: black;
+}
+	etc.
+</pre>
+
+		<p>This tends to reduce the number of classes needed, and keeps the coupling between selectors low.
+		</p>
+		 
+		<p>As a corollary to this, I recommend you put a class (or id) on the &lt;body&gt; tag.  (I'd put <tt>class="home"</tt> in <tt>home.html</tt>. This will allow you to add page-specific behavior easy, and clearly, when the time comes.</p>
+
+
+	</li>
+
+
+	<li>
+		<h3>
+			Modularize geographically
+		</h3>
+		<p>
+			Organize and break up the CSS using the same principles you use to organize the other code and markup. For example, if you are using JSPs and you create a tag file for the footer called <tt>footer.tag</tt>, place corresponding CSS rules in <tt>footer.css</tt>, and place that file in a path identical to the tag file. </p>
+			<p>This leads you to modularize CSS based on geographical areas of the page. This is a simple and understandable organizing principal. It also facilitates debugging-- there's one very clear place to look for selectors.</p>
+			<p>Unless trivial, it's best to create a css file for each page with custom selectors. For a page with its own styles, an embedded &lt;style&gt; element may be fine. Just remember that if the CSS is in a separate file, the browser can cache, which may be important.</p>
+			<p>The only variation on this "geographical" organization is forms. If you have a consistent form styling, it seems reasonable create a form.css to encapsulate it. 
+		</p>
+	</li>
+
+
+
+	
+	<li>		<h3>Order the rules within the file based on the order of the markup.</h3>
+	<p>If the first element of the page is an &lt;h1&gt;, put its selector first, and so on. As you're switching back and forth between the two files, it'll be easier to match up selectors and tags.</p>
+	</li>
+	<li>		
+	<h3>Echo the markup with the selectors. </h3>
+	<p>If the markup looks like this: <pre>
+&lt;div class="nav"&gt;
+	&lt;ul class="company"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;About us&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Jobs&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;ul class="products"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Enterprise&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Small Business&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Free Stuff!&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</pre>
+	<p>having the selectors echo the markup makes the intention clear:</p>
+	<pre>
+.nav {
+	...
+}
+.nav ul.company {
+	background-color: magenta;
+	...
+}
+.nav ul.products {
+	background-color: magenta;
+	...
+}
+.nav ul.company li a:link { 
+	...
+}
+	</pre>
+	<p>The last selector probably could be shortened to <code>.company a:link</code>. But this doesn't add any value, and makes the file harder to scan. 
+	
+	</p>
+	<p>I think this is  great, but not everyone agrees.</p>
+	</li>
+	
+
+
+
+
+
+
+
+</ol>
+<h3>General Development Guidelines</h3>
+<ol>
+	<li>
+		<h3>
+			Naming
+		</h3>
+		<p>Create a naming scheme. People use 
+		<tt>
+			camelCase</tt>, 
+		<tt>
+			lowercasenames</tt>,
+		<tt>
+			hyphens-between-words</tt>, and even
+		 
+		<tt>
+			underlines_to_separate_words</tt>. Pick one. If you don't, at some point you'll waste a few frustrating minutes trying to figure out why your selector doesn't match, only to realize it was the same words but different formatting. 
+	</p></li>
+	
+	
+
+
+		<li>
+		<h3>
+			Learn the full language
+		</h3>
+		<p>
+		Understand the full range of selectors, and understand the values that are allowed. With some technologies you can muddle around with partial understanding, picking it up as you go along. You can do that with CSS, but it's not a good method. The reason is this: the most common problem is not seeing a rule work, but it's fairly easy to reach a solution without knowing why. It didn't work because the selector didn't match, it was overridden by some more specific rule, or some other error in the rule caused the processing to stop. If you don't know the language well, it's difficult to guess what's wrong. It's not the only way, but typically people end up adding more rules than they need just to get something working-- until they have a mess. 
+		</p>
+	</li>
+
+	<li>
+		<h3>Use tools</h3>
+		<p><a target="_blank" href="http://getfirebug.com/">Firebug</a> now has excellent CSS debugging, and the <a href="http://chrispederick.com/work/webdeveloper/" target="_blank">Web Developer's Extension</a> has a cool "Show Element Information" that I use all the time.</p>
+
+
+
+
+	<li>
+		<h3>Work towards separate, modular files</h3>
+		<p>Begin the development process with inline styles and move towards separate (modular) files by the end of the project. This is quite common.</p>
+		
+		</li>
+		
+	
+		<li>
+		<h3>
+			Avoid a global CSS file
+		</h3>
+		<p>
+			This is the converse of the above practice, but a common problem. From my experience, most projects start with a single CSS file. That file quickly becomes huge, with numerous dependencies between all the selectors. The task of breaking up this file will be daunting (much worse than refactoring code). I've just had to "live with it" more than once. It's better to start modularly and combine later if it becomes a problem.  
+		</p>
+	</li>
+
+
+	
+	<li>
+	<h3>Clean up occasionally</h3>
+	<p>(I think my mom said that.)</p>
+	<p>Get the project set up so you can quickly do global searches for styles, and remove the old ones. I've never met a large CSS file that didn't have at least one unused style.</p>
+	</li>
+
+	<li>
+		<h3>
+			Keep it simple
+		</h3>
+		<p>
+		This is the hardest thing to do. When you find yourself creating selectors to undo your own styles, it's time to refactor. For example, if you defined </p>
+<pre>
+li { display: inline }
+</pre> <p>in your main stylesheet, but then in a sidebar, you need to override it: </p>
+<pre>
+div.sidebar li { display: block; border-left: 3px solid #00f; ... }
+</pre><p>and then somewhere else you do something else. It's probably better not to undo the initial style by changing the default li. It's just causing confusion. 
+		</p>
+	</li>
+
+	<li>
+	
+	<h3>Save optimization until the end</h3>
+
+	<p>Here are a few techniques:</p>
+
+	<p>If you're not using it, add gzip compression to your web server (like Apache). This will significantly reduce the transfer size of the CSS files, low-risk and easy. (This will compress HTML and Javascript files as well; I recall a 30% bandwidth savings in one case.)</p>
+
+	<p> There are various scripts out there that "compress" CSS files. I have used them, and they work. That being said, I don't really like the idea: you'll be deploying something different than what you are developing with. (No, don't try  developing with compressed CSS files.)</p>
+	<p>In the same vein, you can combine numerous CSS files into one, reducing the number of HTTP requests the browser will have to make. I question the efficacy of this, but have seen it mentioned several places.</p>
+
+	<p>You can generally wait until late in the development process. That being said, there are a few things you can do from the beginning. These will reduce file size, but can also increase readability:</p>
+	<ul><li><a target="_blank" href="http://www.w3.org/TR/CSS1#grouping">Group selectors</a> that have the same style. This is fairly standard practice, and I haven't seen people argue against this. </li>
+	<li>And it's okay to use the shorthand styles. They are cryptic and can be mis-read and mis-typed, to an experienced developer they will be easier to read. 
+	</li>
+	</ul>
+	<p>If you choose to adopt these techniques, adopt them universally.
+	</p>
+	</li>
+	
+	
+	
+</ol>
+
+<h3>References</h3>
+<ol>
+	<li><a target="_blank" href="http://www.brookgroup.com/Resources/Design-and-Usability/CSS-Best-Practices.html">Brookgroup CSS Best Practices</a> - some complementary ideas</li>
+	<li><a target="_blank" href="http://www.mezzoblue.com/archives/2003/11/17/css_best_pra/">Mezzoblue's contribution</a> needs heavy editing</li>
+</ol>
+</div>
+<!--id content -->
+<div id="footer" >
+  <table class="sitemap screenOnly">
+    <tr>
+      <td>
+        <div class="menu cheatsheets">
+          <ul>
+            <li title="Short summaries of detailed technical topics">
+              Cheat Sheets 
+            </li>
+            <li>
+              <a class="new" href="git-cheatsheet.html">
+                Visual Git Cheatsheet
+              </a>
+            </li>
+            <li>
+              <a href="HibernateMappingCheatSheet.html" title="Short hibernate mapping examples, without the detailed explanations.">
+                Hibernate Mapping
+              </a>
+            </li>
+            <li>
+              <a class="updated" href="JSPXMLCheatSheet.html" title="JSPs with XML? A simple summary of the most useful and used constructs">
+                JSP 2.0 XML Documents
+              </a>
+            </li>
+            <li>
+              <a href="http://amp-what.com/" title="A quick, interactive reference of 11,500 HTML character entities">&amp;what (amp-what.com)</a>
+            </li>
+            <li>
+              XSLT 
+            </li>
+            <li>
+              <a href="downloads-xsl-struts.html">
+                Struts Xslt
+              </a>
+            </li>
+            <li>
+              <a href="downloads-xsl-resume.html">
+                Xslt for My Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu technical">
+          <ul>
+            <li>
+              CSS 
+            </li>
+            <li>
+              <a class="updated" href="CssBestPractices.html">
+                CSS Best Practices
+              </a>
+            </li>
+            <li>
+              <a href="cssExperiments.html">
+                CSS Experiments
+              </a>
+            </li>
+            <li>
+              <a href="css.html">
+                CSS Links
+              </a>
+            </li>
+            <li>
+              Javascript 
+            </li>
+            <li>
+              <a href="http://github.com/ndp/csster" class="new" >
+                Csster
+              </a>
+            </li>
+            <li>
+              <a href="ScriptaculousEffectsDemo.html" class="new" >
+                Scriptaculous Effects Demo
+              </a>
+            </li>
+            <li>
+                <a href="http://github.com/ndp/jsutils" class="new" >
+                    Javascript Playground
+                </a>
+            </li>
+            <li>
+              jQuery Plugins
+            </li>
+            <li>
+              <a href="show_char_limit.html" class="new" >
+                Show Char Limit
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/align-column" class="new" >
+                Align Column
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/fixie" class="new" >
+                Fixie
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/wizardize" class="new" >
+                Wizardize
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/ndp/color_spy" class="new" >
+                Color Spy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu technical">
+          <ul>
+            <li>
+              Other Technical 
+            </li>
+            <!--li>
+              <a href="books.php" title="Books we like">
+                Books
+              </a>
+            </li-->
+            <li>
+              <a href="isbn.html">
+                ISBN Excel Converter
+              </a>
+            </li>
+            <li>
+              <a class="new" href="agile_methods/agile_methods.html">
+                Agile Methods Visualization
+              </a>
+            </li>
+            <li>
+              <a class="new" href="softwareDevMaturityModel.html">
+                Software Development Maturity Model
+              </a>
+            </li>
+            <li>
+              <a class="new" href="OpenUpBasic/index.html" target="_blank">
+                OpenUP/Basic
+              </a>
+            </li>
+            <li>
+              <a class="new" href="other.html">
+                Other Projects
+              </a>
+            </li>
+            <li>
+              <a href="http://blog.ndpsoftware.com/" target="_blank">My Blog</a>
+            </li>
+            <li>
+              <a href="about.html"> 
+                About This Site
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="menu nontechnical">
+          <ul>
+            <li>
+              Non-technical 
+            </li>
+            <li>
+              <a href="http://delicious.com/ndp" target="_blank">
+                  delicious/ndp
+              </a>
+            </li>
+            <li>
+              <a href="http://ical.mac.com/WebObjects/iCal.woa/wa/default?u=ndp&amp;n=ndp.ics" target="_blank">
+                Calendar
+              </a>
+            </li>
+            <li>
+              <a href="construction.html">
+                Construction
+              </a>
+            </li>
+            <!--<li>-->
+              <!--<a href="http://priita.com" target="_blank">-->
+                <!--Priita.com-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="http://homepage.mac.com/ndp" target="_blank">-->
+                <!--Photos-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="http://tanyandy.com" target="_blank">-->
+                <!--Tanyandy.com-->
+              <!--</a>-->
+            <!--</li>-->
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="footnotes screenOnly">
+    <div class="menu technical">
+      <ul>
+        <li>
+          <span class='st_email'></span>
+            <span class='st_stumbleupon'></span>
+             <span class='st_twitter'></span>
+            <span class='st_googleplus'></span>
+            <span class='st_facebook'></span>
+            <span class='st_wordpress'></span>
+            <span class='st_hatena'></span>
+            <span class='st_delicious'></span>
+            <span class='st_blogger'></span>
+            <span class='st_tumblr'></span>
+            <span class='st_reddit'></span>
+            <span class='st_linkedin'></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    Copyright (c) 1999-2013 Andrew J. Peterson.
+    <a href="mailto:andy@ndpsoftware.com">
+      andy@ndpsoftware.com</a>. 
+  </div>
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = '../apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>      
+<script type="text/javascript">var switchTo5x=false;</script><script type="text/javascript" src="../w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'34a76a8b-d635-4885-8b9c-78fbf9a6d08d'});</script>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/CssBestPractices.php by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:16:39 GMT -->
+</html>

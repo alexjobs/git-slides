@@ -1,0 +1,69 @@
+/* 
+undohtml.css 
+Copyright (c) ndpsoftware.com
+
+Major portions copyright by:
+(CC) 2004 Tantek Celik. Some Rights Reserved.
+http://creativecommons.org/licenses/by/2.0
+This style sheet is licensed under a Creative Commons License.
+
+Eric Meyer's comments caused a few more changes.
+
+*/
+
+/* Purpose: undo some of the default styling of common (X)HTML browsers */
+
+/* link underlines tend to make hypertext less readable,
+because underlines obscure the shapes of the lower halves of words */
+:link, :visited {
+  text-decoration: none
+}
+
+/* no list-markers by default, since lists are used more often for semantics */
+ul, ol {
+  list-style: none
+}
+
+/* avoid browser default inconsistent heading font-sizes */
+/* and pre/code too */
+h1, h2, h3, h4, h5, h6, pre, code {
+  font-size: 1em;
+}
+
+/* remove the inconsistent (among browsers) default ul,ol padding or margin  */
+/* the default spacing on headings does not match nor align with 
+   normal interline spacing at all, so let's get rid of it. */
+/* zero out the spacing around pre, form, body, html, p, blockquote as well */
+/* form elements are oddly inconsistent, and not quite CSS emulatable. */
+/*  nonetheless strip their margin and padding as well */
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
+  margin: 0;
+  padding: 0
+}
+
+/* whoever thought blue linked image borders were a good idea? */
+a img, :link img, :visited img {
+  border: none
+}
+
+/* de-italicize address */
+address {
+  font-style: normal
+}
+
+/* more varnish stripping as necessary... */
+
+/* nested lists have no top/bottom margins */
+ul ul, ul ol, ul dir, ul menu, ul dl,
+ol ul, ol ol, ol dir, ol menu, ol dl,
+dir ul, dir ol, dir dir, dir menu, dir dl,
+menu ul, menu ol, menu dir, menu menu, menu dl,
+dl ul, dl ol, dl dir, dl menu, dl dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+form {
+  display: inline;
+}
+

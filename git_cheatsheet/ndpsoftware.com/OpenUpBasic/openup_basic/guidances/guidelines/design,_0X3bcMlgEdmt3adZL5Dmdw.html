@@ -1,0 +1,319 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/design,_0X3bcMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:23 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Design</title>
+<meta content="Guideline" name="uma.type">
+<meta content="design" name="uma.name">
+<meta content="Design" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Design</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline gives additional information on how to design a portion of the system.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="architectural_view%2c_T9nygClEEduLGM8dfVsrKg.html" guid="_T9nygClEEduLGM8dfVsrKg">Architectural View</a>
+</li>
+<li>
+<a href="../../workproducts/design%2c_0WuL8slgEdmt3adZL5Dmdw.html" guid="_0WuL8slgEdmt3adZL5Dmdw">Design</a>
+</li>
+<li>
+<a href="../../tasks/design_solution%2c_0fshwMlgEdmt3adZL5Dmdw.html" guid="_0fshwMlgEdmt3adZL5Dmdw">Design the Solution</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><p>
+    The design represents the behavior and structure of the system at various levels of abstraction – most notably not
+    solely at the code level of abstraction.&nbsp; This will help the designer reason&nbsp;about the quality, structure,
+    and behavior&nbsp;of the design.
+</p>
+<h3>
+    Multiple Passes
+</h3>
+<p>
+    The design will be revisited many times throughout the iterative lifecycle and even within an iteration.&nbsp;
+</p>
+<p>
+    Each time some design activity is being performed, it will be performed with some specific goal.&nbsp; The goal might
+    be to identify a notional set of participants in a collaboration that can be exercised to realize the behavior required
+    (an analysis pass).&nbsp; The goal might be in the identification of some coarse-grained elements that are required to
+    act out some scenario (an architectural pass).&nbsp; Then a pass might be done within one of those components to
+    identify the elements within that will collaborate together to perform the behavior required (a more detailed design
+    pass).
+</p>
+<p>
+    Design might be performed in a particular context such as database context, user-interface context, or perhaps the
+    context of how some existing library will be applied.&nbsp; In these cases the design steps will be performed just to
+    make and communicate decisions regarding that context.
+</p>
+<p>
+    Avoid analysis paralysis.&nbsp; Avoid refining, extending, and improving the design beyond a minimal version that
+    suffices to cover the needs of the requirements within the architecture.&nbsp; Design should be done in small chunks,
+    proven via implementation, improved via refactoring, and integrated into the baseline to provide value to the
+    stakeholders.
+</p>
+<h3>
+    Identification of&nbsp;Elements
+</h3>
+<p>
+    Identify the&nbsp;elements based on needs of the requirements.
+</p>
+<p>
+    The identification of elements can stem from a static perspective of walking through the requirements and identifying
+    elements clearly called out, a form of domain modeling.&nbsp; It can pull in other elements identified as being in the
+    application domain or deemed necessary from examining the requirements for the portion of the system being
+    designed.&nbsp; This can also pull from key abstractions identified while defining the architecture.
+</p>
+<p>
+    The identification of&nbsp;elements&nbsp;should&nbsp;apply a dynamic perspective&nbsp;by&nbsp;walking through scenarios
+    of usage of the system (or subsystem) identifying elements needed to support&nbsp;the behavior.&nbsp; That behavior
+    might be a scenario of usage from an external user perspective or, while designing a subsystem, a responsibility
+    assigned to the subsystem that has complex algorithmic behavior. Consider applying the <a class="elementLink" href="../concepts/entity_control_boundary_pattern%2c_uF-QYEAhEdq_UJTvM1DM2Q.html" guid="_uF-QYEAhEdq_UJTvM1DM2Q">Entity-Control-Boundary Pattern</a>&nbsp;to identify the elements necessary to support
+    the scenario or apply other patterns identified in the architecture that specify the elements that will be used to
+    support specific aspects of the scenario.
+</p>
+<p>
+    If the system being designed is a real-time system, include elements representing events and signals that allow us to
+    describe the asynchronous triggers of behavior to which the system must respond.&nbsp; Events are specifications of
+    interesting occurrences in time and space that usually (if they are noteworthy) require some response from the
+    system.&nbsp; Signals represent asynchronous mechanisms used to communicate certain types of events within the system.
+</p>
+<p>
+    If there are existing&nbsp;elements from previous passes over the design or from selected frameworks or other reusable
+    elements, those should be reused whenever possible.
+</p>
+<p>
+    Having identified the elements, each should be given a meaningful name.&nbsp; Each element should also have a
+    description so that the team members that work together to refine the design and implement from&nbsp;the
+    design&nbsp;will understand the role the&nbsp;element will play.
+</p>
+<p>
+    Based on the above, this identification of&nbsp;elements&nbsp;could be applied a number of times in designing just one
+    part of the system.&nbsp; While there is no&nbsp;one correct&nbsp;strategy for multiple passes, they could be done at a
+    coarse-grained level and then a fine-grained level or at an analysis (abstract) level and then a design level.
+</p>
+<h3>
+    Behavior&nbsp;of&nbsp;Elements
+</h3>
+<p>
+    To&nbsp;identify the behavior&nbsp;of the elements, walk through scenarios assigning behavior to the appropriate
+    collaborating participant.&nbsp; If a particular usage of the system or subsystem can have&nbsp;multiple possible
+    outcomes or variant sequences, cover enough scenarios to ensure that the design is robust enough to support the
+    necessary possibilities.
+</p>
+<p>
+    When assigning behavior to elements, consider applying the <a class="elementLink" href="../concepts/entity_control_boundary_pattern%2c_uF-QYEAhEdq_UJTvM1DM2Q.html" guid="_uF-QYEAhEdq_UJTvM1DM2Q">Entity-Control-Boundary Pattern</a>&nbsp;or other patterns identified in the
+    architecture.
+</p>
+<p>
+    Behavior can be&nbsp;represented as&nbsp;a simple statement of responsibility or it can be a detailed operation
+    specification.&nbsp; Use the appropriate level of detail to communicate important design decisions while&nbsp;giving
+    the freedom to make appropriate implementation decisions as those tasks ensue.
+</p>
+<p>
+    Behavior must be understood as a responsibility on an element, and as an interaction between two&nbsp;elements in the
+    context of some broader behavior of the system or subsystem.&nbsp; The latter part of this will lead the developer to
+    identify relationships needed between the elements.
+</p>
+<p>
+    Avoid too much&nbsp;identification of behavior solely from the perspective of domain modeling.&nbsp; Only include
+    behavior that is really needed, behavior identified by walking through required scenarios of system usage.
+</p>
+<h3>
+    Design&nbsp;Element Relationships
+</h3>
+<p>
+    The relationships between the&nbsp;elements necessary for the behavior must be designed.&nbsp; This can simply be the
+    identification of&nbsp;the ability&nbsp;to traverse from one&nbsp;element to another or a need to manage an association
+    between the elements.
+</p>
+<p>
+    More detailed design can be performed on the relationships as appropriate.&nbsp; This can include optionality,
+    multiplicity, whether the relationship is a simple dependency or managed association, etc. These decisions that drive
+    implementation details are best made at the design level when it is&nbsp;easier to see how all the pieces fit
+    together.&nbsp;
+</p>
+<p>
+    As with the behavior discussion above, avoid defining too many relationships based on relationships in the application
+    domain.&nbsp; Only include the relationships that are really needed based on the requirements.&nbsp; On the other hand,
+    a combination of requirements knowledge and domain knowledge can lead to some detailed decisions on the relationships
+    such as optionality and multiplicity.
+</p>
+<h3>
+    Refine Design
+</h3>
+<p>
+    Having identified a design&nbsp;including a set of collaborating&nbsp;elements with the behavior and relationships
+    robust enough to handle the requirements under consideration, the design can be improved and transformed into an
+    implementable system through refinement.
+</p>
+<p>
+    The visibility of each operation should be selected to be as&nbsp;restrictive as possible.&nbsp; Based on walking
+    through the scenario it should be clear which operations must be&nbsp;available to other elements in the design and
+    which can be considered private behavior inside the element that has the operation.&nbsp; Minimizing the number of
+    public operations creates a more maintainable and understandable design.
+</p>
+<p>
+    With respect to parameters, the return value, and&nbsp;a description of how it will go about performing the behavior,
+    operations can be detailed at a lower level that drives the actual implementation or that detail might be left to
+    be&nbsp;handled when writing the code.
+</p>
+<p>
+    Data attributes can be identified based on information needed to support behavior or based on additional requirements
+    such as information to be presented to the user or transmitted to another system.&nbsp; Avoid indiscriminate domain
+    analysis; there might be a great deal of data in the domain that is not needed to support the requirements.&nbsp; Data
+    attributes can simply be identified or they can be designed in detail with attribute types, initial values, and
+    constraints. Decide on the visibility of the data attribute; operations to access and update the data can be added or
+    deferred to implementation.
+</p>
+<p>
+    Generalization&nbsp;and interfaces can be applied to simplify or otherwise improve the design.&nbsp; Ensure that the
+    usage of these techniques actually improves the design rather than muddling it with complexity.&nbsp; For example,
+    common behavior can be factored into a parent class via generalization or out to a helper class via delegation; the
+    latter solution can be more understandable and maintainable as generalization is an inflexible relationship.
+</p>
+<p>
+    The refinement of any portion of the design could include another pass through the design process.&nbsp; One might find
+    that what was initially identified as a single behavior on an&nbsp;element&nbsp;warrants a detailed walkthrough of the
+    collaborating&nbsp;elements to realize that behavior.
+</p>
+<p>
+    When updating an existing design <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: KO; mso-bidi-language: AR-SA">
+    –</span> especially one that has had portions already implemented <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-bidi-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: KO; mso-bidi-language: AR-SA">
+    –</span> apply <a class="elementLink" href="../concepts/refactoring%2c_Poc7IPDzEdqYgerqi84oCA.html" guid="_Poc7IPDzEdqYgerqi84oCA">Refactoring</a> to ensure that the improved design continues to perform as expected.
+</p>
+<h4>
+    Organization of&nbsp;Elements (package-level)
+</h4>
+<p>
+    In a design of any notable size, the&nbsp;elements must be organized into packages.&nbsp; Assign the&nbsp;elements to
+    existing or new packages and ensure that the visibility relationships between the packages support
+    the&nbsp;navigability required between the elements.&nbsp; Decide whether each element should be visible to elements
+    outside its package.
+</p>
+<p>
+    When structuring the design into packages, consider <a class="elementLink" href="layering%2c_0gpkAMlgEdmt3adZL5Dmdw.html" guid="_0gpkAMlgEdmt3adZL5Dmdw">Layering</a>&nbsp;and other patterns.&nbsp; Though all design work must conform to
+    existing architectural decisions, the allocation of&nbsp;elements to packages and possible updates to package
+    visibility is an area of&nbsp;significant architectural concern.&nbsp; The developer should collaborate with the
+    architect to ensure that package-level decisions are in accordance with the rest of the architecture.
+</p>
+<p>
+    This guideline first talks about the identification and design of the&nbsp;elements and then about organizing
+    the&nbsp;elements into packages.&nbsp; This is not a strict order of events.&nbsp; There is nothing wrong with
+    identifying a package structure for the system and then populating that structure with identified&nbsp;elements&nbsp;as
+    long as the actual&nbsp;elements identified are allowed to influence the resulting package structure.
+</p>
+<h3>
+    Reviewing the Design
+</h3>
+<p>
+    Design is best done collaboratively as it is a problem-solving activity with a range parts and perspectives.&nbsp;
+    There should be a constant level of review to ensure that the decisions make sense within the area being designed and
+    in the design of the system overall.&nbsp; There also might be occasions where the review of some area of design is
+    reviewed by a set of interested or knowledgeable parties such as the architect who will verify that the design conforms
+    to some architectural decision or a developer&nbsp;who will be expected to implement the design.&nbsp;
+</p>
+<p>
+    The design should be examined to ensure that it follows heuristics of quality design such as loose coupling and high
+    cohesion.&nbsp; Responsibilities should be appropriately&nbsp;distributed to elements such that there are no elements
+    with too much responsibility and no elements are left without any responsibilities.&nbsp; The design should be able to
+    clearly&nbsp;communicate the design decisions while not delving into concerns best dealt with during implementation of
+    code.
+</p>
+<p>
+    Ensure the design follows any project-specific guidelines and conforms to the architecture.
+</p>
+<p>
+    Modifications to the design to improve it based on issues identified in reviewing it should apply <a class="elementLink" href="../concepts/refactoring%2c_Poc7IPDzEdqYgerqi84oCA.html" guid="_Poc7IPDzEdqYgerqi84oCA">Refactoring</a> to ensure that the design and any existing implementation of the design
+    continues to fulfill its responsibilities.
+</p>
+<h3>
+    Relationship of Design to Architecture
+</h3>
+<p>
+    This guideline remarks on conforming to the architecture in various ways; it is written as though one is designing
+    within a pre-existing architecture.&nbsp; Though projects will often have pre-existing architectures available, a
+    particular architecture is the result of design activities.&nbsp; Therefore, in addition to discussing conformance to
+    some existing architecture, one must also consider the creation of the architecture and updates and improvements to the
+    architecture based on the work of design.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">More Information</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Guidelines</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="architectural_view%2c_T9nygClEEduLGM8dfVsrKg.html" guid="_T9nygClEEduLGM8dfVsrKg">Architectural View</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/design,_0X3bcMlgEdmt3adZL5Dmdw.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:26:23 GMT -->
+</html>

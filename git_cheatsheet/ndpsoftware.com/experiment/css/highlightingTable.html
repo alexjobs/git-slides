@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from ndpsoftware.com/experiment/css/highlightingTable.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:17:42 GMT -->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Untitled</title>
+<style>
+table.striped {
+	border: 1px solid black;
+	border-width: 1px 2px 2px 1px;
+	border-color: black #aaa #aaa black;
+	background-color: ;
+}
+/* cells, in general */
+table.striped tr td,
+table.striped tr th {
+	border:0px solid #aaa;
+	border-width: 0px 0px 0px 1px;
+	margin:0;
+	padding: 2px 3px 0 3px;
+}
+
+/*row labels*/
+table.striped tr th {
+	background-color: #ddf;
+	color: #666;
+	font-size: 80%;
+	text-align:right;
+	padding: 2px 4px 0px 4px;
+	width: 1%;
+	margin:0;
+}
+/*columns labels*/
+table.striped tr th+th {
+	color: #666;
+	font-size: 80%;
+	text-align:center;
+	text-decoration:none;
+	background-color: #ddd;
+	padding: 10px 4px 2px 4px;
+	width: 10%;
+}
+/* striping is done using the "+" selector: */
+table.striped tr+tr,
+table.striped tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr+tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr+tr+tr+tr+tr+tr+tr {
+	background-color: white;
+}
+table.striped tr+tr+tr,
+table.striped tr+tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr+tr+tr+tr+tr+tr,
+table.striped tr+tr+tr+tr+tr+tr+tr+tr+tr+tr+tr+tr+tr {
+	background-color: #eee;
+}
+/* hover mouseover is done via the :hover pseudoclass */
+table.striped tr:hover {
+	background-color: #ff9;
+}
+
+</style>
+</head>
+
+<body>
+<p>A very simple demonstration of two useful table concepts: striping can be done without tagging rows themselves, and the hover over a row changing the color.</p>
+<table class="striped" cellspacing="0">
+<tr>
+	<th>
+	
+	</th>
+	<th>
+	XXXXX
+	</th>
+	<th>
+	XX
+	</th>
+	<th>
+	XXX
+	</th>
+	<th>
+	XXX
+	</th>
+	<th>
+	XXX
+	</th>
+	<th>
+	XXX
+	</th>
+	<th>
+	XXX
+	</th>
+</tr>
+<tr>
+	<th>
+	XXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	X
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XXXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XXXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	X
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	X
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+<tr>
+	<th>
+	XXX
+	</th>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+	<td>
+	Y
+	</td>
+
+</tr>
+
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/experiment/css/highlightingTable.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:17:42 GMT -->
+</html>

@@ -1,0 +1,32 @@
+<section>
+    <h2>Patching</h2>
+    <h3><a href="http://git-scm.com/docs/git-format-patch" target="_new">git-format-patch</a></h3>
+    <p>git-format-patch - Prepare patches for e-mail submission</p>
+    <pre><code style="margin-top: 20px;">
+  # Extract commits between revisions R1 and R2
+  $ git format-patch -k --stdout R1..R2
+  # Extract all commits which are in the current branch but not in the origin branch
+  $ git format-patch origin
+  # Extract all commits that lead to origin since the inception of the project
+  $ git format-patch --root origin
+  # Extract three topmost commits from the current branch
+  $ git format-patch -3
+	</code></pre>
+</section>
+
+
+<section>
+    <h3><a href="http://git-scm.com/docs/git-apply" target="_new">apply</a></h3>
+    <p>git-apply - Apply a patch to files and/or to the index</p>
+    <pre><code style="margin-top: 20px;">
+  $ git apply --whitespace=warn "patch"
+  $ git apply --whitespace=fix "patch"
+	</code></pre>
+    <h3><a href="http://git-scm.com/docs/git-am" target="_new">am</a></h3>
+    <p>git-am - Apply a series of patches from a mailbox</p>
+    <pre><code style="margin-top: 20px;">
+  $ git am *.patch
+  $ git am 0002-allow-users-to-be-locked.patch 
+    </code></pre>
+    <h3>Always use am</h3>
+</section>

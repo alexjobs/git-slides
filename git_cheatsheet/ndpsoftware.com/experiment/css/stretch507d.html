@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+<!-- Mirrored from ndpsoftware.com/experiment/css/stretch.php?width=600&css=stretchymargins by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:24:09 GMT -->
+<head>
+		<meta name="author" content="Andrew J. Peterson" />
+		<meta name="copyright" content="Copyright (c) 2006 NDP Software. All Rights Reserved." />
+		 <script type="text/javascript" src="js/minmax.html"></script>
+		<title>
+			NDPSoftware: Layout Exampls: 
+stretchymargins		</title>
+<style>
+	html { font-family: verdana, helvetica, sans-serif}
+	body {
+		background-color: #006;
+	}
+	h1, h2, h3 { margin-top: 0; padding-top: 0; }
+	#margin {
+		background-color: #309;
+		padding: 0 100px 0 100px;
+
+	}
+	#page {
+		background-color: #eee;
+		padding: 0 1em;
+		margin-left: 0; margin-right: 0;
+
+	}
+	label {
+		font-size: .9em;
+		background-color: #ff9;
+		border: 1px solid #ff0;
+	}
+	
+	.sidebar {
+	float: right; width: 33%; background-color: #9cf; padding: 1em; border: 1px dashed #ccc; margin-left: 1em; margin-right: 0}
+		
+	</style> 
+	</head>
+	<body>
+	<label>
+		body 
+	</label>
+	<div class="margin" id="margin">
+		<label>
+			margin 
+		</label>
+		<div class="page" id="page">
+			<label>
+				page 
+			</label>
+
+
+					<div class="sidebar">
+					<h2>
+						Experiment 
+					</h2>
+					<p>
+						The current display is 
+						<b>
+		stretchymargins						</b>
+					</p>
+					<p>
+						Choose the styles to reformat this page: 
+					</p>
+					<ul>
+						<li>
+							<a href="stretch1546.html?width=600&amp;css=stretchy">
+								<b>stretchy</b>
+							</a>
+						</li>
+						<li>
+							<a href="stretch313b.html?width=600&amp;css=stretchymaxleft">
+								<b>stretchymaxleft</b>: stretches to a limit, and then fixed on left side
+							</a>
+						</li>
+						<li>
+							<a href="stretch6f58.html?width=600&amp;css=stretchymaxcenter">
+								<b>stretchymaxcenter</b>: stretches to a limit, and then fixed centered
+							</a>
+						</li>
+						<li>
+							<a href="stretch507d.html?width=600&amp;css=stretchymargins">
+								<b>stretchymargins</b>: stretchy, with margins
+							</a>
+						</li>
+						<li>
+							<a href="stretch5698.html?width=600&amp;css=center">
+								<b>center</b>: fixed width, centered
+							</a>
+						</li>
+						<li>
+							<a href="stretchb70c.html?width=600&amp;css=left">
+								<b>left</b>: fixed width, left aligned
+							</a>
+						</li>
+					</ul>
+						Width (px): 
+							<a href="stretch2c9f.html?width=400&amp;css=stretchymargins">400</a>
+							<a href="stretch507d.html?width=600&amp;css=stretchymargins">600</a>
+							<a href="stretch7bb7.html?width=780&amp;css=stretchymargins">780</a>
+							<a href="stretchb713.html?width=900&amp;css=stretchymargins">900</a>
+							<a href="stretchceac.html?width=1000&amp;css=stretchymargins">1000</a>
+					</div>
+
+
+
+			<h1>Stretchy Page Design Experiment</h1>
+			<p>
+				The design of the site requires picking an overall approach: stretchy or fixed width, or some hybrid. Making the page stretchy or fixed is straightforward, as long as you include enough enclosing tags to give you the control you want. This experiment is to determine what CSS architecture will work. </p>
+				<p>This document can be viewed in one of six ways, depending on the stylesheet selected. Play with it and see what happens!
+			</p>
+			
+			<h2>
+				How it works 
+			</h2>
+			<p>
+				Within the <tt>&lt;body&gt;</tt> tag, two <tt>&lt;div&gt;</tt>s are used: one called <tt>margin</tt> and one called <tt>page</tt>. You can use either class or ids to identify these. In this document they are labelled visibly so you can see them, but you (obviously) wouldn't do this. These two elements allow control of the overall stretchi-ness of the page. 
+				</p>
+				<p>Here are the current styles: <pre>
+#margin {
+  padding: 0 100px 0 100px;
+
+}
+#page {
+  margin-left: 0; margin-right: 0;
+
+}
+</pre> 
+
+<h2>Browsers</h2>
+<ul>
+	<li>IE 5, 5.5, 6.0 -- these require Javascript to work correctly. There's a "hack" called <a href="../../js/minmax.js">minmax.js</a> that facilitates the tricker layouts.</li>
+	<li>Firefox 1.0, 1.5</li>
+	<li>Safari</li>
+</ul>
+
+<br />
+<br />
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/experiment/css/stretch.php?width=600&css=stretchymargins by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:24:09 GMT -->
+</html>

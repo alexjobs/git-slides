@@ -1,0 +1,32 @@
+div.method {
+	background-color: orange;
+	opacity: 0.9;
+	font-weight: bold;
+	padding: 3px;
+}
+	
+div.attr, div.method {
+	cursor: pointer;
+}
+	
+
+div#controls {
+    width: 100%;
+    padding: 3px 0;
+	background-color: #eee;
+    color: black;
+	z-index: 100;
+	opacity: .9;
+    font: 15px/20px courier, monospaced;
+    float: left;
+    clear: left;
+	}
+	
+div#controls label {
+	padding: 0 5px 0 15px;
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+
+

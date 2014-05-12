@@ -1,0 +1,280 @@
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/analyze_arch_reqs,_42UD4A3tEduibvKwrGxWxA.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Guideline: Analyze the Architecture</title>
+<meta content="Guideline" name="uma.type">
+<meta content="analyze_arch_reqs" name="uma.name">
+<meta content="Analyze the Architecture" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="../../../css/default.css" rel="StyleSheet">
+<script src="../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = '../../../index-2.html';
+				</script>
+</head>
+<body onload="createSectionLinks('div', 'sectionHeading', '../../../images/index.html');">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Guideline: Analyze the Architecture</td><td align="right" class="expandCollapseLink" width="100%"><a href="../../../index.html"></a><script src="../../../scripts/treebrowser.js" type="text/javascript" language="JavaScript"></script></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline provides additional information to support the analysis of architecturally significant requirements and the creation of an outline architecture.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relationships</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Related Elements</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="../../tasks/analyze_arch_reqs%2c_0f-1oMlgEdmt3adZL5Dmdw.html" guid="_0f-1oMlgEdmt3adZL5Dmdw">Analyze Architectural Requirements</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Main Description</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableCell"><h4>
+    Identify architectural goals
+</h4>
+<p>
+    Architectural goals provide the motivation and rationale&nbsp;for decisions. These goals are&nbsp;often driven
+    by&nbsp;the software requirements, particularly in&nbsp;<a class="elementLink" href="../../workproducts/supporting_requirements%2c_BVh9cL-CEdqb7N6KIeDL8Q.html" guid="_BVh9cL-CEdqb7N6KIeDL8Q">Supporting Requirements</a>, because they are not always&nbsp;obvious from&nbsp;the use
+    cases alone [<a class="elementLinkWithUserText" href="../supportingmaterials/references%2c_9ToeIB83Edqsvps02rpOOg.html" guid="_9ToeIB83Edqsvps02rpOOg">ALL02</a>].
+</p>
+<p>
+    Architectural goals define how the system needs to respond to change over time. Consider these questions when writing
+    your goals:
+</p>
+<ul>
+    <li>
+        What is the expected lifespan of the system?
+    </li>
+    <li>
+        Will the system need to respond to technological changes over that time, such as new versions of middleware or
+        other products?
+    </li>
+    <li>
+        How&nbsp;frequently is&nbsp;the system&nbsp;expected to adapt to change?
+    </li>
+    <li>
+        What changes can we anticipate in the future, and how can we make them easier to accommodate?
+    </li>
+</ul>
+<p>
+    These considerations will have a significant effect on the structure of the system.
+</p>
+<h4>
+    Identify architectural constraints
+</h4>
+<p>
+    Often, the system that you develop will be integrated into an existing environment. To ensure a smooth integration, you
+    need to gather information about this environment and identify any architectural constraints.
+</p>
+<p>
+    Architectural constraints can arise from various factors:
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ul>
+        <li>
+            Network topology
+        </li>
+        <li>
+            Use of a given database vendor or an existing database
+        </li>
+        <li>
+            Web environment (server configurations, firewall, DMZs, and so forth)
+        </li>
+        <li>
+            Servers (hardware model, operating system)
+        </li>
+        <li>
+            Use of third-party software or a particular technology
+        </li>
+        <li>
+            Compliance with existing standards
+        </li>
+    </ul>
+</div>
+<p>
+    For example, if the company uses only one type of database, you will probably try to use it as much as possible to
+    leverage&nbsp;the existing database administration skills, rather than introducing a new one.
+</p>
+<p>
+    These architectural constraints, combined with the requirements, help you define&nbsp;an appropriate&nbsp;candidate for
+    the system architecture.
+</p>
+<h4>
+    Survey, assess, and select from available assets
+</h4>
+<p>
+    To assess and select assets to reuse on your project, you need to understand the requirements of the system's
+    environment. You also need to understand the scope and general functionality of the system that the Stakeholders
+    require. There are several types of assets to consider, including (but not limited to): reference architectures;
+    frameworks; patterns; analysis mechanisms; classes; and experience. You can search asset&nbsp;repositories (internal or
+    external to your organization) and industry literature to identify assets or similar projects.
+</p>
+<p>
+    You need to assess whether available assets contribute to solving the key challenges of the current project and whether
+    they are compatible with the project's architectural constraints. You also need to analyze the extent of the fit
+    between assets and requirements, considering whether any of the requirements are negotiable (to enable use of the
+    asset). Also, assess whether the asset could be modified or extended to satisfy requirements, as well as what the
+    tradeoffs in adopting it are, in terms of cost, risk, and functionality.
+</p>
+<p>
+    Finally, decide, in principle, whether to use one or more assets, and record the rationale for this decision.
+</p>
+<h4>
+    Define approach for structuring the system
+</h4>
+<p>
+    Structuring your system helps you manage its complexity by using the well-known "divide and conquer" strategy. By
+    breaking the process into smaller and more manageable pieces, you make development easier.
+</p>
+<p>
+    Layering&nbsp; is&nbsp;one of the most&nbsp;commonly used&nbsp;approaches for structuring and decomposing systems. Each
+    layer groups similar classes or components, which communicate insofar as possible only with adjacent layers.
+</p>
+<p>
+    You do not define which layers contain which classes or components. Instead, you define how many layers you will need
+    and which kinds of layers you will use. For example, if you are developing a new middleware system, you probably do not
+    need a business layer. Later, during&nbsp;design activities, you decide which classes and components will populate
+    these layers.
+</p>
+<h4>
+    Develop deployment overview
+</h4>
+<p>
+    Develop a high level overview of how the software is deployed. For example, determine if the system needs to be
+    accessed remotely, or has requirements that suggest distribution across multiple nodes. Some sources of information to
+    consider are:
+</p>
+<ul>
+    <li>
+        users at locations, defined in&nbsp;the Vision and use cases
+    </li>
+    <li>
+        organization of business data
+    </li>
+    <li>
+        service level requirements defined in the Supplementary Specifications.
+    </li>
+    <li>
+        constraints (in the Supplementary Specifications, such as requirements to interface with legacy systems)
+    </li>
+</ul>
+<p>
+    Validate that the deployment overview supports users (especially users at remote locations if this is required)
+    performing typical use cases while satisfying nonfunctional requirements and constraints. Validate that the nodes and
+    connections are adequate to support the interactions between components on different nodes, and between components and
+    their stored data.
+</p>
+<h4>
+    Identify key abstractions
+</h4>
+<p>
+    Requirement and analysis tasks usually uncover key concepts that the system must be able to handle. These concepts
+    manifest in design as key abstractions.&nbsp;Your <a class="elementLink" href="../../workproducts/vision%2c_0WVxcMlgEdmt3adZL5Dmdw.html" guid="_0WVxcMlgEdmt3adZL5Dmdw">Vision</a> and <a class="elementLink" href="../../workproducts/glossary%2c_Wn7HcNcEEdqz_d2XWoVt6Q.html" guid="_Wn7HcNcEEdqz_d2XWoVt6Q">Glossary</a> work products are good sources for key abstractions. You can often easily
+    identify these abstractions, because they represent things that are significant to the business. For example, Customer
+    and Account are typical key abstractions in the banking business.
+</p>
+<p>
+    When you define the key abstractions, also define any obvious relationships that exist between entity classes. You can
+    capture these in a table or&nbsp;on UML class diagrams (in a tool or whiteboard), and create a short description for
+    each abstraction.&nbsp;In general, it is not worth agonizing over defining a highly detailed set of relationships at
+    this early stage in design. The relationships will become more concrete and detailed later and will&nbsp; probably
+    modify your initial assumptions.
+</p>
+<p>
+    The classes that you identify at this point will also probably change and evolve during the course of the project. The
+    purpose of this step is not to identify a set of classes and relationships that will survive throughout
+    design.&nbsp;Rather, it is&nbsp;to identify the key concepts that the system must handle. Don't spend too much time
+    describing entity classes in detail at this initial stage, because there is a risk that you will identify classes and
+    relationships that the use cases do not actually need. Remember that you will find more entity classes and
+    relationships when looking at the use cases.
+</p>
+<h4>
+    Identify analysis mechanisms
+</h4>
+<p>
+    See <a class="elementLink" href="../concepts/analysis_mechanism%2c_0gvqoMlgEdmt3adZL5Dmdw.html" guid="_0gvqoMlgEdmt3adZL5Dmdw">Analysis Mechanism</a>.
+</p>
+<h4>
+    Capture architectural decisions
+</h4>
+<p>
+    It is often useful to record key architectural decisions and working assumptions on an architectural overview diagram
+    to make it easier to communicate the architecture to the project team and stakeholders.&nbsp;This information should be
+    part of the description of the architecture, but it can vary in format to suit the needs of the project.&nbsp;For
+    example, on an agile and low-ceremony project the overview diagram can be an informal picture story board or a graph
+    with icons on either a whiteboard or a drawing tool. The illustration needs to show the nature of the proposed
+    solution, convey the governing ideas, and represent the major building blocks.
+</p>
+<p>
+    If a more complex system is required, then a more formal and comprehensive set of&nbsp;models that describe the
+    architecture from a number of viewpoints is more appropriate. See <a class="elementLink" href="architectural_view%2c_T9nygClEEduLGM8dfVsrKg.html" guid="_T9nygClEEduLGM8dfVsrKg">Architectural View</a>&nbsp;for more information.&nbsp;
+</p>
+<p>
+    You will find it useful to develop these three Unified Modeling Language (UML) diagrams at this stage:
+</p>
+<ul>
+    <li>
+        <strong>Layer map</strong> (represented as a class diagram using packages) that describes the upper-level layers of
+        the architecture
+    </li>
+    <li>
+        <strong>Draft deployment diagram</strong> that outlines the&nbsp;expected network topology
+    </li>
+    <li>
+        <strong>Simple class diagram</strong> that shows the key abstractions and any obvious relationships among them
+    </li>
+</ul>
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    This program and the accompanying materials are made available under the<br />
+     <a href="http://www.eclipse.org/org/documents/epl-v10.php" target="_blank">Eclipse Public License v1.0</a> which
+    accompanies this distribution.
+</p>
+<p>
+    View copyright information here:&nbsp;<a class="elementLink" href="../supportingmaterials/openup_copyright%2c_UaGfECcTEduSX6N2jUafGA.html" guid="_UaGfECcTEduSX6N2jUafGA">OpenUP Copyright</a>
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+<!-- Mirrored from ndpsoftware.com/OpenUpBasic/openup_basic/guidances/guidelines/analyze_arch_reqs,_42UD4A3tEduibvKwrGxWxA.html by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 04 May 2014 04:32:07 GMT -->
+</html>

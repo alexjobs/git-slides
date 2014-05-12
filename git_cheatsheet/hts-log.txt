@@ -1,0 +1,27 @@
+HTTrack3.47-27+htsswf+htsjava launched on Sun, 04 May 2014 09:42:45 at http://ndpsoftware.com/git-cheatsheet.html +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2013], %s -->" -%l "en, *" http://ndpsoftware.com/git-cheatsheet.html -O1 C:\Users\amit\Downloads\zzzzzzz\git-cheatsheet\git-cheatsheet +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+09:44:48	Warning: 	Retry after error -2 (Receive Time Out) at link ndpsoftware.com/git-cheatsheet/1200.css (from ndpsoftware.com/git-cheatsheet.html)
+09:47:42	Error: 	"Not Found" (404) at link ndpsoftware.com/css/undohtmlx.css (from ndpsoftware.com/ScriptaculousEffectsDemo.php)
+09:47:42	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link wiki.script.aculo.us/stylesheets/script.aculo.us.css (from ndpsoftware.com/ScriptaculousEffectsDemo.php)
+09:47:42	Error: 	"Not Found" (404) at link www.blm.gov/heritage/HE_Kids/images/10000_20picture.jpg (from ndpsoftware.com/ScriptaculousEffectsDemo.php)
+09:47:42	Error: 	"Gone" (410) at link crazyegg.com/pages/scripts/0003/7863.js (from ndpsoftware.com/ScriptaculousEffectsDemo.php)
+09:48:15	Error: 	"Not Found" (404) at link ndpsoftware.com/OpenUpBasic/applet/browser.htm (from ndpsoftware.com/OpenUpBasic/index.htm)
+09:48:15	Error: 	"Not Found" (404) at link ndpsoftware.com/peets.com (from ndpsoftware.com/other.php)
+09:48:15	Error: 	"Not Found" (404) at link ndpsoftware.com/AcroPDF.PDF (from w.sharethis.com/button/buttons.js)
+09:48:15	Error: 	"Not Found" (404) at link ndpsoftware.com/buttons.js (from w.sharethis.com/button/buttons.js)
+09:48:53	Error: 	"Not Found" (404) at link ndpsoftware.com/experiment/css/js/minmax.js (from ndpsoftware.com/experiment/css/stretch.php)
+09:49:12	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link wiki.script.aculo.us/stylesheets/script.aculo.us.css (from ndpsoftware.com/ScriptaculousEffectsDemo.php)
+09:54:09	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link wiki.script.aculo.us/stylesheets/script.aculo.us.css (from ndpsoftware.com/ScriptaculousEffectsDemo.php)
+09:54:49	Warning: 	Retry after error -2 (Receive Time Out) at link ndpsoftware.com/OpenUpBasic/openup_basic/roles/architect,_0X9iEMlgEdmt3adZL5Dmdw.html (from ndpsoftware.com/OpenUpBasic/noapplet/OpenUP_Basic.html)
+09:56:30	Warning: 	Retry after error -2 (Receive Time Out) at link ndpsoftware.com/OpenUpBasic/openup_basic/guidances/checklists/test_script,_0Z9tMMlgEdmt3adZL5Dmdw.html (from ndpsoftware.com/OpenUpBasic/noapplet/OpenUP_Basic.html)
+10:03:00	Warning: 	Retry after error -2 (Receive Time Out) at link ndpsoftware.com/OpenUpBasic/openup_basic/capabilitypatterns/ongoing_tasks_TAVx0CliEdqjQsaFX0CJTw_wpbs.html (from ndpsoftware.com/OpenUpBasic/openup_basic/capabilitypatterns/ongoing_tasks,_TAVx0CliEdqjQsaFX0CJTw.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&path=_0uyGoMlgEdmt3adZL5Dmdw,_0Spa4BOKEduCNqgZdt_OaA,_TAVx0CliEdqjQsaFX0CJTw)
+10:03:08	Warning: 	Retry after error -2 (Receive Time Out) at link ndpsoftware.com/OpenUpBasic/openup_basic/capabilitypatterns/develop_solution_MWFjoU9HEdudU75l2xOQTw_tbs.html (from ndpsoftware.com/OpenUpBasic/openup_basic/capabilitypatterns/develop_solution,_MWFjoU9HEdudU75l2xOQTw.html?proc=_0uyGoMlgEdmt3adZL5Dmdw&path=_0uyGoMlgEdmt3adZL5Dmdw,_3CqrAROKEduCNqgZdt_OaA,_MWFjoU9HEdudU75l2xOQTw)
+
+HTTrack Website Copier/3.47-27 mirror complete in 21 minutes 3 seconds : 878 links scanned, 861 files written (16634020 bytes overall) [16638200 bytes received at 13173 bytes/sec], 346179 bytes transferred using HTTP compression in 16 files, ratio 29%
+(9 errors, 7 warnings, 0 messages)

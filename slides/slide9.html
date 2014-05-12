@@ -1,0 +1,91 @@
+<section>
+    <h2>Sharing and Updating Projects</h2>
+    <h3>Rremotes</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git clone git://github.com/schacon/ticgit.git   
+  $ cd ticgit
+  $ git remote
+  origin
+  
+  $ git remote -v
+  cho45     git://github.com/cho45/grit.git
+  defunkt   git://github.com/defunkt/grit.git
+  koke      git://github.com/koke/grit.git
+  origin    git@github.com:mojombo/grit.git
+	</code></pre>
+    <pre><code style="margin-top: 20px;">  
+  $ git remote
+  origin
+  $ git remote add pb git://github.com/paulboone/ticgit.git
+  $ git remote -v
+  origin git://github.com/schacon/ticgit.git
+  pb git://github.com/paulboone/ticgit.git
+	</code></pre>
+</section>
+
+
+<section>
+    <h3>Fetching and Pulling from Your Remotes</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git fetch [remote-name]
+  $ git merge [remote-name]/[branch-name]
+	</code></pre>
+    <pre><code style="margin-top: 20px;">  
+  $ git pull [remote-name] [branch-name]
+	</code></pre>
+    <h3>Pushing to Your Remotes</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git push origin master
+	</code></pre>
+</section>
+
+<section>
+    <h3>Inspecting a Remote</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git remote show origin
+  * remote origin
+  URL: git@github.com:defunkt/github.git
+  Remote branch merged with 'git pull' while on branch issues  
+  Remote branch merged with 'git pull' while on branch master  
+  New remote branches (next fetch will store in remotes/origin)
+  caching
+  Stale tracking branches (use 'git remote prune')
+  libwalker  
+  issues
+  master
+  postgres
+  Local branch pushed with 'git push'
+  master:master
+	</code></pre>
+    <p style="font-size:25px;">This command shows which branch is automatically pushed when you run git push on certain branches. It also shows you which remote branches on the server you don't yet have, which remote branches you have that have been removed from the server, and multiple branches that are automatically merged when you run git pull. </p>
+</section>
+
+<section>
+    <h3>Removing and Renaming Remotes</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git remote rename pb paul
+  $ git remote
+  origin
+  paul
+	</code></pre>
+    <pre><code style="margin-top: 20px;">  
+  $ git remote rm paul
+  $ git remote
+  origin
+	</code></pre>
+</section>
+
+
+<section>
+    <h3>Tracking Branches</h3>
+    <pre><code style="margin-top: 20px;">
+  $ git checkout --track origin/serverfix
+  $ git checkout -b sf origin/serverfix
+	</code></pre>
+    <h3>Deleting Remote Branches</h3>
+    <pre><code style="margin-top: 20px;">  
+  $ git push origin :serverfix 
+  To git@github.com:schacon/simplegit.git
+  - [deleted] serverfix
+	</code></pre>
+</section>
